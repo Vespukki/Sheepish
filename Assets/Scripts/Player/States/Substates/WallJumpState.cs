@@ -18,6 +18,8 @@ public class WallJumpState : AirState
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<PlayerMovement>().StopCoroutine(animator.GetComponent<PlayerMovement>().WallJumpCut());
+        base.OnStateExit(animator, stateInfo, layerIndex);
+
+        animator.GetComponent<PlayerMovement>().StopWallJumpCut();
     }
 }

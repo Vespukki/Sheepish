@@ -24,6 +24,13 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
     int wallCling = 0;
 
+    //timers
+    [HideInInspector] public float lastDashTimer = 100;
+
+    //coroutines
+    Coroutine wallJumpCutCo;
+
+
     Rigidbody2D body;
     PlayerInput input;
     SpriteRenderer spriter;
@@ -73,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DashInput(InputAction.CallbackContext context)
     {
-        if(remainingDashes > 0)
+        if(remainingDashes > 0 && lastDashTimer >= stats.dashCD)
         {
             animator.SetTriggerOneFixedFrame(this, "Dash");
         }
@@ -81,6 +88,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        UpdateTimers();
+
         //movement hitbox checks
         Grounded();
         WallClinging();
@@ -131,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
     {
         body.velocity = new Vector2(lookingDir * stats.wallJumpForce.x, stats.wallJumpForce.y);
 
-        StartCoroutine(WallJumpCut());
+        wallJumpCutCo = StartCoroutine(WallJumpCut());
     }
 
     public IEnumerator WallJumpCut()
@@ -140,8 +149,19 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTriggerOneFixedFrame(this, "WallJumpCut");
     }
 
+    public void StopWallJumpCut()
+    {
+        if (wallJumpCutCo != null)
+        {
+            StopCoroutine(wallJumpCutCo);
+        }
+    }
+
     public void Dash()
     {
+        spriter.flipX = lookingDir == -1;
+        StopCoroutine(DashCut());
+        animator.ResetTrigger("DashCut");
         body.velocity = new Vector2(stats.dashDistance / stats.dashTime * lookingDir, 0);
         StartCoroutine(DashCut());
     }
@@ -220,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (!(currentState is DashState))
+        if (!(currentState is DashState || currentState is WallJumpState))
         {
             spriter.flipX = lookingDir == -1;
         }
@@ -232,4 +252,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("yVelocity", body.velocity.y);
         animator.SetInteger("WallCling", wallCling);
     }
+
+    void UpdateTimers()
+    {
+        lastDashTimer += Time.deltaTime;
+    }
+
+
 }

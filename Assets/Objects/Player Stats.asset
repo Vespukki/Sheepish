@@ -20,11 +20,12 @@ MonoBehaviour:
   _jumpTime: 0.5
   _maxFallSpeed: -17
   _fallSpeedMultiplier: 1.25
-  _inputForgivenessFrames: 10
+  _inputForgivenessFrames: 5
   _wallClingFallSpeed: 4
   _wallClingAcceleration: 6
-  _wallJumpForce: {x: 16, y: 16}
-  _wallJumpTime: 0.1
+  _wallJumpForce: {x: 8, y: 16}
+  _wallJumpTime: 0.15
   _dashTime: 0.25
   _dashDistance: 4
   _maxDashes: 1
+  _dashCD: 0.17

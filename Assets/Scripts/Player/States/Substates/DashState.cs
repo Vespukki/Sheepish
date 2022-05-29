@@ -24,6 +24,7 @@ public class DashState : AirState
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<PlayerMovement>().StopCoroutine(animator.GetComponent<PlayerMovement>().DashCut());
+        animator.GetComponent<PlayerMovement>().lastDashTimer = 0;
+        //animator.GetComponent<PlayerMovement>().StopCoroutine(animator.GetComponent<PlayerMovement>().DashCut());
     }
 }
