@@ -1,0 +1,3048 @@
+fileFormatVersion: 2
+guid: bb84c32bc33cca0438e6b44d90d2b035
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5210778470877212964
+    second: TEMP kirby sprites_0
+  - first:
+      213: -4292565329555929452
+    second: TEMP kirby sprites_1
+  - first:
+      213: 4761120546979532406
+    second: TEMP kirby sprites_2
+  - first:
+      213: -4056747993479548550
+    second: TEMP kirby sprites_3
+  - first:
+      213: -2736319670030924915
+    second: TEMP kirby sprites_4
+  - first:
+      213: 2357512808863767478
+    second: TEMP kirby sprites_5
+  - first:
+      213: 3496573512572731684
+    second: TEMP kirby sprites_6
+  - first:
+      213: -4287701220161247848
+    second: TEMP kirby sprites_7
+  - first:
+      213: -7545525280268203663
+    second: TEMP kirby sprites_8
+  - first:
+      213: -1647930882011869674
+    second: TEMP kirby sprites_9
+  - first:
+      213: 449749234531572598
+    second: TEMP kirby sprites_10
+  - first:
+      213: 165923967165088866
+    second: TEMP kirby sprites_11
+  - first:
+      213: 4685389524265614642
+    second: TEMP kirby sprites_16
+  - first:
+      213: -7378035213545492198
+    second: TEMP kirby sprites_17
+  - first:
+      213: 3995725193578119781
+    second: TEMP kirby sprites_18
+  - first:
+      213: -5252663890816081270
+    second: TEMP kirby sprites_19
+  - first:
+      213: -7717344087460264658
+    second: TEMP kirby sprites_20
+  - first:
+      213: -2062130952450511759
+    second: TEMP kirby sprites_21
+  - first:
+      213: 6463291028246066095
+    second: TEMP kirby sprites_22
+  - first:
+      213: 4010415315118366
+    second: TEMP kirby sprites_23
+  - first:
+      213: -6073312906264931185
+    second: TEMP kirby sprites_24
+  - first:
+      213: -6994805799814476952
+    second: TEMP kirby sprites_25
+  - first:
+      213: 1988867085084887649
+    second: TEMP kirby sprites_46
+  - first:
+      213: 662372759996549572
+    second: TEMP kirby sprites_48
+  - first:
+      213: -3996749559654787170
+    second: TEMP kirby sprites_49
+  - first:
+      213: 1750972959881290109
+    second: TEMP kirby sprites_50
+  - first:
+      213: 5413982324664955976
+    second: TEMP kirby sprites_51
+  - first:
+      213: -5794653053688475299
+    second: TEMP kirby sprites_52
+  - first:
+      213: -7892416863482568465
+    second: TEMP kirby sprites_53
+  - first:
+      213: -1940993012647087182
+    second: TEMP kirby sprites_54
+  - first:
+      213: 2595752492144822166
+    second: TEMP kirby sprites_55
+  - first:
+      213: 5073726916009485234
+    second: TEMP kirby sprites_69
+  - first:
+      213: 5667691436565128669
+    second: TEMP kirby sprites_70
+  - first:
+      213: 8103457536919730900
+    second: TEMP kirby sprites_71
+  - first:
+      213: 6095303590618014826
+    second: TEMP kirby sprites_72
+  - first:
+      213: 6478148952849016538
+    second: TEMP kirby sprites_73
+  - first:
+      213: -2682955511300179024
+    second: TEMP kirby sprites_74
+  - first:
+      213: 4649099321524939089
+    second: TEMP kirby sprites_75
+  - first:
+      213: -7819580348064819897
+    second: TEMP kirby sprites_76
+  - first:
+      213: 5202490820285428048
+    second: TEMP kirby sprites_77
+  - first:
+      213: 5965260700893430622
+    second: TEMP kirby sprites_78
+  - first:
+      213: -280819500265089502
+    second: TEMP kirby sprites_92
+  - first:
+      213: 7248918795057346332
+    second: TEMP kirby sprites_93
+  - first:
+      213: -612984550260605252
+    second: TEMP kirby sprites_94
+  - first:
+      213: 4377656212910258231
+    second: TEMP kirby sprites_95
+  - first:
+      213: -1203358763078610024
+    second: TEMP kirby sprites_96
+  - first:
+      213: -1520155656212058927
+    second: TEMP kirby sprites_110
+  - first:
+      213: 262437587738396796
+    second: TEMP kirby sprites_111
+  - first:
+      213: 1993483565386620569
+    second: TEMP kirby sprites_112
+  - first:
+      213: 6707416201005091578
+    second: TEMP kirby sprites_113
+  - first:
+      213: 5681924352233105839
+    second: TEMP kirby sprites_114
+  - first:
+      213: 5112211231765215840
+    second: TEMP kirby sprites_115
+  - first:
+      213: 2986902264991601036
+    second: TEMP kirby sprites_116
+  - first:
+      213: -1878426985924679699
+    second: TEMP kirby sprites_117
+  - first:
+      213: 2695050754052640130
+    second: TEMP kirby sprites_130
+  - first:
+      213: -7557620059853606226
+    second: TEMP kirby sprites_131
+  - first:
+      213: -8469952771180952681
+    second: TEMP kirby sprites_132
+  - first:
+      213: -4604182184738015337
+    second: TEMP kirby sprites_133
+  - first:
+      213: 1696331555014354755
+    second: TEMP kirby sprites_134
+  - first:
+      213: 6677610325377543434
+    second: TEMP kirby sprites_135
+  - first:
+      213: -6059258116616493004
+    second: TEMP kirby sprites_136
+  - first:
+      213: -1008673721130710274
+    second: TEMP kirby sprites_137
+  - first:
+      213: -6473685813181680260
+    second: TEMP kirby sprites_138
+  - first:
+      213: 507662858797805269
+    second: TEMP kirby sprites_139
+  - first:
+      213: 385081897664220198
+    second: TEMP kirby sprites_140
+  - first:
+      213: -4378600435774191950
+    second: TEMP kirby sprites_141
+  - first:
+      213: 1166864974033790472
+    second: TEMP kirby sprites_142
+  - first:
+      213: 2957186479294874966
+    second: TEMP kirby sprites_143
+  - first:
+      213: 6246943825536128415
+    second: TEMP kirby sprites_144
+  - first:
+      213: -788281943480342732
+    second: TEMP kirby sprites_145
+  - first:
+      213: -5289689231900035057
+    second: TEMP kirby sprites_146
+  - first:
+      213: 5428324532475419237
+    second: TEMP kirby sprites_147
+  - first:
+      213: -9217682920078155590
+    second: TEMP kirby sprites_148
+  - first:
+      213: -2112189463939133901
+    second: TEMP kirby sprites_149
+  - first:
+      213: 2874492378762681701
+    second: TEMP kirby sprites_150
+  - first:
+      213: -7575324105697018314
+    second: TEMP kirby sprites_151
+  - first:
+      213: -6324182412232731794
+    second: TEMP kirby sprites_152
+  - first:
+      213: 3195481303156813981
+    second: TEMP kirby sprites_153
+  - first:
+      213: -2287417738651282898
+    second: TEMP kirby sprites_154
+  - first:
+      213: -5952136109935442735
+    second: TEMP kirby sprites_155
+  - first:
+      213: -6536052252552332397
+    second: TEMP kirby sprites_156
+  - first:
+      213: -8455740263272273694
+    second: TEMP kirby sprites_157
+  - first:
+      213: 4856149752962918504
+    second: TEMP kirby sprites_158
+  - first:
+      213: 8032416535745462458
+    second: TEMP kirby sprites_159
+  - first:
+      213: 4738234785298892203
+    second: TEMP kirby sprites_160
+  - first:
+      213: 172061265127033976
+    second: TEMP kirby sprites_161
+  - first:
+      213: 752382188006188215
+    second: TEMP kirby sprites_162
+  - first:
+      213: 2755736752468733715
+    second: TEMP kirby sprites_163
+  - first:
+      213: -6127056648156792608
+    second: TEMP kirby sprites_164
+  - first:
+      213: -2522821237886550401
+    second: TEMP kirby sprites_165
+  - first:
+      213: 1317994257878061681
+    second: TEMP kirby sprites_166
+  - first:
+      213: -7667001554632679807
+    second: TEMP kirby sprites_167
+  - first:
+      213: 6339192365382526742
+    second: TEMP kirby sprites_168
+  - first:
+      213: -4594989539591539181
+    second: TEMP kirby sprites_169
+  - first:
+      213: -4964403832622000544
+    second: TEMP kirby sprites_170
+  - first:
+      213: -2535150346610240390
+    second: TEMP kirby sprites_171
+  - first:
+      213: -3930810272490121166
+    second: TEMP kirby sprites_172
+  - first:
+      213: 8233341536378310245
+    second: TEMP kirby sprites_173
+  - first:
+      213: -1716470176338602401
+    second: TEMP kirby sprites_174
+  - first:
+      213: 6704099999065123555
+    second: TEMP kirby sprites_175
+  - first:
+      213: 2572851353820221485
+    second: TEMP kirby sprites_176
+  - first:
+      213: 2737403381293419553
+    second: TEMP kirby sprites_177
+  - first:
+      213: -6180820249387753345
+    second: TEMP kirby sprites_178
+  - first:
+      213: -8879471927920287323
+    second: TEMP kirby sprites_179
+  - first:
+      213: 2304539167263976755
+    second: TEMP kirby sprites_180
+  - first:
+      213: -4774435949822086653
+    second: TEMP kirby sprites_181
+  - first:
+      213: 467902897918317226
+    second: TEMP kirby sprites_182
+  - first:
+      213: 7134481955934136397
+    second: TEMP kirby sprites_183
+  - first:
+      213: 8566668616296412292
+    second: TEMP kirby sprites_184
+  - first:
+      213: 3230249394142936886
+    second: TEMP kirby sprites_185
+  - first:
+      213: -7177035024114018217
+    second: TEMP kirby sprites_186
+  - first:
+      213: -342694109661661882
+    second: TEMP kirby sprites_187
+  - first:
+      213: -7588386557861002633
+    second: TEMP kirby sprites_188
+  - first:
+      213: -786310512225924402
+    second: TEMP kirby sprites_189
+  - first:
+      213: 6940046281860646298
+    second: TEMP kirby sprites_198
+  - first:
+      213: 4537223591329664025
+    second: TEMP kirby sprites_199
+  - first:
+      213: -5431843670305849943
+    second: TEMP kirby sprites_200
+  - first:
+      213: 3086995415080922786
+    second: TEMP kirby sprites_201
+  - first:
+      213: -2905280252815719726
+    second: TEMP kirby sprites_202
+  - first:
+      213: 9027348211520691913
+    second: TEMP kirby sprites_203
+  - first:
+      213: -8740436649127722729
+    second: TEMP kirby sprites_204
+  - first:
+      213: -3387472919336563226
+    second: TEMP kirby sprites_205
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 17
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TEMP kirby sprites_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 623
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421b3ef4967605840800000000000000
+      internalID: 5210778470877212964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 623
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49649a4639ebd64c0800000000000000
+      internalID: -4292565329555929452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 573
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e478779e5e21240800000000000000
+      internalID: 4761120546979532406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_3
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 573
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a717f59813983b7c0800000000000000
+      internalID: -4056747993479548550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 573
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8384ebf1c3a60ad0800000000000000
+      internalID: -2736319670030924915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 573
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb12c5b86197b020800000000000000
+      internalID: 2357512808863767478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 573
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42100f38513568030800000000000000
+      internalID: 3496573512572731684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_7
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 573
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895a74d15760f74c0800000000000000
+      internalID: -4287701220161247848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 573
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17942e94cb8e84790800000000000000
+      internalID: -7545525280268203663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_9
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 573
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e494b089f5129e0800000000000000
+      internalID: -1647930882011869674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 573
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b1242cb84dd3600800000000000000
+      internalID: 449749234531572598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_11
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 573
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264499218fa7d4200800000000000000
+      internalID: 165923967165088866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 598
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d3034b2f8d50140800000000000000
+      internalID: 4685389524265614642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_17
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 598
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a113c445014fb9990800000000000000
+      internalID: -7378035213545492198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_18
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 597
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5628d4fa4eaa37730800000000000000
+      internalID: 3995725193578119781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 597
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82e267650aca17b0800000000000000
+      internalID: -5252663890816081270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_20
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 597
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e254871d07c76e490800000000000000
+      internalID: -7717344087460264658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 597
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c69da03d6d163e0800000000000000
+      internalID: -2062130952450511759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 598
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3739a32f832b950800000000000000
+      internalID: 6463291028246066095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 598
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e196244937f3e0000800000000000000
+      internalID: 4010415315118366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_24
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 599
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84984ce61247bba0800000000000000
+      internalID: -6073312906264931185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_25
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 599
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b47356f257dee90800000000000000
+      internalID: -6994805799814476952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 549
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a83ff8310e99b10800000000000000
+      internalID: 1988867085084887649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_48
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 549
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c94d7c0488313900800000000000000
+      internalID: 662372759996549572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 549
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97d3908371b888c0800000000000000
+      internalID: -3996749559654787170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_50
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 549
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71e90541a4bc4810800000000000000
+      internalID: 1750972959881290109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_51
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 549
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844f5e16d34522b40800000000000000
+      internalID: 5413982324664955976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_52
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 549
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d511442cfb1459fa0800000000000000
+      internalID: -5794653053688475299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_53
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 549
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0a1d0bda0887290800000000000000
+      internalID: -7892416863482568465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_54
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 549
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3b7a983253015e0800000000000000
+      internalID: -1940993012647087182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_55
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 549
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69780238327f50420800000000000000
+      internalID: 2595752492144822166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_69
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 525
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b365149fbf796640800000000000000
+      internalID: 5073726916009485234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_70
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 525
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5ecf4355fa7ae40800000000000000
+      internalID: 5667691436565128669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_71
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 525
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4daff8422b3457070800000000000000
+      internalID: 8103457536919730900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_72
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 525
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6423f4425ed69450800000000000000
+      internalID: 6095303590618014826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_73
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 525
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad662a0662207e950800000000000000
+      internalID: 6478148952849016538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 525
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbb6c86d2a34cad0800000000000000
+      internalID: -2682955511300179024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_75
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 525
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159e001733be48040800000000000000
+      internalID: 4649099321524939089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_76
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 525
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74598f47a154b7390800000000000000
+      internalID: -7819580348064819897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_77
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 525
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051f75a46d5f23840800000000000000
+      internalID: 5202490820285428048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_78
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 525
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53c95d800dd8c250800000000000000
+      internalID: 5965260700893430622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_92
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 493
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22652b007245a1cf0800000000000000
+      internalID: -280819500265089502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_93
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 493
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c17bb09dc35599460800000000000000
+      internalID: 7248918795057346332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_94
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 493
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbef9ec9ccd3e77f0800000000000000
+      internalID: -612984550260605252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_95
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 493
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7383c4fb12f80cc30800000000000000
+      internalID: 4377656212910258231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_96
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 493
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8939855a49fcc4fe0800000000000000
+      internalID: -1203358763078610024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_110
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 467
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dced2c1c7257eae0800000000000000
+      internalID: -1520155656212058927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_111
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 467
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c788bd8789d54a300800000000000000
+      internalID: 262437587738396796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_112
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 467
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ed274adb64aab10800000000000000
+      internalID: 1993483565386620569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_113
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 467
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afacb955f77851d50800000000000000
+      internalID: 6707416201005091578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_114
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 467
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9ee7f18104ade40800000000000000
+      internalID: 5681924352233105839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_115
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 467
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ab026970932f640800000000000000
+      internalID: 5112211231765215840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_116
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 468
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8152a3e8cb937920800000000000000
+      internalID: 2986902264991601036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_117
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 467
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7a37fcb9c7ee5e0800000000000000
+      internalID: -1878426985924679699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_130
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 425
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28dc4feb16eb66520800000000000000
+      internalID: 2695050754052640130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_131
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 425
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea23f09f890fd1790800000000000000
+      internalID: -7557620059853606226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_132
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 426
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7938c6194dea47a80800000000000000
+      internalID: -8469952771180952681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_133
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 426
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797328d62b8aa10c0800000000000000
+      internalID: -4604182184738015337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_134
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 426
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347aaedcf849a8710800000000000000
+      internalID: 1696331555014354755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_135
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 426
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0deb902633abac50800000000000000
+      internalID: 6677610325377543434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_136
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 426
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438eba4a8d039eba0800000000000000
+      internalID: -6059258116616493004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_137
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 426
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa8bb548987002f0800000000000000
+      internalID: -1008673721130710274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_138
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 425
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75f1dd4d09d826a0800000000000000
+      internalID: -6473685813181680260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_139
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 425
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de6d4c2ea49b0700800000000000000
+      internalID: 507662858797805269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_140
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 425
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c85b712f5185500800000000000000
+      internalID: 385081897664220198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_141
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 425
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b60f4c3a161c33c0800000000000000
+      internalID: -4378600435774191950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_142
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 425
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8062126f289813010800000000000000
+      internalID: 1166864974033790472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_143
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 425
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65585f06f690a0920800000000000000
+      internalID: 2957186479294874966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_144
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 424
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9596e4cf4a91b650800000000000000
+      internalID: 6246943825536128415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_145
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 424
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437eff7bfb57f05f0800000000000000
+      internalID: -788281943480342732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_146
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 401
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08b3686baf3796b0800000000000000
+      internalID: -5289689231900035057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_147
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 401
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a5cbbd668455b40800000000000000
+      internalID: 5428324532475419237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_148
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 401
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab06e88b836341080800000000000000
+      internalID: -9217682920078155590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_149
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 398
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ec5979fdeffa2e0800000000000000
+      internalID: -2112189463939133901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_150
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 401
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d97b9b69f34e720800000000000000
+      internalID: 2874492378762681701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_151
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 401
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63eb9759cda0fd690800000000000000
+      internalID: -7575324105697018314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_152
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 401
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6358106a9dfb38a0800000000000000
+      internalID: -6324182412232731794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_153
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 372
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9070199051a85c20800000000000000
+      internalID: 3195481303156813981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_154
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 372
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2253ca9fa57140e0800000000000000
+      internalID: -2287417738651282898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_155
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 372
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4c5886eb3c56da0800000000000000
+      internalID: -5952136109935442735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_156
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 372
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bf9351b174b45a0800000000000000
+      internalID: -6536052252552332397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_157
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 372
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e820bee70d27aa80800000000000000
+      internalID: -8455740263272273694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_158
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 372
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868a479a872846340800000000000000
+      internalID: 4856149752962918504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_159
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 372
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab0051d1840e87f60800000000000000
+      internalID: 8032416535745462458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_160
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 340
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5c328de6791c140800000000000000
+      internalID: 4738234785298892203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_161
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 340
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c408b1fc8436200800000000000000
+      internalID: 172061265127033976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_162
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 340
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4a07b1d9ff07a00800000000000000
+      internalID: 752382188006188215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_163
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 341
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f2361d9f75e3620800000000000000
+      internalID: 2755736752468733715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_164
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 340
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e83be7e07258faa0800000000000000
+      internalID: -6127056648156792608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_165
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 340
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ef5fb53732dfcd0800000000000000
+      internalID: -2522821237886550401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_166
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 308
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17293d46bc47a4210800000000000000
+      internalID: 1317994257878061681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_167
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 306
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e50c325b6599590800000000000000
+      internalID: -7667001554632679807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_168
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 303
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6176e7daed559f750800000000000000
+      internalID: 6339192365382526742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_169
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 262
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316b20aeb515b30c0800000000000000
+      internalID: -4594989539591539181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_170
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 294
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0665afa4405ea1bb0800000000000000
+      internalID: -4964403832622000544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_171
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 266
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74961a013651dcd0800000000000000
+      internalID: -2535150346610240390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_172
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 266
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23815cc22e4f279c0800000000000000
+      internalID: -3930810272490121166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_173
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 270
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e4c465184b24270800000000000000
+      internalID: 8233341536378310245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_174
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 270
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5619c7087fdd28e0800000000000000
+      internalID: -1716470176338602401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_175
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 269
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea29f6ed6fb90d50800000000000000
+      internalID: 6704099999065123555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_176
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 224
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20565cbcaa94b320800000000000000
+      internalID: 2572851353820221485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_177
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 224
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c82f43fd53df520800000000000000
+      internalID: 2737403381293419553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_178
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 224
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70a3b60bb0593aa0800000000000000
+      internalID: -6180820249387753345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_179
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 224
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a12247b357c5c480800000000000000
+      internalID: -8879471927920287323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_180
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 225
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d6eb3a92e5bff10800000000000000
+      internalID: 2304539167263976755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_181
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 228
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302fff7bccbcdbdb0800000000000000
+      internalID: -4774435949822086653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_182
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 229
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa21cc3e4335e7600800000000000000
+      internalID: 467902897918317226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_183
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 232
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4863efe985c20360800000000000000
+      internalID: 7134481955934136397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_184
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 192
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484b5d6e7bbe2e670800000000000000
+      internalID: 8566668616296412292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_185
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f7fc995b624dc20800000000000000
+      internalID: 3230249394142936886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_186
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 192
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758952fcbac066c90800000000000000
+      internalID: -7177035024114018217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_187
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 192
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6457ffed5818e3bf0800000000000000
+      internalID: -342694109661661882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_188
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 161
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772885071a2a0b690800000000000000
+      internalID: -7588386557861002633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_189
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 161
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca4e9351c67615f0800000000000000
+      internalID: -786310512225924402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_198
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 116
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95031bc25fff4060800000000000000
+      internalID: 6940046281860646298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_199
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 116
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c0abb21d477fe30800000000000000
+      internalID: 4537223591329664025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_200
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad37f306f63e94b0800000000000000
+      internalID: -5431843670305849943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_201
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae682379f537da20800000000000000
+      internalID: 3086995415080922786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_202
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d246fdb00f5ea7d0800000000000000
+      internalID: -2905280252815719726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_203
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 115
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ced2739e55974d70800000000000000
+      internalID: 9027348211520691913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_204
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 114
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711cfea2d2bb3b680800000000000000
+      internalID: -8740436649127722729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TEMP kirby sprites_205
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 114
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed40b4d3574df0d0800000000000000
+      internalID: -3387472919336563226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
