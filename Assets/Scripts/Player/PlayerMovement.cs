@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public float remainingDashes = 1;
 
-    [HideInInspector] public float lookingDir = 1;
+    public float lookingDir = 1;
 
     float moveInput = 0;
     bool grounded;
@@ -195,21 +195,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
-                if((currentState is DashState || currentState is WallJumpState))
-                {
-                    if (lookingDir == -1)
-                    {
-                        wallClingingLeft = true;
-                        return;
-                    }
-                    
-                }
-                else
-                {
-                    wallClingingLeft = true;
-                    return;
-                }
-               
+                wallClingingLeft = true;
+                return;
             }
         }
         wallClingingLeft = false;
@@ -222,20 +209,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
-                if ((currentState is DashState || currentState is WallJumpState))
-                {
-                    if (lookingDir == 1)
-                    {
-                        wallClingingRight = true;
-                        return;
-                    }
-
-                }
-                else
-                {
-                    wallClingingRight = true;
-                    return;
-                }
+                wallClingingRight = true;
+                return;
             }
         }
         wallClingingRight = false;
@@ -268,6 +243,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Moving", Mathf.Abs(moveInput) > 0);
         animator.SetBool("Grounded", grounded);
         animator.SetFloat("yVelocity", body.velocity.y);
-        animator.SetBool("WallCling", wallClingingLeft || wallClingingRight);
+        animator.SetBool("WallCling", wallClingingRight || wallClingingLeft);
     }
 }
