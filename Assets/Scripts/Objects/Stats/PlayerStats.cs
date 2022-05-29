@@ -27,7 +27,8 @@ public class PlayerStats : ScriptableObject
     [Header("Dash")]
     [SerializeField] float _dashTime;
     [SerializeField] float _dashDistance;
-    [SerializeField] float _maxDashes;
+    [SerializeField] int _maxDashes;
+    [SerializeField] float _dashCD;
 
 
 
@@ -46,5 +47,6 @@ public class PlayerStats : ScriptableObject
     public float wallJumpTime => _wallJumpTime;
     public float dashTime => _dashTime;
     public float dashDistance => _dashDistance;
-    public float maxDashes => _maxDashes;
+    public int maxDashes => _maxDashes;
+    public float dashCD => _dashCD;
 }

@@ -22,8 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     float moveInput = 0;
     bool grounded;
-    bool wallClingingLeft;
-    bool wallClingingRight;
+    int wallCling = 0;
 
     Rigidbody2D body;
     PlayerInput input;
@@ -84,8 +83,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //movement hitbox checks
         Grounded();
-        WallClingingLeft();
-        WallClingingRight();
+        WallClinging();
 
         SetAnimatorVars();
     }
@@ -131,14 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void WallJump()
     {
-        if (wallClingingLeft)
-        {
-            body.velocity = stats.wallJumpForce;
-        }
-        else if (wallClingingRight)
-        {
-            body.velocity = new Vector2(-stats.wallJumpForce.x, stats.wallJumpForce.y);
-        }
+        body.velocity = new Vector2(lookingDir * stats.wallJumpForce.x, stats.wallJumpForce.y);
 
         StartCoroutine(WallJumpCut());
     }
@@ -187,45 +178,41 @@ public class PlayerMovement : MonoBehaviour
         }
         grounded = false;
     }
-    void WallClingingLeft()
+    void WallClinging()
     {
         List<Collider2D> colliders = new List<Collider2D>();
+
+        //first check left
         leftWallClingingCollider.GetContacts(colliders);
         foreach (var hit in colliders)
         {
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
-                wallClingingLeft = true;
+                wallCling = -1;
                 return;
             }
         }
-        wallClingingLeft = false;
-    }
-    void WallClingingRight()
-    {
-        List<Collider2D> colliders = new List<Collider2D>();
+
+        //then right
         rightWallClingingCollider.GetContacts(colliders);
         foreach (var hit in colliders)
         {
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
-                wallClingingRight = true;
+                wallCling = 1;
                 return;
             }
         }
-        wallClingingRight = false;
-    }
 
+        //can only reach here not touching either wall
+        wallCling = 0;
+    }
 
     void SetAnimatorVars()
     {
-        if (wallClingingLeft)
+        if(wallCling != 0)
         {
-            lookingDir = 1;
-        }
-        else if (wallClingingRight)
-        {
-            lookingDir = -1;
+            lookingDir = -wallCling;
         }
         else if (moveInput != 0)
         {
@@ -243,6 +230,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("Moving", Mathf.Abs(moveInput) > 0);
         animator.SetBool("Grounded", grounded);
         animator.SetFloat("yVelocity", body.velocity.y);
-        animator.SetBool("WallCling", wallClingingRight || wallClingingLeft);
+        animator.SetInteger("WallCling", wallCling);
     }
 }

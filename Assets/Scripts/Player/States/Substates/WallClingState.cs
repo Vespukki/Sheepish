@@ -12,7 +12,6 @@ public class WallClingState : GroundedState
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-
     }
 
     public override void ModifyPhysics(PlayerMovement mover)
