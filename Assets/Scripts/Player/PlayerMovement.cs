@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D groundedCollider;
     [SerializeField] Collider2D leftWallClingingCollider;
     [SerializeField] Collider2D rightWallClingingCollider;
+    public Collider2D downAttackCollider;
 
     [HideInInspector] public PlayerState currentState;
 
@@ -24,12 +25,16 @@ public class PlayerMovement : MonoBehaviour
     bool grounded;
     int wallCling = 0;
 
+    [HideInInspector] public bool jumping = false;
+
     //timers
     [HideInInspector] public float lastDashTimer = 100;
 
     //coroutines
     Coroutine wallJumpCutCo;
 
+    //so you dont hit things multiple times in the same cast
+    List<GameObject> alreadyHit = new List<GameObject>();
 
     Rigidbody2D body;
     PlayerInput input;
@@ -39,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     InputAction move;
     InputAction jump;
     InputAction dash;
+    InputAction downAttack;
+    InputAction drillAttack;
     #endregion
 
     private void Awake()
@@ -51,12 +58,16 @@ public class PlayerMovement : MonoBehaviour
         move = input.actions.FindAction("Move");
         jump = input.actions.FindAction("Jump");
         dash = input.actions.FindAction("Dash");
+        downAttack = input.actions.FindAction("Down Attack");
+        drillAttack = input.actions.FindAction("Drill Attack");
 
         move.performed += MoveInput;
         move.canceled += MoveInput;
         jump.started += JumpInput;
         jump.canceled += CancelJumpInput;
         dash.started += DashInput;
+        downAttack.started += DownAttackInput;
+        drillAttack.started += DrillAttackInput;
     }
 
     void MoveInput(InputAction.CallbackContext context)
@@ -71,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CancelJumpInput(InputAction.CallbackContext context)
     {
-        if(currentState is JumpingState)
+        if (currentState is JumpingState || (currentState is AirDownAttackState && jumping == true))
         {
             animator.SetTriggerOneFixedFrame(this, "JumpCut");
             JumpCut();
@@ -86,6 +97,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }    
 
+    void DownAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.ReadValue<float>() <= 0) return;
+        animator.SetTriggerOneFixedFrame(this, "DownAttack");
+    }
+
+    void DrillAttackInput(InputAction.CallbackContext context)
+    {
+        animator.SetTriggerOneFixedFrame(this, "DrillAttack");
+    }
+
     private void Update()
     {
         UpdateTimers();
@@ -93,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         //movement hitbox checks
         Grounded();
         WallClinging();
+        DownAttack();
 
         SetAnimatorVars();
     }
@@ -102,6 +125,11 @@ public class PlayerMovement : MonoBehaviour
         if(currentState != null)
         {
             currentState.PhysicsUpdate(this);
+        }
+
+        if(body.velocity.y < 0)
+        {
+            jumping = false;
         }
     }
 
@@ -126,7 +154,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        body.velocity = Vector2.zero;
+        jumping = true;
+        body.velocity = new Vector2(body.velocity.x, 0);
 
         body.velocity += (2 * stats.jumpHeight / stats.jumpTime) * Vector2.up; //kinematics to make sure that jump is always same height
     }
@@ -180,7 +209,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    public void StartAttack(Collider2D collider)
+    {
+        collider.gameObject.SetActive(true);
+    }
+    public void EndAttack(Collider2D collider)
+    {
+        collider.gameObject.SetActive(false);
+        alreadyHit.Clear();
+    }
 
     void Grounded()
     {
@@ -228,22 +265,44 @@ public class PlayerMovement : MonoBehaviour
         wallCling = 0;
     }
 
+    void DownAttack()
+    {
+        if(!downAttackCollider.gameObject.activeSelf) return;
+
+
+        List<Collider2D> colliders = new List<Collider2D>();
+
+        downAttackCollider.GetContacts(colliders);
+
+        foreach (var hit in colliders)
+        {
+            if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
+            {
+                iHit.OnHit(this);
+                if(alreadyHit.Count == 0)
+                {
+                    jumping = false;
+                    body.velocity = new Vector2(body.velocity.x, stats.airKnockback);
+                }
+                alreadyHit.Add(hit.gameObject);
+                return;
+            }
+        }
+    }
+
+
     void SetAnimatorVars()
     {
-        if(wallCling != 0)
+        if(wallCling != 0 && (currentState is WallClingState))
         {
             lookingDir = -wallCling;
         }
-        else if (moveInput != 0)
+        else if(currentState.canChangeDir && moveInput != 0)
         {
             lookingDir = moveInput;
         }
 
-
-        if (!(currentState is DashState || currentState is WallJumpState))
-        {
-            spriter.flipX = lookingDir == -1;
-        }
+        spriter.flipX = lookingDir == -1;
 
 
         //sets animator variables
@@ -257,6 +316,8 @@ public class PlayerMovement : MonoBehaviour
     {
         lastDashTimer += Time.deltaTime;
     }
+
+
 
 
 }

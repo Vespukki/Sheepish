@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerState : StateMachineBehaviour
 {
     protected static PlayerState lastState;
+    public bool canChangeDir = true;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
