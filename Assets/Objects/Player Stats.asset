@@ -29,6 +29,7 @@ MonoBehaviour:
   _dashDistance: 4
   _maxDashes: 1
   _dashCD: 0.17
-  _airKnockback: 12
+  _knockback: -30
   _drillSpeed: 50
-  _drillKnockback: 14
+  _drillKnockback: {x: -8, y: 22}
+  _drillKnockbackTime: 0.5

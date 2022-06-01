@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetRock : MonoBehaviour, IHittable
+public class TargetRock : Enemy
 {
-    public void OnHit(PlayerMovement playerMover)
-    {
-        Debug.Log("target rock hit");
-    }
+   
 }

@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1139c6f522fd84a879b90200588bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Target Rock
 --- !u!50 &394759002
 Rigidbody2D:
   serializedVersion: 4
@@ -1305,7 +1306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394759000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.39, y: 11.95, z: 0}
+  m_LocalPosition: {x: 9.47, y: 10.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1626,7 +1627,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.86, y: 0.07}
+  m_Size: {x: 0.91959584, y: 0.07000005}
   m_EdgeRadius: 0
 --- !u!1 &547447863
 GameObject:
@@ -1914,6 +1915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1139c6f522fd84a879b90200588bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Target Rock
 --- !u!50 &965098310
 Rigidbody2D:
   serializedVersion: 4
@@ -2053,7 +2055,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965098308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6, y: 8.76, z: 0}
+  m_LocalPosition: {x: 2.88, y: 10.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2103,6 +2105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1139c6f522fd84a879b90200588bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Target Rock
 --- !u!50 &1127740659
 Rigidbody2D:
   serializedVersion: 4
@@ -2538,6 +2541,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1139c6f522fd84a879b90200588bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Target Rock
+--- !u!1 &1217466762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217466763}
+  - component: {fileID: 1217466764}
+  m_Layer: 0
+  m_Name: Drill Attack Hitbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1217466763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217466762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1932538819}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1217466764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217466762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.37288767, y: -0.47871876}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8179997, y: 0.40715408}
+  m_EdgeRadius: 0
 --- !u!1 &1269282375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,7 +3959,7 @@ GameObject:
   - component: {fileID: 1870761089}
   - component: {fileID: 1870761090}
   m_Layer: 0
-  m_Name: Down Attack Hitbox
+  m_Name: Side Attack Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3931,7 +3992,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000029802322, y: -0.46429443}
+  m_Offset: {x: 0.734986, y: -0.17574811}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3942,7 +4003,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6249606, y: 1.057106}
+  m_Size: {x: 1.1227366, y: 0.68591833}
   m_EdgeRadius: 0
 --- !u!1 &1915204726
 GameObject:
@@ -4162,6 +4223,7 @@ Transform:
   - {fileID: 665851011}
   - {fileID: 547447864}
   - {fileID: 1870761089}
+  - {fileID: 1217466763}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4272,11 +4334,13 @@ MonoBehaviour:
   leftWallClingingCollider: {fileID: 665851012}
   rightWallClingingCollider: {fileID: 547447865}
   downAttackCollider: {fileID: 1870761090}
+  drillAttackCollider: {fileID: 1217466764}
   currentState: {fileID: 0}
   remainingDashes: 1
   lookingDir: 1
   jumping: 0
   lastDashTimer: 0
+  knockbackTimer: 100
 --- !u!1 &1967009034
 GameObject:
   m_ObjectHideFlags: 0

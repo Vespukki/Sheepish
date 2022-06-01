@@ -83,6 +83,39 @@ TextureImporter:
   - first:
       213: -6721333416643740167
     second: Edward_18
+  - first:
+      213: -2177055493240556352
+    second: Edward_19
+  - first:
+      213: 6918094417715227944
+    second: Edward_20
+  - first:
+      213: 5144432247039677925
+    second: Edward_21
+  - first:
+      213: -7697540014846562160
+    second: Edward_22
+  - first:
+      213: -8254416884329256491
+    second: Edward_23
+  - first:
+      213: -3810234596246039763
+    second: Edward_24
+  - first:
+      213: -2300394524474862962
+    second: Edward_25
+  - first:
+      213: 5235230642447670707
+    second: Edward_26
+  - first:
+      213: 6848842576351770623
+    second: Edward_27
+  - first:
+      213: 5198152140862575608
+    second: Edward_28
+  - first:
+      213: 713726813248752667
+    second: Edward_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -188,7 +221,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 207
+        y: 335
         width: 31
         height: 35
       alignment: 0
@@ -209,7 +242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 207
+        y: 335
         width: 33
         height: 35
       alignment: 0
@@ -230,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 145
-        y: 207
+        y: 335
         width: 33
         height: 35
       alignment: 0
@@ -250,8 +283,8 @@ TextureImporter:
       name: Edward_3
       rect:
         serializedVersion: 2
-        x: 208
-        y: 207
+        x: 209
+        y: 335
         width: 33
         height: 35
       alignment: 0
@@ -272,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 271
-        y: 207
+        y: 335
         width: 36
         height: 35
       alignment: 0
@@ -293,7 +326,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 143
+        y: 271
         width: 35
         height: 35
       alignment: 0
@@ -314,7 +347,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 83
-        y: 143
+        y: 271
         width: 32
         height: 35
       alignment: 0
@@ -335,7 +368,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 145
-        y: 143
+        y: 271
         width: 35
         height: 36
       alignment: 0
@@ -356,7 +389,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 207
-        y: 143
+        y: 271
         width: 36
         height: 35
       alignment: 0
@@ -377,7 +410,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 273
-        y: 147
+        y: 275
         width: 36
         height: 32
       alignment: 0
@@ -398,7 +431,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 83
+        y: 211
         width: 36
         height: 32
       alignment: 0
@@ -419,7 +452,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 81
-        y: 83
+        y: 211
         width: 36
         height: 31
       alignment: 0
@@ -440,7 +473,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 148
-        y: 82
+        y: 210
         width: 31
         height: 33
       alignment: 0
@@ -461,7 +494,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 212
-        y: 82
+        y: 210
         width: 31
         height: 33
       alignment: 0
@@ -482,7 +515,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 277
-        y: 82
+        y: 210
         width: 31
         height: 33
       alignment: 0
@@ -503,7 +536,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 15
+        y: 142
         width: 42
         height: 32
       alignment: 9
@@ -524,7 +557,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 15
+        y: 143
         width: 40
         height: 32
       alignment: 9
@@ -545,7 +578,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 150
-        y: 17
+        y: 145
         width: 30
         height: 34
       alignment: 0
@@ -566,7 +599,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 214
-        y: 17
+        y: 145
         width: 30
         height: 34
       alignment: 0
@@ -578,6 +611,237 @@ TextureImporter:
       bones: []
       spriteID: 9fdbcf36ed609b2a0800000000000000
       internalID: -6721333416643740167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_19
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 141
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4751d309b89c1e0800000000000000
+      internalID: -2177055493240556352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_20
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 78
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d67822832020060800000000000000
+      internalID: 6918094417715227944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_21
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 80
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e55ddf4fd1b46740800000000000000
+      internalID: 5144432247039677925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_22
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 77
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09037bac328dc2590800000000000000
+      internalID: -7697540014846562160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_23
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 78
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d96195d39b627d80800000000000000
+      internalID: -8254416884329256491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_24
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 77
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23d9db72d35f1bc0800000000000000
+      internalID: -3810234596246039763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_25
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 14
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e821c653e5b5310e0800000000000000
+      internalID: -2300394524474862962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_26
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 17
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd5558288647a840800000000000000
+      internalID: 5235230642447670707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 17
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7b406590afb0f50800000000000000
+      internalID: 6848842576351770623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_28
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 17
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3dc84c4db832840800000000000000
+      internalID: 5198152140862575608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edward_29
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 17
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c0d5251caa7e900800000000000000
+      internalID: 713726813248752667
       vertices: []
       indices: 
       edges: []

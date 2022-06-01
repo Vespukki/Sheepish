@@ -31,11 +31,12 @@ public class PlayerStats : ScriptableObject
     [SerializeField] float _dashCD;
 
     [Header("Attack")]
-    [SerializeField] float _airKnockback;
+    [SerializeField] float _knockback;
 
     [Header("Drill")]
     [SerializeField] float _drillSpeed;
-    [SerializeField] float _drillKnockback;
+    [SerializeField] Vector2 _drillKnockback;
+    [SerializeField] float _drillKnockbackTime;
 
 
 
@@ -57,7 +58,9 @@ public class PlayerStats : ScriptableObject
     public float dashDistance => _dashDistance;
     public int maxDashes => _maxDashes;
     public float dashCD => _dashCD;
-    public float airKnockback => _airKnockback;
+    public float knockback => _knockback;
     public float drillSpeed => _drillSpeed;
-    public float drillKnockback => _drillKnockback;
+    public Vector2 drillKnockback => _drillKnockback;
+    public float drillKnockbackTime => _drillKnockbackTime;
+
 }

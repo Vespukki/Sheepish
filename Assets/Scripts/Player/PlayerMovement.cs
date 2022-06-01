@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D leftWallClingingCollider;
     [SerializeField] Collider2D rightWallClingingCollider;
     public Collider2D downAttackCollider;
+    public Collider2D drillAttackCollider;
 
     [HideInInspector] public PlayerState currentState;
 
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     //timers
     [HideInInspector] public float lastDashTimer = 100;
+    [HideInInspector] public float knockbackTimer = 100;
 
     //coroutines
     Coroutine wallJumpCutCo;
@@ -82,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CancelJumpInput(InputAction.CallbackContext context)
     {
-        if (currentState is JumpingState || (currentState is AirDownAttackState && jumping == true))
+        if (currentState is JumpingState || (currentState is SideAttackState && jumping == true))
         {
             animator.SetTriggerOneFixedFrame(this, "JumpCut");
             JumpCut();
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     void DownAttackInput(InputAction.CallbackContext context)
     {
         if (context.ReadValue<float>() <= 0) return;
-        animator.SetTriggerOneFixedFrame(this, "DownAttack");
+        animator.SetTriggerOneFixedFrame(this, "SideAttack");
     }
 
     void DrillAttackInput(InputAction.CallbackContext context)
@@ -110,19 +112,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        UpdateTimers();
 
         //movement hitbox checks
         Grounded();
         WallClinging();
-        DownAttack();
+        SideAttack();
+        DrillAttack();
 
         SetAnimatorVars();
     }
 
     private void FixedUpdate()
     {
-        if(currentState != null)
+        UpdateTimers();
+
+        if (currentState != null)
         {
             currentState.PhysicsUpdate(this);
         }
@@ -212,9 +216,11 @@ public class PlayerMovement : MonoBehaviour
     public void StartAttack(Collider2D collider)
     {
         collider.gameObject.SetActive(true);
+        collider.offset = new Vector2(lookingDir * collider.offset.x, collider.offset.y);
     }
     public void EndAttack(Collider2D collider)
     {
+        collider.offset = new Vector2(lookingDir * collider.offset.x, collider.offset.y);
         collider.gameObject.SetActive(false);
         alreadyHit.Clear();
     }
@@ -264,8 +270,7 @@ public class PlayerMovement : MonoBehaviour
         //can only reach here not touching either wall
         wallCling = 0;
     }
-
-    void DownAttack()
+    void SideAttack()
     {
         if(!downAttackCollider.gameObject.activeSelf) return;
 
@@ -282,14 +287,39 @@ public class PlayerMovement : MonoBehaviour
                 if(alreadyHit.Count == 0)
                 {
                     jumping = false;
-                    body.velocity = new Vector2(body.velocity.x, stats.airKnockback);
+                    body.velocity = new Vector2(stats.knockback * lookingDir, body.velocity.y);
                 }
                 alreadyHit.Add(hit.gameObject);
                 return;
             }
         }
     }
+    void DrillAttack()
+    {
+        if (!drillAttackCollider.gameObject.activeSelf) return;
 
+
+        List<Collider2D> colliders = new List<Collider2D>();
+
+        drillAttackCollider.GetContacts(colliders);
+
+        foreach (var hit in colliders)
+        {
+            if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
+            {
+                iHit.OnHit(this);
+                if (alreadyHit.Count == 0)
+                {
+                    jumping = false;
+                    body.velocity = new Vector2(stats.drillKnockback.x * lookingDir, stats.drillKnockback.y);
+                    knockbackTimer = 0;
+                    animator.SetTrigger("DrillAttackCut");
+                }
+                alreadyHit.Add(hit.gameObject);
+                return;
+            }
+        }
+    }
 
     void SetAnimatorVars()
     {
@@ -314,7 +344,8 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateTimers()
     {
-        lastDashTimer += Time.deltaTime;
+        lastDashTimer += Time.fixedDeltaTime;
+        knockbackTimer += Time.fixedDeltaTime;
     }
 
 
