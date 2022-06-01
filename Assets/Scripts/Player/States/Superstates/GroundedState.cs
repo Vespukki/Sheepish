@@ -10,7 +10,7 @@ public class GroundedState : PlayerState
      
         if(!(lastState is GroundedState))
         {
-            animator.GetComponent<PlayerMovement>().remainingDashes = animator.GetComponent<PlayerMovement>().stats.maxDashes;
+            animator.GetComponent<PlayerMovement>().GroundReset();
         }
     }
 

@@ -8,6 +8,5 @@ public class Enemy : MonoBehaviour, IHittable
 
     public void OnHit(PlayerMovement playerMover)
     {
-        Debug.Log(enemyName + " hit");
     }
 }

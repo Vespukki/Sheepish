@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 58772b4843be77a46994fa37ab6bd99a
+guid: b069aca147e27fb4286e15a7ce6a592e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3402195819417250576
-    second: EdwardSideAttack_0
+      213: 5551362506748538341
+    second: EdwardDownAttack_0
   - first:
-      213: 7636594631086246829
-    second: EdwardSideAttack_1
+      213: -5992241389614388896
+    second: EdwardDownAttack_1
   - first:
-      213: -4279797354378176410
-    second: EdwardSideAttack_2
+      213: -4430968812224201371
+    second: EdwardDownAttack_2
   - first:
-      213: -1185562928044656389
-    second: EdwardSideAttack_3
-  - first:
-      213: -1628696181368686047
-    second: EdwardSideAttack_4
+      213: 3645527722242936958
+    second: EdwardDownAttack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,106 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EdwardSideAttack_0
+      name: EdwardDownAttack_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 143
-        width: 34
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 32
+        y: 81
+        width: 76
+        height: 41
+      alignment: 9
+      pivot: {x: 0.23411722, y: 0.42658567}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f4d0578de8f8c0d0800000000000000
-      internalID: -3402195819417250576
+      spriteID: 5ed2b2a99c66a0d40800000000000000
+      internalID: 5551362506748538341
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EdwardSideAttack_1
+      name: EdwardDownAttack_1
       rect:
         serializedVersion: 2
         x: 160
-        y: 143
-        width: 82
-        height: 37
+        y: 82
+        width: 76
+        height: 41
       alignment: 9
-      pivot: {x: 0.23249166, y: 0.5}
+      pivot: {x: 0.23411722, y: 0.42658567}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab0d874b52aaf960800000000000000
-      internalID: 7636594631086246829
+      spriteID: 06924a3543847dca0800000000000000
+      internalID: -5992241389614388896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EdwardSideAttack_2
+      name: EdwardDownAttack_2
       rect:
         serializedVersion: 2
-        x: 37
-        y: 77
-        width: 73
-        height: 37
+        x: 31
+        y: 17
+        width: 77
+        height: 41
       alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      pivot: {x: 0.23411722, y: 0.42658567}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 668d1a54bfa1b94c0800000000000000
-      internalID: -4279797354378176410
+      spriteID: 56dba8077590282c0800000000000000
+      internalID: -4430968812224201371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EdwardSideAttack_3
+      name: EdwardDownAttack_3
       rect:
         serializedVersion: 2
-        x: 177
-        y: 79
-        width: 38
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 162
+        y: 17
+        width: 72
+        height: 42
+      alignment: 9
+      pivot: {x: 0.23411722, y: 0.42658567}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8b60f5cc80c8fe0800000000000000
-      internalID: -1185562928044656389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EdwardSideAttack_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 15
-        width: 34
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12afb76c375b569e0800000000000000
-      internalID: -1628696181368686047
+      spriteID: e7011270624879230800000000000000
+      internalID: 3645527722242936958
       vertices: []
       indices: 
       edges: []

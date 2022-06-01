@@ -313,6 +313,7 @@ public class PlayerMovement : MonoBehaviour
                     jumping = false;
                     body.velocity = new Vector2(stats.drillKnockback.x * lookingDir, stats.drillKnockback.y);
                     knockbackTimer = 0;
+                    GroundReset();
                     animator.SetTrigger("DrillAttackCut");
                 }
                 alreadyHit.Add(hit.gameObject);
@@ -342,6 +343,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetInteger("WallCling", wallCling);
     }
 
+    public void GroundReset()
+    {
+        remainingDashes = stats.maxDashes;
+    }
     void UpdateTimers()
     {
         lastDashTimer += Time.fixedDeltaTime;

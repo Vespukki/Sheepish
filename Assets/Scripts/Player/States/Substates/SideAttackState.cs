@@ -18,8 +18,4 @@ public class SideAttackState : AirState
 
         animator.GetComponent<PlayerMovement>().EndAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
     }
-
-    public override void PhysicsUpdate(PlayerMovement mover)
-    {
-    }
 }
