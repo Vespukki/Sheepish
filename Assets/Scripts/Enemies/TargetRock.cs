@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class TargetRock : Enemy
 {
-   
+    public override void AI()
+    {
+        //kek
+    }
 }

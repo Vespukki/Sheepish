@@ -17,9 +17,9 @@ MonoBehaviour:
   _decceleration: 9
   _jerk: 1.2
   _jumpHeight: 4
-  _jumpTime: 0.5
+  _jumpTime: 0.4
   _maxFallSpeed: -17
-  _fallSpeedMultiplier: 1.25
+  _fallSpeedMultiplier: 1
   _inputForgivenessFrames: 5
   _wallClingFallSpeed: 4
   _wallClingAcceleration: 6
@@ -29,7 +29,8 @@ MonoBehaviour:
   _dashDistance: 4
   _maxDashes: 1
   _dashCD: 0.17
-  _knockback: -30
+  _knockback: -5
+  _attackKnockbackTime: 0.15
   _drillSpeed: 50
-  _drillKnockback: {x: -8, y: 22}
-  _drillKnockbackTime: 0.5
+  _drillKnockback: {x: -15, y: 25}
+  _drillKnockbackTime: 0.2

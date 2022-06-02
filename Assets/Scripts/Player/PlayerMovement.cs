@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     int wallCling = 0;
 
     [HideInInspector] public bool jumping = false;
+    bool canMove = true;
 
     //timers
     [HideInInspector] public float lastDashTimer = 100;
@@ -80,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
     void JumpInput(InputAction.CallbackContext context)
     {
         animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "Jump");
+
+        if(currentState is SideAttackState && grounded)
+        {
+            Jump();
+        }
     }
 
     void CancelJumpInput(InputAction.CallbackContext context)
@@ -113,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        //movement hitbox checks
+        //hitbox checks
         Grounded();
         WallClinging();
         SideAttack();
@@ -139,6 +145,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement()
     {
+        if (!canMove) return;
+
         float targetSpeed = moveInput * stats.speed; //dir to move in at speed
         float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
 
@@ -288,12 +296,21 @@ public class PlayerMovement : MonoBehaviour
                 {
                     jumping = false;
                     body.velocity = new Vector2(stats.knockback * lookingDir, body.velocity.y);
+                    StartCoroutine(CantMove(stats.attackKnockbackTime));
                 }
                 alreadyHit.Add(hit.gameObject);
                 return;
             }
         }
     }
+
+    IEnumerator CantMove(float time)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(time);
+        canMove = true;
+    }
+
     void DrillAttack()
     {
         if (!drillAttackCollider.gameObject.activeSelf) return;
@@ -352,8 +369,4 @@ public class PlayerMovement : MonoBehaviour
         lastDashTimer += Time.fixedDeltaTime;
         knockbackTimer += Time.fixedDeltaTime;
     }
-
-
-
-
 }

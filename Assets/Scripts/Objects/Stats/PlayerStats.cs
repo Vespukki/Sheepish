@@ -32,6 +32,7 @@ public class PlayerStats : ScriptableObject
 
     [Header("Attack")]
     [SerializeField] float _knockback;
+    [SerializeField] float _attackKnockbackTime;
 
     [Header("Drill")]
     [SerializeField] float _drillSpeed;
@@ -59,6 +60,7 @@ public class PlayerStats : ScriptableObject
     public int maxDashes => _maxDashes;
     public float dashCD => _dashCD;
     public float knockback => _knockback;
+    public float attackKnockbackTime => _attackKnockbackTime;
     public float drillSpeed => _drillSpeed;
     public Vector2 drillKnockback => _drillKnockback;
     public float drillKnockbackTime => _drillKnockbackTime;
