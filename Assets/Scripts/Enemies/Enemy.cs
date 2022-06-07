@@ -5,24 +5,15 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour, IHittable
 {
     public string enemyName = "ERROR NO NAME";
-    [HideInInspector] public GameObject target;
-
-    private void OnEnable()
-    {
-        PlayerMovement.OnPlayerAwake += SetTarget;
-    }
-    private void OnDisable()
-    {
-        PlayerMovement.OnPlayerAwake -= SetTarget;
-    }
 
     public void OnHit(PlayerMovement playerMover)
     {
 
     }
 
-    void SetTarget(GameObject player)
+    private void FixedUpdate()
     {
-        target = player;
+        AI();
     }
+    public abstract void AI();
 }

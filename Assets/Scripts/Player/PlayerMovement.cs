@@ -49,10 +49,6 @@ public class PlayerMovement : MonoBehaviour
     InputAction dash;
     InputAction downAttack;
     InputAction drillAttack;
-
-    //events
-    public delegate void PlayerAwakeDelegate(GameObject player);
-    public static event PlayerAwakeDelegate OnPlayerAwake;
     #endregion
 
     private void Awake()
@@ -75,11 +71,6 @@ public class PlayerMovement : MonoBehaviour
         dash.started += DashInput;
         downAttack.started += DownAttackInput;
         drillAttack.started += DrillAttackInput;
-
-        if(OnPlayerAwake != null)
-        {
-            OnPlayerAwake(this.gameObject);
-        }
     }
 
     void MoveInput(InputAction.CallbackContext context)
@@ -110,19 +101,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if(remainingDashes > 0 && lastDashTimer >= stats.dashCD)
         {
-            animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "Dash");
+            animator.SetTriggerOneFixedFrame(this, "Dash");
         }
     }    
 
     void DownAttackInput(InputAction.CallbackContext context)
     {
         if (context.ReadValue<float>() <= 0) return;
-        animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "SideAttack");
+        animator.SetTriggerOneFixedFrame(this, "SideAttack");
     }
 
     void DrillAttackInput(InputAction.CallbackContext context)
     {
-        animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "DrillAttack");
+        animator.SetTriggerOneFixedFrame(this, "DrillAttack");
     }
 
     private void Update()
@@ -209,10 +200,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Dash()
     {
-        if(moveInput != 0)
-        {
-            lookingDir = moveInput;
-        }
         spriter.flipX = lookingDir == -1;
         StopCoroutine(DashCut());
         animator.ResetTrigger("DashCut");

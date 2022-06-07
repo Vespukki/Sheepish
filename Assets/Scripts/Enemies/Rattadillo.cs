@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class Rattadillo : Enemy
 {
-    [HideInInspector] public int facingDir = 1;
-    [HideInInspector] public RattadilloState currentState;
-    [HideInInspector] public Vector2 targetDist;
-
-    [Header("Rolling")]
-    public float rollSpeed;
-    public float rollAcceleration;
-    public float rollDecceleration;
-
-    [Header("Logic")]
-    public Vector2 awakeDist = new Vector2();
-    public Vector2 warningDist = new Vector2();
-    public Vector2 rollingDist = new Vector2();
-
+    int facingDir = 1;
+    [SerializeField] float speed;
+    [SerializeField] float acceleration;
+    [SerializeField] float decceleration;
+ 
     [SerializeField] Collider2D frontWallCollider;
 
     Rigidbody2D body;
     Animator animator;
-
-    //events that are referenced by mechanim
-    public delegate void HitWall(Animator animator);
-    public event HitWall OnHitWall;
 
     private void Start()
     {
@@ -33,11 +20,11 @@ public class Rattadillo : Enemy
         animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    public override void AI()
     {
         WallCheck();
-        Vector2 vec = transform.position - target.transform.position;
-        targetDist = new Vector2(Mathf.Abs(vec.x), Mathf.Abs(vec.y));
+        animator.SetInteger("FacingDir", facingDir);
+        Movement();
     }
 
     void WallCheck()
@@ -50,16 +37,14 @@ public class Rattadillo : Enemy
         {
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
-                if(OnHitWall != null)
-                {
-                    OnHitWall(animator);
-                }
+                facingDir *= -1;
+                transform.localScale = new Vector3(facingDir, 1, 1);
                 return;
             }
         }
     }
 
-    public void Movement(float speed, float acceleration, float decceleration)
+    void Movement()
     {
         float targetSpeed = facingDir * speed; //dir to move in at speed
         float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
@@ -76,11 +61,5 @@ public class Rattadillo : Enemy
         {
             body.velocity = new Vector2(0, body.velocity.y);
         }
-    }
-
-    public void Flip()
-    {
-        facingDir *= -1;
-        transform.localScale = new Vector3(facingDir, 1, 1);
     }
 }
