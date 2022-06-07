@@ -7,10 +7,10 @@ public class SideAttackKnockbackState : AirState
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        animator.GetComponent<PlayerMovement>().knockbackTimer = 0;
+        mover.knockbackTimer = 0;
     }
 
-    public override void PhysicsUpdate(PlayerMovement mover)
+    public override void PhysicsUpdate()
     {
         if (mover.knockbackTimer >= mover.stats.attackKnockbackTime)
         {

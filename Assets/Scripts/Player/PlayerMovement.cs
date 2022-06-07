@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D downAttackCollider;
     public Collider2D drillAttackCollider;
 
+    [HideInInspector] public PlayerState lastState;
     [HideInInspector] public PlayerState currentState;
 
     [HideInInspector] public float remainingDashes = 1;
@@ -143,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentState != null)
         {
-            currentState.PhysicsUpdate(this);
+            currentState.PhysicsUpdate();
         }
 
         if(body.velocity.y < 0)

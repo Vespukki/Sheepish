@@ -7,27 +7,27 @@ public class DrillAttackState : AirState
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        animator.GetComponent<PlayerMovement>().StartAttack(animator.GetComponent<PlayerMovement>().drillAttackCollider);
+        mover.StartAttack(mover.drillAttackCollider);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<PlayerMovement>().EndAttack(animator.GetComponent<PlayerMovement>().drillAttackCollider);
+        mover.EndAttack(mover.drillAttackCollider);
     }
 
-    public override void ModifyPhysics(PlayerMovement mover)
+    public override void ModifyPhysics()
     {
-        mover.GetComponent<Rigidbody2D>().gravityScale = 0;
+       body.gravityScale = 0;
     }
 
-    public override void PhysicsUpdate(PlayerMovement mover)
+    public override void PhysicsUpdate()
     {
         float targetSpeed = -mover.stats.drillSpeed;
-        float speedDiff = targetSpeed - mover.GetComponent<Rigidbody2D>().velocity.y;
+        float speedDiff = targetSpeed - body.velocity.y;
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * mover.stats.wallClingAcceleration, 1) * Mathf.Sign(speedDiff);
 
-        mover.GetComponent<Rigidbody2D>().AddForce(movement * Vector2.up);
+        body.AddForce(movement * Vector2.up);
     }
 }

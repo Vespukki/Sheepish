@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class StartDrillAttackState : AirState
 {
-    public override void ModifyPhysics(PlayerMovement mover)
+    public override void ModifyPhysics()
     {
-        mover.GetComponent<Rigidbody2D>().gravityScale = 0;
-        mover.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        body.gravityScale = 0;
+        body.velocity = Vector2.zero;
     }
 
-    public override void PhysicsUpdate(PlayerMovement mover)
+    public override void PhysicsUpdate()
     {
-        mover.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        body.velocity = Vector2.zero;
     }
 }

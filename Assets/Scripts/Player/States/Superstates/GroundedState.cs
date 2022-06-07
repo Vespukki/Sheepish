@@ -8,9 +8,9 @@ public class GroundedState : PlayerState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
      
-        if(!(lastState is GroundedState))
+        if(!(mover.lastState is GroundedState))
         {
-            animator.GetComponent<PlayerMovement>().GroundReset();
+            mover.GroundReset();
         }
     }
 

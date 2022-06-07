@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DashState : AirState
 {
-    public override void ModifyPhysics(PlayerMovement mover)
+    public override void ModifyPhysics()
     {
         mover.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
-    public override void PhysicsUpdate(PlayerMovement mover)
+    public override void PhysicsUpdate()
     {
         //empty on purpose
     }
@@ -16,14 +16,14 @@ public class DashState : AirState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<PlayerMovement>().Dash();
-        animator.GetComponent<PlayerMovement>().remainingDashes--;
+        mover.Dash();
+        mover.remainingDashes--;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<PlayerMovement>().lastDashTimer = 0;
+        mover.lastDashTimer = 0;
     }
 }

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class WallClingState : GroundedState
 {
-    public override void ModifyPhysics(PlayerMovement mover)
+    public override void ModifyPhysics()
     {
-        mover.GetComponent<Rigidbody2D>().gravityScale = 0;
+        body.gravityScale = 0;
     }
 
-    public override void PhysicsUpdate(PlayerMovement mover)
+    public override void PhysicsUpdate()
     {
-        base.PhysicsUpdate(mover);
+        base.PhysicsUpdate();
 
         float targetSpeed = -mover.stats.wallClingFallSpeed;
-        float speedDiff = targetSpeed - mover.GetComponent<Rigidbody2D>().velocity.y;
+        float speedDiff = targetSpeed - body.velocity.y;
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * mover.stats.wallClingAcceleration, mover.stats.jerk) * Mathf.Sign(speedDiff);
 
-        mover.GetComponent<Rigidbody2D>().AddForce(movement * Vector2.up);
+        body.AddForce(movement * Vector2.up);
     }
 }

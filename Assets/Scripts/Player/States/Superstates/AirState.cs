@@ -8,16 +8,8 @@ public class AirState : PlayerState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
-        if (!(lastState is AirState))
+        if (!(mover.lastState is AirState))
         {
         }
     }
-
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, stateInfo, layerIndex);
-
-    }
-
-
 }
