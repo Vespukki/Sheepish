@@ -21,8 +21,8 @@ public abstract class Enemy : MonoBehaviour, IHittable
 
     }
 
-    void SetTarget(GameObject player)
+    void SetTarget(PlayerMovement mover)
     {
-        target = player;
+        target = mover.gameObject;
     }
 }

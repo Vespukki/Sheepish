@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Camera Zone
   - Water
+  - Water Surface
   layers:
   - Default
   - TransparentFX

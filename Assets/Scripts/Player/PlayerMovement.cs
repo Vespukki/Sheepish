@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool underwater;
     int wallCling = 0;
 
+    //surface you are standing on
+    WaterSurface waterSurface;
+
     [HideInInspector] public bool jumping = false;
     bool canMove = true;
 
@@ -52,9 +55,10 @@ public class PlayerMovement : MonoBehaviour
     InputAction dash;
     InputAction downAttack;
     InputAction drillAttack;
+    InputAction dropDown;
 
     //events
-    public delegate void PlayerAwakeDelegate(GameObject player);
+    public delegate void PlayerAwakeDelegate(PlayerMovement mover);
     public static event PlayerAwakeDelegate OnPlayerAwake;
     #endregion
 
@@ -70,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         dash = input.actions.FindAction("Dash");
         downAttack = input.actions.FindAction("Down Attack");
         drillAttack = input.actions.FindAction("Drill Attack");
+        dropDown = input.actions.FindAction("Drop Down");
 
         move.performed += MoveInput;
         move.canceled += MoveInput;
@@ -78,10 +83,11 @@ public class PlayerMovement : MonoBehaviour
         dash.started += DashInput;
         downAttack.started += DownAttackInput;
         drillAttack.started += DrillAttackInput;
+        dropDown.started += DropDownInput;
 
         if(OnPlayerAwake != null)
         {
-            OnPlayerAwake(this.gameObject);
+            OnPlayerAwake(this);
         }
 
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
@@ -130,9 +136,14 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "DrillAttack");
     }
 
+    void DropDownInput(InputAction.CallbackContext context)
+    {
+  
+    }
+
+
     private void Update()
     {
-
         //hitbox checks
         Grounded();
         Underwater();
@@ -150,6 +161,18 @@ public class PlayerMovement : MonoBehaviour
         if(body.velocity.y < 0)
         {
             jumping = false;
+        }
+
+        if(waterSurface != null)
+        {
+            if(dropDown.IsPressed())
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), waterSurface.coll);
+            }
+            else
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), waterSurface.coll, false);
+            }
         }
     }
 
@@ -250,6 +273,7 @@ public class PlayerMovement : MonoBehaviour
         alreadyHit.Clear();
     }
 
+    //also checks if on water surface
     void Grounded()
     {
         List<Collider2D> colliders = new List<Collider2D>();
@@ -261,6 +285,12 @@ public class PlayerMovement : MonoBehaviour
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
             {
                 grounded = true;
+                return;
+            }
+            else if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Water Surface"))
+            {
+                grounded = true;
+                waterSurface = hit.GetComponent<WaterSurface>();
                 return;
             }
         }
