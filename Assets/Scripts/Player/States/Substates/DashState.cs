@@ -6,7 +6,7 @@ public class DashState : AirState
 {
     public override void ModifyPhysics()
     {
-        mover.GetComponent<Rigidbody2D>().gravityScale = 0;
+        SetGravity(0);
     }
     public override void PhysicsUpdate()
     {

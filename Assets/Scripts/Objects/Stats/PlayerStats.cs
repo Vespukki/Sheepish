@@ -39,6 +39,10 @@ public class PlayerStats : ScriptableObject
     [SerializeField] Vector2 _drillKnockback;
     [SerializeField] float _drillKnockbackTime;
 
+    [Header("Water")]
+    [SerializeField] float _waterGravityMultiplier;
+    [SerializeField] float _waterFallSpeedMultiplier;
+
 
 
 
@@ -64,5 +68,7 @@ public class PlayerStats : ScriptableObject
     public float drillSpeed => _drillSpeed;
     public Vector2 drillKnockback => _drillKnockback;
     public float drillKnockbackTime => _drillKnockbackTime;
+    public float waterGravityMultiplier => _waterGravityMultiplier;
+    public float waterFallSpeedMultiplier => _waterFallSpeedMultiplier;
 
 }

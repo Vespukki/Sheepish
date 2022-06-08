@@ -6,8 +6,7 @@ TagManager:
   tags:
   - Ground
   - Camera Zone
-  - CameraZone
-  - CameraZoneBound
+  - Water
   layers:
   - Default
   - TransparentFX

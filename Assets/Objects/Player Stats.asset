@@ -19,11 +19,11 @@ MonoBehaviour:
   _jumpHeight: 4
   _jumpTime: 0.4
   _maxFallSpeed: -17
-  _fallSpeedMultiplier: 1
+  _fallSpeedMultiplier: 1.25
   _inputForgivenessFrames: 5
   _wallClingFallSpeed: 4
   _wallClingAcceleration: 6
-  _wallJumpForce: {x: 8, y: 14}
+  _wallJumpForce: {x: 8, y: 18}
   _wallJumpTime: 0.15
   _dashTime: 0.25
   _dashDistance: 4
@@ -32,5 +32,7 @@ MonoBehaviour:
   _knockback: -5
   _attackKnockbackTime: 0.15
   _drillSpeed: 50
-  _drillKnockback: {x: -15, y: 25}
+  _drillKnockback: {x: -15, y: 15}
   _drillKnockbackTime: 0.2
+  _waterGravityMultiplier: 0.8
+  _waterFallSpeedMultiplier: 0.7

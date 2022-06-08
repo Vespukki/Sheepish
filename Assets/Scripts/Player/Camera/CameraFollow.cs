@@ -12,15 +12,9 @@ public class CameraFollow : MonoBehaviour
     CamZone zone = null;
     CamZone lastzone;
 
-    float CamYBound;
-    float CamXBound;
-
     private void Awake()
     {
         mover = GetComponent<PlayerMovement>();
-
-        CamYBound = (Camera.main.ViewportToWorldPoint(new Vector3(.5f, .5f, 0)) - Camera.main.ViewportToWorldPoint(Vector3.zero)).y;
-        CamXBound = (Camera.main.ViewportToWorldPoint(new Vector3(.5f, .5f, 0)) - Camera.main.ViewportToWorldPoint(Vector3.zero)).x;
     }
 
     private void FixedUpdate()

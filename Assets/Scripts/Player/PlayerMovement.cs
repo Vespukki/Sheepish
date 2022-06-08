@@ -20,11 +20,13 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerState currentState;
 
     [HideInInspector] public float remainingDashes = 1;
+    [HideInInspector] public float normalGravity = 0;
 
     public float lookingDir = 1;
 
     float moveInput = 0;
     bool grounded;
+    [HideInInspector] public bool underwater;
     int wallCling = 0;
 
     [HideInInspector] public bool jumping = false;
@@ -81,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
         {
             OnPlayerAwake(this.gameObject);
         }
+
+        normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
     }
 
     void MoveInput(InputAction.CallbackContext context)
@@ -131,6 +135,7 @@ public class PlayerMovement : MonoBehaviour
 
         //hitbox checks
         Grounded();
+        Underwater();
         WallClinging();
         SideAttack();
         DrillAttack();
@@ -141,11 +146,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateTimers();
-
-        if (currentState != null)
-        {
-            currentState.PhysicsUpdate();
-        }
 
         if(body.velocity.y < 0)
         {
@@ -227,11 +227,14 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTriggerOneFixedFrame(this, "DashCut");
     }
 
-    public void LimitFallSpeed()
+    public void LimitFallSpeed(float multiplier)
     {
-        if(body.velocity.y < stats.maxFallSpeed)
+        float waterMultiplier = underwater ? stats.waterFallSpeedMultiplier : 1;
+
+        float maxFallSpeed = stats.maxFallSpeed * multiplier * waterMultiplier;
+        if (body.velocity.y < maxFallSpeed)
         {
-            body.velocity = new Vector2(body.velocity.x, stats.maxFallSpeed);
+            body.velocity = new Vector2(body.velocity.x, stats.maxFallSpeed * multiplier * waterMultiplier);
         }
     }
 
@@ -262,6 +265,22 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         grounded = false;
+    }
+    void Underwater()
+    {
+        List<Collider2D> colliders = new List<Collider2D>();
+
+        GetComponent<Collider2D>().GetContacts(colliders);
+
+        foreach (var hit in colliders)
+        {
+            if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Water"))
+            {
+                underwater = true;
+                return;
+            }
+        }
+        underwater = false;
     }
     void WallClinging()
     {

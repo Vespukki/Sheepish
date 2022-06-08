@@ -6,7 +6,7 @@ public class WallClingState : GroundedState
 {
     public override void ModifyPhysics()
     {
-        body.gravityScale = 0;
+        SetGravity(0);
     }
 
     public override void PhysicsUpdate()

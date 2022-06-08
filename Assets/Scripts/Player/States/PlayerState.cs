@@ -15,7 +15,6 @@ public class PlayerState : StateMachineBehaviour
         body = animator.GetComponent<Rigidbody2D>();
 
         mover.currentState = this;
-        ModifyPhysics();
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -23,13 +22,28 @@ public class PlayerState : StateMachineBehaviour
         mover.lastState = this;
     }
 
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        ModifyPhysics();
+        PhysicsUpdate();
+    }
+
     public virtual void ModifyPhysics()
     {
-        mover.gameObject.GetComponent<Rigidbody2D>().gravityScale = ((-2 * mover.stats.jumpHeight) / (mover.stats.jumpTime * mover.stats.jumpTime)) / -10;
+        SetGravity(1);
     }
+
+
+    protected void SetGravity(float multiplier)
+    {
+        float waterMultiplier = mover.underwater ? mover.stats.waterGravityMultiplier : 1;
+
+        body.gravityScale = mover.normalGravity * multiplier * waterMultiplier;
+    }
+
     public virtual void PhysicsUpdate()
     {
         mover.Movement();
-        mover.LimitFallSpeed();
+        mover.LimitFallSpeed(1);
     }
 }

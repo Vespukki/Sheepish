@@ -19,7 +19,7 @@ public class DrillAttackState : AirState
 
     public override void ModifyPhysics()
     {
-       body.gravityScale = 0;
+        SetGravity(0);
     }
 
     public override void PhysicsUpdate()

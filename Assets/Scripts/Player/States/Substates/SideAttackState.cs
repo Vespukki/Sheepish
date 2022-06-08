@@ -8,14 +8,13 @@ public class SideAttackState : AirState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<Rigidbody2D>().velocity = new Vector2(0, animator.GetComponent<Rigidbody2D>().velocity.y);
-        animator.GetComponent<PlayerMovement>().StartAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
+        mover.StartAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<PlayerMovement>().EndAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
+        mover.EndAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
     }
 }
