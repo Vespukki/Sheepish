@@ -160,7 +160,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 33
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -220,10 +220,10 @@ TextureImporter:
       name: Edward_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 335
-        width: 31
-        height: 35
+        x: 0
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: Edward_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 335
-        width: 33
-        height: 35
+        x: 64
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: Edward_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 335
-        width: 33
-        height: 35
+        x: 128
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: Edward_3
       rect:
         serializedVersion: 2
-        x: 209
-        y: 335
-        width: 33
-        height: 35
+        x: 192
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Edward_4
       rect:
         serializedVersion: 2
-        x: 271
-        y: 335
-        width: 36
-        height: 35
+        x: 256
+        y: 320
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,10 +325,10 @@ TextureImporter:
       name: Edward_5
       rect:
         serializedVersion: 2
-        x: 17
-        y: 271
-        width: 35
-        height: 35
+        x: 0
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: Edward_6
       rect:
         serializedVersion: 2
-        x: 83
-        y: 271
-        width: 32
-        height: 35
+        x: 64
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: Edward_7
       rect:
         serializedVersion: 2
-        x: 145
-        y: 271
-        width: 35
-        height: 36
+        x: 128
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,10 +388,10 @@ TextureImporter:
       name: Edward_8
       rect:
         serializedVersion: 2
-        x: 207
-        y: 271
-        width: 36
-        height: 35
+        x: 192
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,10 +409,10 @@ TextureImporter:
       name: Edward_9
       rect:
         serializedVersion: 2
-        x: 273
-        y: 275
-        width: 36
-        height: 32
+        x: 256
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,10 +430,10 @@ TextureImporter:
       name: Edward_10
       rect:
         serializedVersion: 2
-        x: 17
-        y: 211
-        width: 36
-        height: 32
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +451,10 @@ TextureImporter:
       name: Edward_11
       rect:
         serializedVersion: 2
-        x: 81
-        y: 211
-        width: 36
-        height: 31
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: Edward_12
       rect:
         serializedVersion: 2
-        x: 148
-        y: 210
-        width: 31
-        height: 33
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Edward_13
       rect:
         serializedVersion: 2
-        x: 212
-        y: 210
-        width: 31
-        height: 33
+        x: 192
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,10 +514,10 @@ TextureImporter:
       name: Edward_14
       rect:
         serializedVersion: 2
-        x: 277
-        y: 210
-        width: 31
-        height: 33
+        x: 256
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,12 +535,12 @@ TextureImporter:
       name: Edward_15
       rect:
         serializedVersion: 2
-        x: 12
-        y: 142
-        width: 42
-        height: 32
-      alignment: 9
-      pivot: {x: 0.62, y: 0.5}
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -556,12 +556,12 @@ TextureImporter:
       name: Edward_16
       rect:
         serializedVersion: 2
-        x: 78
-        y: 143
-        width: 40
-        height: 32
-      alignment: 9
-      pivot: {x: 0.63, y: 0.5}
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -577,10 +577,10 @@ TextureImporter:
       name: Edward_17
       rect:
         serializedVersion: 2
-        x: 150
-        y: 145
-        width: 30
-        height: 34
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,10 +598,10 @@ TextureImporter:
       name: Edward_18
       rect:
         serializedVersion: 2
-        x: 214
-        y: 145
-        width: 30
-        height: 34
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,10 +619,10 @@ TextureImporter:
       name: Edward_19
       rect:
         serializedVersion: 2
-        x: 270
-        y: 141
-        width: 39
-        height: 41
+        x: 256
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,10 +640,10 @@ TextureImporter:
       name: Edward_20
       rect:
         serializedVersion: 2
-        x: 14
-        y: 78
-        width: 40
-        height: 43
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,10 +661,10 @@ TextureImporter:
       name: Edward_21
       rect:
         serializedVersion: 2
-        x: 75
-        y: 80
-        width: 42
-        height: 40
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,10 +682,10 @@ TextureImporter:
       name: Edward_22
       rect:
         serializedVersion: 2
-        x: 139
-        y: 77
-        width: 42
-        height: 40
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +703,10 @@ TextureImporter:
       name: Edward_23
       rect:
         serializedVersion: 2
-        x: 205
-        y: 78
-        width: 41
-        height: 41
+        x: 192
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,10 +724,10 @@ TextureImporter:
       name: Edward_24
       rect:
         serializedVersion: 2
-        x: 268
-        y: 77
-        width: 40
-        height: 44
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,10 +745,10 @@ TextureImporter:
       name: Edward_25
       rect:
         serializedVersion: 2
-        x: 12
-        y: 14
-        width: 41
-        height: 40
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -758,90 +758,6 @@ TextureImporter:
       bones: []
       spriteID: e821c653e5b5310e0800000000000000
       internalID: -2300394524474862962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Edward_26
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 17
-        width: 51
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bd5558288647a840800000000000000
-      internalID: 5235230642447670707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Edward_27
-      rect:
-        serializedVersion: 2
-        x: 138
-        y: 17
-        width: 51
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff7b406590afb0f50800000000000000
-      internalID: 6848842576351770623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Edward_28
-      rect:
-        serializedVersion: 2
-        x: 202
-        y: 17
-        width: 51
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f3dc84c4db832840800000000000000
-      internalID: 5198152140862575608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Edward_29
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 17
-        width: 51
-        height: 45
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1c0d5251caa7e900800000000000000
-      internalID: 713726813248752667
       vertices: []
       indices: 
       edges: []

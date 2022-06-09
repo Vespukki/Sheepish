@@ -6,7 +6,6 @@ public class Rattadillo : Enemy
 {
     [HideInInspector] public int facingDir = 1;
     [HideInInspector] public RattadilloState currentState;
-    [HideInInspector] public Vector2 targetDist;
 
     [Header("Rolling")]
     public float rollSpeed;
@@ -36,8 +35,7 @@ public class Rattadillo : Enemy
     private void FixedUpdate()
     {
         WallCheck();
-        Vector2 vec = transform.position - target.transform.position;
-        targetDist = new Vector2(Mathf.Abs(vec.x), Mathf.Abs(vec.y));
+        
     }
 
     void WallCheck()
