@@ -29,6 +29,8 @@ MonoBehaviour:
   _dashDistance: 4
   _maxDashes: 1
   _dashCD: 0.17
+  _damage: 4
+  _invincibleTime: 2
   _knockback: -5
   _attackKnockbackTime: 0.15
   _drillSpeed: 50

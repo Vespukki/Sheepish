@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public float remainingDashes = 1;
     [HideInInspector] public float normalGravity = 0;
 
-    public float lookingDir = 1;
+    [HideInInspector] public float lookingDir = 1;
 
     float moveInput = 0;
     bool grounded;
@@ -85,10 +85,7 @@ public class PlayerMovement : MonoBehaviour
         drillAttack.started += DrillAttackInput;
         dropDown.started += DropDownInput;
 
-        if(OnPlayerAwake != null)
-        {
-            OnPlayerAwake(this);
-        }
+        OnPlayerAwake?.Invoke(this);
 
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
     }
@@ -354,7 +351,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(this);
+                iHit.OnHit(stats.damage, gameObject);
                 if(alreadyHit.Count == 0)
                 {
                     jumping = false;
@@ -387,7 +384,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(this);
+                iHit.OnHit(stats.damage, gameObject);
                 if (alreadyHit.Count == 0)
                 {
                     jumping = false;
@@ -432,4 +429,6 @@ public class PlayerMovement : MonoBehaviour
         lastDashTimer += Time.fixedDeltaTime;
         knockbackTimer += Time.fixedDeltaTime;
     }
+
+    
 }
