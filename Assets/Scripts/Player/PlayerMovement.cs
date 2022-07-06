@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     WaterSurface waterSurface;
 
     [HideInInspector] public bool jumping = false;
-    bool canMove = true;
+    public bool canMove = true;
 
     //timers
     [HideInInspector] public float lastDashTimer = 100;
@@ -387,9 +387,7 @@ public class PlayerMovement : MonoBehaviour
                 iHit.OnHit(stats.damage, gameObject);
                 if (alreadyHit.Count == 0)
                 {
-                    jumping = false;
-                    body.velocity = new Vector2(stats.drillKnockback.x * lookingDir, stats.drillKnockback.y);
-                    knockbackTimer = 0;
+                    Knockback(stats.drillKnockback);
                     GroundReset();
                     animator.SetTrigger("DrillAttackCut");
                 }
@@ -397,6 +395,13 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public void Knockback(Vector2 force)
+    {
+        jumping = false;
+        body.velocity = new Vector2(force.x * lookingDir, force.y);
+        knockbackTimer = 0;
     }
 
     void SetAnimatorVars()

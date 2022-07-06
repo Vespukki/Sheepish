@@ -55,11 +55,13 @@ public class PlayerStats : ScriptableObject
     [SerializeField] float _invincibleTime;
     [SerializeField] float _knockback;
     [SerializeField] float _attackKnockbackTime;
+    [SerializeField] Vector2 _damageKnockback;
 
     public int damage => _damage;
     public float invincibleTime => _invincibleTime;
-    public float knockback => _knockback;
+    public float knockback => _knockback; //knockback from attacking
     public float attackKnockbackTime => _attackKnockbackTime;
+    public Vector2 damageKnockback => _damageKnockback; //knockback the player takes when damaged
 
     [Header("Drill")]
     [SerializeField] float _drillSpeed;

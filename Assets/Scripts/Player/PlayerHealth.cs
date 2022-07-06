@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IHittable
 {
+    Animator animator;
     [SerializeField] PlayerStats stats;
     
     public int health;
     [SerializeField] float invincibleTimer = 100;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void FixedUpdate()
     {
@@ -25,6 +31,8 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     void TakeDamage(int damage, GameObject attacker)
     {
+        animator.SetTrigger( "Damaged");
+
         health -= damage;
 
         if (health <= 0)

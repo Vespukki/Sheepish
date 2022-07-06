@@ -54,10 +54,8 @@ public abstract class Enemy : MonoBehaviour, IHittable
 
         foreach (var hit in colliders)
         {
-            Debug.Log(1);
             if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Player") && hit.TryGetComponent(out IHittable victim))
             {
-            Debug.Log(2);
                 victim.OnHit(damage, gameObject);
                 return;
             }

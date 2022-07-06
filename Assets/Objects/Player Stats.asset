@@ -33,6 +33,7 @@ MonoBehaviour:
   _invincibleTime: 2
   _knockback: -5
   _attackKnockbackTime: 0.15
+  _damageKnockback: {x: -15, y: 5}
   _drillSpeed: 50
   _drillKnockback: {x: -15, y: 15}
   _drillKnockbackTime: 0.2
