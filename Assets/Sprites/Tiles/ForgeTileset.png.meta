@@ -62,6 +62,15 @@ TextureImporter:
   - first:
       213: -2594180210910571737
     second: ForgeTileset_19
+  - first:
+      213: 1430634635169035786
+    second: ForgeTileset_20
+  - first:
+      213: -37900933245136107
+    second: ForgeTileset_21
+  - first:
+      213: -4453671009882121879
+    second: ForgeTileset_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,47 +172,18 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ForgeTileset_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 144
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 668d8d28efeb25870800000000000000
-      internalID: 8670202232967845990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: ForgeTileset_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 176
-        width: 32
-        height: 32
+        x: 107
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8417fe84335ddf030800000000000000
@@ -216,19 +196,15 @@ TextureImporter:
       name: ForgeTileset_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 176
-        width: 32
-        height: 32
+        x: 155
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a1a86ac0d58799300800000000000000
@@ -241,19 +217,15 @@ TextureImporter:
       name: ForgeTileset_2
       rect:
         serializedVersion: 2
-        x: 80
-        y: 176
-        width: 32
-        height: 32
+        x: 203
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 189630c1b8c9d86f0800000000000000
@@ -266,19 +238,15 @@ TextureImporter:
       name: ForgeTileset_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 144
-        width: 32
-        height: 32
+        x: 107
+        y: 277
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 2051843719367a800800000000000000
@@ -288,22 +256,39 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgeTileset_5
+      name: ForgeTileset_4
       rect:
         serializedVersion: 2
-        x: 80
-        y: 144
-        width: 32
-        height: 32
+        x: 155
+        y: 277
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668d8d28efeb25870800000000000000
+      internalID: 8670202232967845990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgeTileset_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 277
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: a00a60af54e054c90800000000000000
@@ -316,19 +301,15 @@ TextureImporter:
       name: ForgeTileset_6
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
-        width: 32
-        height: 32
+        x: 107
+        y: 229
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7dcd2cc5320c408e0800000000000000
@@ -341,19 +322,15 @@ TextureImporter:
       name: ForgeTileset_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 112
-        width: 32
-        height: 32
+        x: 160
+        y: 228
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: cd274740755c812e0800000000000000
@@ -366,19 +343,15 @@ TextureImporter:
       name: ForgeTileset_8
       rect:
         serializedVersion: 2
-        x: 80
-        y: 112
-        width: 32
-        height: 32
+        x: 203
+        y: 229
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: fc71fc8d69d065210800000000000000
@@ -391,19 +364,15 @@ TextureImporter:
       name: ForgeTileset_9
       rect:
         serializedVersion: 2
-        x: 16
-        y: 79
-        width: 32
-        height: 32
+        x: 107
+        y: 180
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 018f151789cd105a0800000000000000
@@ -416,19 +385,15 @@ TextureImporter:
       name: ForgeTileset_10
       rect:
         serializedVersion: 2
-        x: 48
-        y: 79
-        width: 32
-        height: 32
+        x: 155
+        y: 180
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 3af83fc275774bb60800000000000000
@@ -441,19 +406,15 @@ TextureImporter:
       name: ForgeTileset_11
       rect:
         serializedVersion: 2
-        x: 80
-        y: 79
-        width: 32
-        height: 32
+        x: 203
+        y: 180
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f5fff372f8d0c00b0800000000000000
@@ -466,19 +427,15 @@ TextureImporter:
       name: ForgeTileset_12
       rect:
         serializedVersion: 2
-        x: 113
-        y: 176
-        width: 32
-        height: 32
+        x: 252
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 8171338c334afa0a0800000000000000
@@ -491,19 +448,15 @@ TextureImporter:
       name: ForgeTileset_13
       rect:
         serializedVersion: 2
-        x: 113
-        y: 144
-        width: 32
-        height: 32
+        x: 252
+        y: 277
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 5785569f39ba7acf0800000000000000
@@ -516,19 +469,15 @@ TextureImporter:
       name: ForgeTileset_14
       rect:
         serializedVersion: 2
-        x: 113
-        y: 112
-        width: 32
-        height: 32
+        x: 253
+        y: 229
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 50b7584b13c0fffa0800000000000000
@@ -541,19 +490,15 @@ TextureImporter:
       name: ForgeTileset_15
       rect:
         serializedVersion: 2
-        x: 113
-        y: 79
-        width: 32
-        height: 32
+        x: 252
+        y: 180
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 0c54314a11b02b8f0800000000000000
@@ -566,19 +511,15 @@ TextureImporter:
       name: ForgeTileset_16
       rect:
         serializedVersion: 2
-        x: 160
-        y: 176
-        width: 32
-        height: 32
+        x: 301
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ab4f133278d6ff880800000000000000
@@ -591,19 +532,15 @@ TextureImporter:
       name: ForgeTileset_17
       rect:
         serializedVersion: 2
-        x: 192
-        y: 176
-        width: 32
-        height: 32
+        x: 349
+        y: 325
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: be4d47521fce69cb0800000000000000
@@ -616,19 +553,15 @@ TextureImporter:
       name: ForgeTileset_18
       rect:
         serializedVersion: 2
-        x: 160
-        y: 144
-        width: 32
-        height: 32
+        x: 301
+        y: 277
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: e354b40a51eb218d0800000000000000
@@ -641,19 +574,15 @@ TextureImporter:
       name: ForgeTileset_19
       rect:
         serializedVersion: 2
-        x: 192
-        y: 144
-        width: 32
-        height: 32
+        x: 349
+        y: 277
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 723d35db7de9ffbd0800000000000000
