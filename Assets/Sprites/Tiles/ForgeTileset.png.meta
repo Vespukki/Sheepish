@@ -93,6 +93,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -601,6 +602,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ForgeTileset_16: -8575014738311646022
+      ForgeTileset_6: -1728045098890765097
+      ForgeTileset_5: -7186321936689487862
+      ForgeTileset_10: 7760959274166226851
+      ForgeTileset_4: 8670202232967845990
+      ForgeTileset_18: -2877028211843447490
+      ForgeTileset_9: -6556717035180394480
+      ForgeTileset_8: 1321258482213525455
+      ForgeTileset_0: 3530212099172036936
+      ForgeTileset_11: -5761214914823717025
+      ForgeTileset_12: -6868090364407638248
+      ForgeTileset_19: -2594180210910571737
+      ForgeTileset_17: -4857434627612814101
+      ForgeTileset_7: -2154755444169215268
+      ForgeTileset_1: 259370794590046746
+      ForgeTileset_3: 623576549769614594
+      ForgeTileset_15: -526346036053850688
+      ForgeTileset_13: -241035403008321419
+      ForgeTileset_14: -5764875590389368059
+      ForgeTileset_2: -680715847378703999
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

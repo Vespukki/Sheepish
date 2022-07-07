@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -304,6 +305,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MagicClaymoreAttack_6: 435452976999660838
+      MagicClaymoreAttack_4: -8782221719531615136
+      MagicClaymoreAttack_3: -8747067349272910556
+      MagicClaymoreAttack_0: 7060009411395802429
+      MagicClaymoreAttack_1: -9053480906808081529
+      MagicClaymoreAttack_2: 335284872112157370
+      MagicClaymoreAttack_7: 1956990805838842871
+      MagicClaymoreAttack_5: -719481623768835034
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
