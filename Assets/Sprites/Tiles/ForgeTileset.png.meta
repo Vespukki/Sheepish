@@ -323,8 +323,8 @@ TextureImporter:
       name: ForgeTileset_7
       rect:
         serializedVersion: 2
-        x: 160
-        y: 228
+        x: 155
+        y: 229
         width: 48
         height: 48
       alignment: 0
@@ -470,7 +470,7 @@ TextureImporter:
       name: ForgeTileset_14
       rect:
         serializedVersion: 2
-        x: 253
+        x: 252
         y: 229
         width: 48
         height: 48
