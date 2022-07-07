@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -280,6 +281,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MagicClaymoreStopBubble_1: -3937386015742221589
+      MagicClaymoreStopBubble_3: 2914575270898947012
+      MagicClaymoreStopBubble_6: -6617947108145675809
+      MagicClaymoreStopBubble_5: 4029309779261033932
+      MagicClaymoreStopBubble_2: 8552520609000164880
+      MagicClaymoreStopBubble_0: 8632907787812889960
+      MagicClaymoreStopBubble_4: -2866894944133027348
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

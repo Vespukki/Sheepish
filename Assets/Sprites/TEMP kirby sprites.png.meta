@@ -390,6 +390,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -3040,6 +3041,129 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TEMP kirby sprites_48: 662372759996549572
+      TEMP kirby sprites_173: 8233341536378310245
+      TEMP kirby sprites_95: 4377656212910258231
+      TEMP kirby sprites_171: -2535150346610240390
+      TEMP kirby sprites_161: 172061265127033976
+      TEMP kirby sprites_151: -7575324105697018314
+      TEMP kirby sprites_184: 8566668616296412292
+      TEMP kirby sprites_160: 4738234785298892203
+      TEMP kirby sprites_55: 2595752492144822166
+      TEMP kirby sprites_174: -1716470176338602401
+      TEMP kirby sprites_149: -2112189463939133901
+      TEMP kirby sprites_2: 4761120546979532406
+      TEMP kirby sprites_141: -4378600435774191950
+      TEMP kirby sprites_186: -7177035024114018217
+      TEMP kirby sprites_54: -1940993012647087182
+      TEMP kirby sprites_185: 3230249394142936886
+      TEMP kirby sprites_46: 1988867085084887649
+      TEMP kirby sprites_72: 6095303590618014826
+      TEMP kirby sprites_178: -6180820249387753345
+      TEMP kirby sprites_21: -2062130952450511759
+      TEMP kirby sprites_180: 2304539167263976755
+      TEMP kirby sprites_131: -7557620059853606226
+      TEMP kirby sprites_153: 3195481303156813981
+      TEMP kirby sprites_134: 1696331555014354755
+      TEMP kirby sprites_146: -5289689231900035057
+      TEMP kirby sprites_139: 507662858797805269
+      TEMP kirby sprites_53: -7892416863482568465
+      TEMP kirby sprites_201: 3086995415080922786
+      TEMP kirby sprites_203: 9027348211520691913
+      TEMP kirby sprites_143: 2957186479294874966
+      TEMP kirby sprites_19: -5252663890816081270
+      TEMP kirby sprites_71: 8103457536919730900
+      TEMP kirby sprites_23: 4010415315118366
+      TEMP kirby sprites_110: -1520155656212058927
+      TEMP kirby sprites_163: 2755736752468733715
+      TEMP kirby sprites_176: 2572851353820221485
+      TEMP kirby sprites_5: 2357512808863767478
+      TEMP kirby sprites_205: -3387472919336563226
+      TEMP kirby sprites_158: 4856149752962918504
+      TEMP kirby sprites_50: 1750972959881290109
+      TEMP kirby sprites_11: 165923967165088866
+      TEMP kirby sprites_137: -1008673721130710274
+      TEMP kirby sprites_189: -786310512225924402
+      TEMP kirby sprites_188: -7588386557861002633
+      TEMP kirby sprites_1: -4292565329555929452
+      TEMP kirby sprites_182: 467902897918317226
+      TEMP kirby sprites_16: 4685389524265614642
+      TEMP kirby sprites_9: -1647930882011869674
+      TEMP kirby sprites_200: -5431843670305849943
+      TEMP kirby sprites_49: -3996749559654787170
+      TEMP kirby sprites_0: 5210778470877212964
+      TEMP kirby sprites_22: 6463291028246066095
+      TEMP kirby sprites_150: 2874492378762681701
+      TEMP kirby sprites_93: 7248918795057346332
+      TEMP kirby sprites_69: 5073726916009485234
+      TEMP kirby sprites_133: -4604182184738015337
+      TEMP kirby sprites_183: 7134481955934136397
+      TEMP kirby sprites_20: -7717344087460264658
+      TEMP kirby sprites_169: -4594989539591539181
+      TEMP kirby sprites_96: -1203358763078610024
+      TEMP kirby sprites_94: -612984550260605252
+      TEMP kirby sprites_162: 752382188006188215
+      TEMP kirby sprites_6: 3496573512572731684
+      TEMP kirby sprites_165: -2522821237886550401
+      TEMP kirby sprites_204: -8740436649127722729
+      TEMP kirby sprites_115: 5112211231765215840
+      TEMP kirby sprites_138: -6473685813181680260
+      TEMP kirby sprites_18: 3995725193578119781
+      TEMP kirby sprites_132: -8469952771180952681
+      TEMP kirby sprites_7: -4287701220161247848
+      TEMP kirby sprites_179: -8879471927920287323
+      TEMP kirby sprites_111: 262437587738396796
+      TEMP kirby sprites_114: 5681924352233105839
+      TEMP kirby sprites_92: -280819500265089502
+      TEMP kirby sprites_113: 6707416201005091578
+      TEMP kirby sprites_198: 6940046281860646298
+      TEMP kirby sprites_145: -788281943480342732
+      TEMP kirby sprites_51: 5413982324664955976
+      TEMP kirby sprites_177: 2737403381293419553
+      TEMP kirby sprites_10: 449749234531572598
+      TEMP kirby sprites_3: -4056747993479548550
+      TEMP kirby sprites_25: -6994805799814476952
+      TEMP kirby sprites_147: 5428324532475419237
+      TEMP kirby sprites_175: 6704099999065123555
+      TEMP kirby sprites_167: -7667001554632679807
+      TEMP kirby sprites_142: 1166864974033790472
+      TEMP kirby sprites_136: -6059258116616493004
+      TEMP kirby sprites_202: -2905280252815719726
+      TEMP kirby sprites_130: 2695050754052640130
+      TEMP kirby sprites_166: 1317994257878061681
+      TEMP kirby sprites_144: 6246943825536128415
+      TEMP kirby sprites_164: -6127056648156792608
+      TEMP kirby sprites_181: -4774435949822086653
+      TEMP kirby sprites_24: -6073312906264931185
+      TEMP kirby sprites_77: 5202490820285428048
+      TEMP kirby sprites_199: 4537223591329664025
+      TEMP kirby sprites_170: -4964403832622000544
+      TEMP kirby sprites_159: 8032416535745462458
+      TEMP kirby sprites_73: 6478148952849016538
+      TEMP kirby sprites_76: -7819580348064819897
+      TEMP kirby sprites_17: -7378035213545492198
+      TEMP kirby sprites_156: -6536052252552332397
+      TEMP kirby sprites_112: 1993483565386620569
+      TEMP kirby sprites_117: -1878426985924679699
+      TEMP kirby sprites_152: -6324182412232731794
+      TEMP kirby sprites_168: 6339192365382526742
+      TEMP kirby sprites_52: -5794653053688475299
+      TEMP kirby sprites_155: -5952136109935442735
+      TEMP kirby sprites_187: -342694109661661882
+      TEMP kirby sprites_74: -2682955511300179024
+      TEMP kirby sprites_116: 2986902264991601036
+      TEMP kirby sprites_172: -3930810272490121166
+      TEMP kirby sprites_4: -2736319670030924915
+      TEMP kirby sprites_148: -9217682920078155590
+      TEMP kirby sprites_75: 4649099321524939089
+      TEMP kirby sprites_140: 385081897664220198
+      TEMP kirby sprites_157: -8455740263272273694
+      TEMP kirby sprites_154: -2287417738651282898
+      TEMP kirby sprites_78: 5965260700893430622
+      TEMP kirby sprites_70: 5667691436565128669
+      TEMP kirby sprites_135: 6677610325377543434
+      TEMP kirby sprites_8: -7545525280268203663
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

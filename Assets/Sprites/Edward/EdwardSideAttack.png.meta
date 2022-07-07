@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -232,6 +233,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      EdwardSideAttack_4: -1628696181368686047
+      EdwardSideAttack_3: -1185562928044656389
+      EdwardSideAttack_0: -3402195819417250576
+      EdwardSideAttack_1: 7636594631086246829
+      EdwardSideAttack_2: -4279797354378176410
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
