@@ -9,7 +9,6 @@ public class DamagedState : AirState
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
         mover.canMove = false;
-        mover.Knockback(mover.stats.damageKnockback);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

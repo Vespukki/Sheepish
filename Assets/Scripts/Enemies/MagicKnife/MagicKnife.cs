@@ -19,11 +19,10 @@ public class MagicKnife : Enemy
 
     public Transform embedPoint;
 
-    [HideInInspector] public Rigidbody2D body;
 
-    private void Awake()
+    protected override void Initialize()
     {
-        body = GetComponent<Rigidbody2D>();
+        base.Initialize();
         animator = GetComponent<Animator>();
     }
     public void FaceTarget()

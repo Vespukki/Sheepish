@@ -6,7 +6,6 @@ public class MagicClaymore : Enemy
 {
     [HideInInspector] public MagicClaymoreState currentState;
 
-    [HideInInspector] public Rigidbody2D body;
 
     public Vector2 aggroDist;
     public Vector2 attackDist;
@@ -14,12 +13,6 @@ public class MagicClaymore : Enemy
     [SerializeField] float walkAccel;
     [SerializeField] float walkDeccel;
     [SerializeField] float turnTime;
-
-
-    private void Awake()
-    {
-        body = GetComponent<Rigidbody2D>();
-    }
 
 
     public void FaceTarget(GameObject walkTarget)

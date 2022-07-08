@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     Coroutine wallJumpCutCo;
 
     //so you dont hit things multiple times in the same cast
-    List<GameObject> alreadyHit = new List<GameObject>();
+    List<GameObject> alreadyHit = new();
 
     Rigidbody2D body;
     PlayerInput input;
@@ -351,11 +351,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(stats.damage, gameObject);
+                iHit.OnHit(stats.damage, stats.damageKnockback, gameObject);
                 if(alreadyHit.Count == 0)
                 {
                     jumping = false;
-                    body.velocity = new Vector2(stats.knockback * lookingDir, body.velocity.y);
+                    body.velocity = new Vector2(stats.sideAttackKnockback * lookingDir, body.velocity.y);
                     StartCoroutine(CantMove(stats.attackKnockbackTime));
                 }
                 alreadyHit.Add(hit.gameObject);
@@ -384,10 +384,10 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(stats.damage, gameObject);
+                iHit.OnHit(stats.damage, stats.damageKnockback, gameObject);
                 if (alreadyHit.Count == 0)
                 {
-                    Knockback(stats.drillKnockback);
+                    Knockback(stats.drillKnockback, lookingDir);
                     GroundReset();
                     animator.SetTrigger("DrillAttackCut");
                 }
@@ -397,10 +397,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Knockback(Vector2 force)
+    public void Knockback(Vector2 force, float direction)
     {
         jumping = false;
-        body.velocity = new Vector2(force.x * lookingDir, force.y);
+        body.velocity = new Vector2(force.x * direction, force.y);
         knockbackTimer = 0;
     }
 

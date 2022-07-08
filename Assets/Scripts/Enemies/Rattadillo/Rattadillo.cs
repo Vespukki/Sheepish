@@ -19,7 +19,6 @@ public class Rattadillo : Enemy
 
     [SerializeField] Collider2D frontWallCollider;
 
-    Rigidbody2D body;
     Animator animator;
 
     //events that are referenced by mechanim
@@ -28,7 +27,6 @@ public class Rattadillo : Enemy
 
     private void Start()
     {
-        body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour, IHittable
 {
     Animator animator;
+    PlayerMovement mover;
     [SerializeField] PlayerStats stats;
     
     public int health;
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour, IHittable
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        mover = GetComponent<PlayerMovement>();
     }
 
     private void FixedUpdate()
@@ -20,18 +22,19 @@ public class PlayerHealth : MonoBehaviour, IHittable
         invincibleTimer += Time.fixedDeltaTime;
     }
 
-    public void OnHit(int damage, GameObject attacker)
+    public void OnHit(int damage, Vector2 knockback, GameObject attacker)
     {
         if(invincibleTimer >= stats.invincibleTime)
         {
-            Debug.Log("hit");
-            TakeDamage(damage, attacker);
+            Debug.Log("player hit");
+            TakeDamage(damage,knockback, attacker);
         }
     }
 
-    void TakeDamage(int damage, GameObject attacker)
+    void TakeDamage(int damage,Vector2 knockback, GameObject attacker)
     {
-        animator.SetTrigger( "Damaged");
+        animator.SetTrigger("Damaged");
+        mover.Knockback(knockback, Mathf.Sign(transform.position.x - attacker.transform.position.x));
 
         health -= damage;
 

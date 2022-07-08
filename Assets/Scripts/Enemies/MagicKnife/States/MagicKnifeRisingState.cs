@@ -17,7 +17,7 @@ public class MagicKnifeRisingState : MagicKnifeState
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        knife.body.velocity = knife.riseSpeed * new Vector2(-knife.transform.right.x, Mathf.Abs(knife.transform.right.y)) ;
+        knife.body.AddForce(knife.riseSpeed * new Vector2(-knife.transform.right.x, Mathf.Abs(knife.transform.right.y)),ForceMode2D.Impulse);
         knife.FaceTarget();
 
         riseTimer += Time.fixedDeltaTime;
