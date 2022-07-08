@@ -85,9 +85,14 @@ public class PlayerMovement : MonoBehaviour
         drillAttack.started += DrillAttackInput;
         dropDown.started += DropDownInput;
 
-        OnPlayerAwake?.Invoke(this);
+        CallPlayerAwake();
 
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
+    }
+
+    public void CallPlayerAwake()
+    {
+        OnPlayerAwake?.Invoke(this);
     }
 
     void MoveInput(InputAction.CallbackContext context)
@@ -141,18 +146,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //hitbox checks
-        Grounded();
-        Underwater();
-        WallClinging();
-        SideAttack();
-        DrillAttack();
-
-        SetAnimatorVars();
+        
     }
 
     private void FixedUpdate()
     {
+       
+
         UpdateTimers();
 
         if(body.velocity.y < 0)
@@ -171,6 +171,17 @@ public class PlayerMovement : MonoBehaviour
                 Physics2D.IgnoreCollision(GetComponent<Collider2D>(), waterSurface.coll, false);
             }
         }
+
+        //hitbox checks
+        Grounded();
+        Underwater();
+        WallClinging();
+        SideAttack();
+        DrillAttack();
+
+        SetAnimatorVars();
+
+
     }
 
     public void Movement()
@@ -410,7 +421,7 @@ public class PlayerMovement : MonoBehaviour
         {
             lookingDir = -wallCling;
         }
-        else if(currentState.canChangeDir && moveInput != 0)
+        else if(currentState != null && currentState.canChangeDir && moveInput != 0)
         {
             lookingDir = moveInput;
         }
