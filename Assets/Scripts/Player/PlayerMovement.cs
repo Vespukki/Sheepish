@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     PlayerInput input;
     SpriteRenderer spriter;
     Animator animator;
+    PlayerInteraction inter;
 
     InputAction move;
     InputAction jump;
@@ -56,11 +57,14 @@ public class PlayerMovement : MonoBehaviour
     InputAction downAttack;
     InputAction drillAttack;
     InputAction dropDown;
+    InputAction interact;
 
     //events
     public delegate void PlayerAwakeDelegate(PlayerMovement mover);
     public static event PlayerAwakeDelegate OnPlayerAwake;
     #endregion
+
+    
 
     private void Awake()
     {
@@ -68,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<PlayerInput>();
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        inter = GetComponent<PlayerInteraction>();
 
         move = input.actions.FindAction("Move");
         jump = input.actions.FindAction("Jump");
@@ -75,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
         downAttack = input.actions.FindAction("Down Attack");
         drillAttack = input.actions.FindAction("Drill Attack");
         dropDown = input.actions.FindAction("Drop Down");
+        interact = input.actions.FindAction("Interact");
+
 
         move.performed += MoveInput;
         move.canceled += MoveInput;
@@ -84,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         downAttack.started += DownAttackInput;
         drillAttack.started += DrillAttackInput;
         dropDown.started += DropDownInput;
+        interact.started += InteractInput;
 
         CallPlayerAwake();
 
@@ -140,13 +148,12 @@ public class PlayerMovement : MonoBehaviour
 
     void DropDownInput(InputAction.CallbackContext context)
     {
-  
+ 
     }
 
-
-    private void Update()
+    void InteractInput(InputAction.CallbackContext context)
     {
-        
+        inter.TryInteract();
     }
 
     private void FixedUpdate()
