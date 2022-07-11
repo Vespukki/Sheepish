@@ -8,10 +8,15 @@ public class PlayerHealth : MonoBehaviour, IHittable
 {
     Animator animator;
     PlayerMovement mover;
+    Rigidbody2D body;
+
     [SerializeField] PlayerStats stats;
     
     public int health;
     [SerializeField] float invincibleTimer = 100;
+
+    public Vector2 respawnAnchor;
+    public int respawnSceneIndex;
 
     [SerializeField] Canvas deathScreen;
 
@@ -19,6 +24,10 @@ public class PlayerHealth : MonoBehaviour, IHittable
     {
         animator = GetComponent<Animator>();
         mover = GetComponent<PlayerMovement>();
+        body = GetComponent<Rigidbody2D>();
+
+        respawnAnchor = new Vector2(transform.position.x, transform.position.y);
+        respawnSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
 
@@ -38,7 +47,6 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     void TakeDamage(int damage,Vector2 knockback, GameObject attacker)
     {
-        animator.SetTrigger("Damaged");
         mover.Knockback(knockback, Mathf.Sign(transform.position.x - attacker.transform.position.x));
 
         health -= damage;
@@ -46,6 +54,12 @@ public class PlayerHealth : MonoBehaviour, IHittable
         if (health <= 0)
         {
             OpenDeathScreen();
+            animator.SetTrigger("Reset");
+            body.velocity = Vector2.zero;
+        }
+        else
+        {
+            animator.SetTrigger("Damaged");
         }
 
         invincibleTimer = 0;
@@ -64,33 +78,21 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     IEnumerator Respawn()
     {
-        /*Scene newScene = SceneManager.GetActiveScene();
-        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(newScene.name, LoadSceneMode.Additive);
-        AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        unloadProgress.allowSceneActivation = false;
-        loadProgress.allowSceneActivation = false;
-        if(!unloadProgress.isDone || !loadProgress.isDone)
-        {
-            yield return null;
-        }
-        unloadProgress.allowSceneActivation = true;
-        loadProgress.allowSceneActivation = true;
-        SceneManager.SetActiveScene(newScene);
-*/
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(SceneManager.GetSceneByBuildIndex(sceneIndex).name, LoadSceneMode.Additive);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(respawnSceneIndex, LoadSceneMode.Additive);
         if (!loadProgress.isDone)
         {
             yield return null;
         }
-        AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(sceneIndex));
+        AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
         if(!unloadProgress.isDone)
         {
             yield return null;
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(sceneIndex));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(respawnSceneIndex));
         Time.timeScale = 1;
         deathScreen.gameObject.SetActive(false);
+        transform.position = respawnAnchor;
         mover.CallPlayerAwake();
     }
 }

@@ -1548,7 +1548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763734406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.9, y: -12.952406, z: 0}
+  m_LocalPosition: {x: 3.48, y: -7.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2018,6 +2018,7 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 91c635253dccd7246b8143d407e0b5f5, type: 2}
   health: 1
   invincibleTimer: 100
+  respawnAnchor: {x: 0, y: 0}
   deathScreen: {fileID: 331787142}
 --- !u!114 &1932538826
 MonoBehaviour:

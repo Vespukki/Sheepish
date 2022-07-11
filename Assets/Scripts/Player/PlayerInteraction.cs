@@ -21,7 +21,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         float dist = 100;
         IInteractable closest = null;
-        foreach(var col in Physics2D.OverlapBoxAll(transform.position,new Vector2(2,2),0))
+        foreach(var col in Physics2D.OverlapBoxAll(transform.position, new Vector2(2,2),0))
         {
             if(col.TryGetComponent<IInteractable>(out IInteractable iInt))
             {

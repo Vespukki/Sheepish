@@ -8,14 +8,6 @@ public class SavePoint : MonoBehaviour, IInteractable
 
     public void Interact(GameObject player)
     {
-        Debug.Log("Save not implemented but it was interacted with");
-    }
-    public void ShowPrompt()
-    {
-        Prompt.gameObject.SetActive(true);
-    }
-    public void HidePrompt()
-    {
-        Prompt.gameObject.SetActive(false);
+        player.GetComponent<PlayerHealth>().respawnAnchor = new Vector2(transform.position.x, transform.position.y);
     }
 }
