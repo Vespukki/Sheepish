@@ -6,6 +6,7 @@ public interface IInteractable
     public GameObject Prompt { get; }
 
     public void Interact(GameObject player);
+
     public void ShowPrompt()
     {
         Prompt.SetActive(true);

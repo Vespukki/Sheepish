@@ -42,4 +42,10 @@ public class PlayerInteraction : MonoBehaviour
         }
         return closest;
     }
+
+    public void ClearInteractTarget()
+    {
+        interactTarget?.HidePrompt();
+        interactTarget = null;
+    }
 }

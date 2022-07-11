@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour, IHittable
     Animator animator;
     PlayerMovement mover;
     Rigidbody2D body;
+    PlayerInteraction inter;
 
     [SerializeField] PlayerStats stats;
     
@@ -25,6 +26,7 @@ public class PlayerHealth : MonoBehaviour, IHittable
         animator = GetComponent<Animator>();
         mover = GetComponent<PlayerMovement>();
         body = GetComponent<Rigidbody2D>();
+        inter = GetComponent<PlayerInteraction>();
 
         respawnAnchor = new Vector2(transform.position.x, transform.position.y);
         respawnSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -78,6 +80,7 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     IEnumerator Respawn()
     {
+        inter.ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         AsyncOperation loadProgress = SceneManager.LoadSceneAsync(respawnSceneIndex, LoadSceneMode.Additive);
         if (!loadProgress.isDone)
