@@ -29,9 +29,6 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool underwater;
     int wallCling = 0;
 
-    //surface you are standing on
-    WaterSurface waterSurface;
-
     [HideInInspector] public bool jumping = false;
     public bool canMove = true;
 
@@ -50,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer spriter;
     Animator animator;
     PlayerInteraction inter;
+    Collider2D coll;
 
     InputAction move;
     InputAction jump;
@@ -73,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
         spriter = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         inter = GetComponent<PlayerInteraction>();
+        coll = GetComponent<Collider2D>();
 
         move = input.actions.FindAction("Move");
         jump = input.actions.FindAction("Jump");
@@ -167,16 +166,13 @@ public class PlayerMovement : MonoBehaviour
             jumping = false;
         }
 
-        if(waterSurface != null)
+        if (dropDown.IsPressed())
         {
-            if(dropDown.IsPressed())
-            {
-                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), waterSurface.coll);
-            }
-            else
-            {
-                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), waterSurface.coll, false);
-            }
+            Physics2D.IgnoreLayerCollision(8, 6, true);
+        }
+        else if (underwater == false)
+        {
+            Physics2D.IgnoreLayerCollision(8, 6, false);
         }
 
         //hitbox checks
@@ -297,15 +293,14 @@ public class PlayerMovement : MonoBehaviour
 
         foreach (var hit in colliders)
         {
-            if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
+            if (hit.IsTouching(coll) && hit.CompareTag("Ground"))
             {
                 grounded = true;
                 return;
             }
-            else if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Water Surface"))
+            else if (hit.IsTouching(coll) && hit.CompareTag("Water Surface"))
             {
                 grounded = true;
-                waterSurface = hit.GetComponent<WaterSurface>();
                 return;
             }
         }
@@ -315,11 +310,11 @@ public class PlayerMovement : MonoBehaviour
     {
         List<Collider2D> colliders = new List<Collider2D>();
 
-        GetComponent<Collider2D>().GetContacts(colliders);
+        coll.GetContacts(colliders);
 
         foreach (var hit in colliders)
         {
-            if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Water"))
+            if (hit.IsTouching(coll) && hit.CompareTag("Water"))
             {
                 underwater = true;
                 return;
@@ -335,7 +330,7 @@ public class PlayerMovement : MonoBehaviour
         leftWallClingingCollider.GetContacts(colliders);
         foreach (var hit in colliders)
         {
-            if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
+            if (hit.IsTouching(coll) && hit.CompareTag("Ground"))
             {
                 wallCling = -1;
                 return;
@@ -346,7 +341,7 @@ public class PlayerMovement : MonoBehaviour
         rightWallClingingCollider.GetContacts(colliders);
         foreach (var hit in colliders)
         {
-            if (hit.IsTouching(GetComponent<Collider2D>()) && hit.CompareTag("Ground"))
+            if (hit.IsTouching(coll) && hit.CompareTag("Ground"))
             {
                 wallCling = 1;
                 return;

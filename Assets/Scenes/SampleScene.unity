@@ -1585,10 +1585,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   health: 0
+  knockback: {x: 0, y: 0}
+  knockable: 0
+  damageable: 0
   enemyName: Target Rock
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
-  hitbox: {fileID: 0}
+  body: {fileID: 0}
 --- !u!50 &394759002
 Rigidbody2D:
   serializedVersion: 4
@@ -2061,10 +2064,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   health: 0
+  knockback: {x: 0, y: 0}
+  knockable: 0
+  damageable: 0
   enemyName: Target Rock
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
-  hitbox: {fileID: 0}
+  body: {fileID: 0}
 --- !u!50 &965098310
 Rigidbody2D:
   serializedVersion: 4
@@ -2330,10 +2336,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   health: 0
+  knockback: {x: 0, y: 0}
+  knockable: 0
+  damageable: 0
   enemyName: Target Rock
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
-  hitbox: {fileID: 0}
+  body: {fileID: 0}
 --- !u!50 &1127740659
 Rigidbody2D:
   serializedVersion: 4
@@ -2747,10 +2756,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   health: 0
+  knockback: {x: 0, y: 0}
+  knockable: 0
+  damageable: 0
   enemyName: Target Rock
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
-  hitbox: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &1257438226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6664512156024148334, guid: c2f130df9689016418f4d14b775f6bb7, type: 3}
@@ -3552,10 +3564,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   health: 0
+  knockback: {x: 0, y: 0}
+  knockable: 0
+  damageable: 0
   enemyName: Target Rock
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
-  hitbox: {fileID: 0}
+  body: {fileID: 0}
 --- !u!50 &1519547418
 Rigidbody2D:
   serializedVersion: 4

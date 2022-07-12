@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 4164941070205802291}
   - component: {fileID: 8848064283051885860}
   m_Layer: 31
-  m_Name: ForgePalette
+  m_Name: Forge Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
