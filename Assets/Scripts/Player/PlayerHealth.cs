@@ -80,19 +80,21 @@ public class PlayerHealth : MonoBehaviour, IHittable
 
     IEnumerator Respawn()
     {
+        Scene respawnScene = SceneManager.GetSceneByBuildIndex(respawnSceneIndex);
+
         inter.ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(respawnSceneIndex, LoadSceneMode.Additive);
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(respawnScene.name, LoadSceneMode.Additive);
         if (!loadProgress.isDone)
         {
             yield return null;
         }
+        SceneManager.SetActiveScene(respawnScene);
         AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
         if(!unloadProgress.isDone)
         {
             yield return null;
         }
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(respawnSceneIndex));
         Time.timeScale = 1;
         deathScreen.gameObject.SetActive(false);
         transform.position = respawnAnchor;
