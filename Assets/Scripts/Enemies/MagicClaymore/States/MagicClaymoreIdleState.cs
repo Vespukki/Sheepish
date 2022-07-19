@@ -15,6 +15,8 @@ public class MagicClaymoreIdleState : MagicClaymoreState
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
+        claymore.Walk(claymore.transform, true);
+
         if (claymore.targetDist.x <= claymore.aggroDist.x && claymore.targetDist.y <= claymore.aggroDist.y)
         {
             animator.SetTrigger("Walk");

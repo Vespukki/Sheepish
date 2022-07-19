@@ -246,8 +246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  maxHealth: 5
   health: 5
   knockback: {x: 10, y: 10}
+  knockbackTaken: {x: -15, y: 5}
   knockable: 0
   damageable: 0
   enemyName: Magic Knife
@@ -460,11 +462,11 @@ Transform:
   m_GameObject: {fileID: 402275476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.83, y: -16.92, z: 0}
-  m_LocalScale: {x: 1, y: 1.0124, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &402275480
 Rigidbody2D:
@@ -499,18 +501,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe0b03ce6087e1429fb8b85fcd533c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
+  maxHealth: 4
   health: 4
-  knockback: {x: 0, y: 0}
+  knockback: {x: 10, y: 10}
+  knockbackTaken: {x: -15, y: 0}
   knockable: 0
-  damageable: 0
+  damageable: 1
   enemyName: Magic Claymore
   target: {fileID: 0}
   targetDist: {x: 0, y: 0}
   body: {fileID: 0}
   currentState: {fileID: 0}
   aggroDist: {x: 10, y: 10}
-  attackDist: {x: 1, y: 1}
+  attackDist: {x: 3, y: 1}
   walkSpeed: 3
   walkAccel: 9
   walkDeccel: 9
@@ -3899,7 +3903,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1449565840
 GameObject:

@@ -5,8 +5,10 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour, IHittable
 {
     public int damage;
+    public int maxHealth;
     public int health;
     public Vector2 knockback;
+    public Vector2 knockbackTaken;
 
     public bool knockable;
     public bool damageable;
@@ -21,6 +23,8 @@ public abstract class Enemy : MonoBehaviour, IHittable
     {
         body = GetComponent<Rigidbody2D>();
         Initialize();
+
+        health = maxHealth;
     }
 
     /// <summary>
@@ -49,13 +53,18 @@ public abstract class Enemy : MonoBehaviour, IHittable
         //HurtboxCheck();
     }
 
-    public virtual void OnHit(int damage,Vector2 knockback, GameObject attacker)
+    public virtual void OnHit(int damage, GameObject attacker)
     {
-        Debug.Log(damage.ToString() + " damage taken on " + enemyName);
+        health -= damage;
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
 
         if(knockable)
         {
-            Knockback(knockback, Mathf.Sign(attacker.transform.position.x - transform.position.x));
+            Knockback(knockbackTaken, Mathf.Sign(attacker.transform.position.x - transform.position.x));
         }
     }
 
@@ -69,7 +78,7 @@ public abstract class Enemy : MonoBehaviour, IHittable
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponentInParent<IHittable>().OnHit(damage, knockback, gameObject);
+            collision.GetComponentInParent<PlayerHealth>().OnHit(damage, knockback, gameObject);
         }
     }
 

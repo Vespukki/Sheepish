@@ -15,14 +15,19 @@ public class MagicClaymore : Enemy
     [SerializeField] float turnTime;
 
 
-    public void FaceTarget(GameObject walkTarget)
+    public void FaceTarget(Transform walkTarget)
     {
-            transform.localScale = new Vector3(-Mathf.Sign(walkTarget.transform.position.x - transform.position.x), 1, 1);
+            transform.localScale = new Vector3(-Mathf.Sign(walkTarget.position.x - transform.position.x), transform.localScale.y, 1);
     }
 
-    public void Walk(GameObject walkTarget)
+    public void Walk(Transform walkTarget, bool stop = false)
     {
-        float targetSpeed = Mathf.Sign(walkTarget.transform.position.x - transform.position.x) * walkSpeed; //dir to move in at speed
+        float targetSpeed = 0;
+        if(stop == false)
+        {
+             targetSpeed = Mathf.Sign(walkTarget.position.x - transform.position.x) * walkSpeed; //dir to move in at speed
+        }
+
         float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
 
         float accelRate = (Mathf.Abs(targetSpeed) > .01) ? walkAccel : walkDeccel; //choose to accelerate or decelerate

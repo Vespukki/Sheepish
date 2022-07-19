@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 91c635253dccd7246b8143d407e0b5f5, type: 2}
-  health: 1
+  health: 100
   invincibleTimer: 100
   respawnAnchor: {x: 0, y: 0}
   respawnSceneIndex: 0

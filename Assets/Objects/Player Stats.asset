@@ -29,11 +29,10 @@ MonoBehaviour:
   _dashDistance: 4
   _maxDashes: 1
   _dashCD: 0.17
-  _damage: 4
+  _damage: 1
   _invincibleTime: 2
   _sideAttackKnockback: 0.1
   _attackKnockbackTime: 0.15
-  _damageKnockback: {x: -15, y: 5}
   _drillSpeed: 50
   _drillKnockback: {x: -15, y: 15}
   _drillKnockbackTime: 0.2

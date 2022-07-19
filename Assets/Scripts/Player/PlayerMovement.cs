@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public float lookingDir = 1;
 
-    float moveInput = 0;
+    public float moveInput = 0;
     bool grounded;
     [HideInInspector] public bool underwater;
     int wallCling = 0;
@@ -364,7 +364,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(stats.damage, stats.damageKnockback, gameObject);
+                iHit.OnHit(stats.damage, gameObject);
                 if(alreadyHit.Count == 0)
                 {
                     jumping = false;
@@ -397,7 +397,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (hit.TryGetComponent<IHittable>(out IHittable iHit) && !alreadyHit.Contains(hit.gameObject) && hit.isTrigger)
             {
-                iHit.OnHit(stats.damage, stats.damageKnockback, gameObject);
+                iHit.OnHit(stats.damage, gameObject);
                 if (alreadyHit.Count == 0)
                 {
                     Knockback(stats.drillKnockback, lookingDir);

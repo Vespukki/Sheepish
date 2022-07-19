@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IHittable
 {
-    public void OnHit(int damage, Vector2 knockback, GameObject attacker);
+    public void OnHit(int damage, GameObject attacker);
 }

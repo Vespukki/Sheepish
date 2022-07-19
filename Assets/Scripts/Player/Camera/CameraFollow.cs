@@ -7,14 +7,14 @@ public class CameraFollow : MonoBehaviour
 {
     [SerializeField] float xOffset;
 
-    PlayerMovement mover;
+    Rigidbody2D body;
 
     CamZone zone = null;
     CamZone lastzone;
 
     private void Awake()
     {
-        mover = GetComponent<PlayerMovement>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -24,7 +24,7 @@ public class CameraFollow : MonoBehaviour
 
         if(zone != null)
         {
-            zone.vCam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset.x = xOffset * mover.lookingDir;
+            zone.vCam.GetCinemachineComponent<CinemachineFramingTransposer>().m_TrackedObjectOffset.x = Mathf.Sign(xOffset * body.velocity.x);
         }
 
 

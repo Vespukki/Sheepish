@@ -8,8 +8,8 @@ public class MagicClaymoreWalkState : MagicClaymoreState
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
 
-        claymore.Walk(claymore.target);
-        claymore.FaceTarget(claymore.target);
+        claymore.Walk(claymore.target.transform);
+        claymore.FaceTarget(claymore.target.transform);
 
         if (claymore.targetDist.x <= claymore.attackDist.x && claymore.targetDist.y <= claymore.attackDist.y)
         {
