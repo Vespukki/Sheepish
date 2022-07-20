@@ -55,9 +55,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            OpenDeathScreen();
-            animator.SetTrigger("Reset");
-            body.velocity = Vector2.zero;
+            Die();
         }
         else
         {
@@ -65,6 +63,13 @@ public class PlayerHealth : MonoBehaviour
         }
 
         invincibleTimer = 0;
+    }
+
+    void Die()
+    {
+        OpenDeathScreen();
+        animator.SetTrigger("Reset");
+        body.velocity = Vector2.zero;
     }
 
     void OpenDeathScreen()
@@ -82,14 +87,14 @@ public class PlayerHealth : MonoBehaviour
     {
         inter.ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
+        Debug.Log(SceneManager.GetSceneByBuildIndex(currentSceneIndex).name);
         AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
-        if (!unloadProgress.isDone)
+        while(!unloadProgress.isDone)
         {
             yield return null;
         }
         AsyncOperation loadProgress = SceneManager.LoadSceneAsync(respawnSceneIndex, LoadSceneMode.Additive);
-        if (!loadProgress.isDone)
+        while(!loadProgress.isDone)
         {
             yield return null;
         }

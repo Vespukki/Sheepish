@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
     IInteractable interactTarget;
 
+    PlayerMovement mover;
+    private void Awake()
+    {
+        mover = GetComponent<PlayerMovement>();
+    }
 
     public void TryInteract()
     {
@@ -47,5 +53,40 @@ public class PlayerInteraction : MonoBehaviour
     {
         interactTarget?.HidePrompt();
         interactTarget = null;
+    }
+
+    IEnumerator ChangeScene(Door door, Object targetScene, Vector2 destination)
+    {
+        Vector2 offset = transform.position - door.transform.position;
+
+        Time.timeScale = 0;
+
+        ClearInteractTarget();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
+        while (!unloadProgress.isDone)
+        {
+            yield return null;
+        }
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(targetScene.name, LoadSceneMode.Additive);
+        while (!loadProgress.isDone)
+        {
+            yield return null;
+        }
+
+
+        yield return null;
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetScene.name));
+
+        Time.timeScale = 1;
+        transform.position = destination + offset;
+        mover.CallPlayerAwake();
+    }
+
+    public void StartChangeScene(Door door, Object targetScene, Vector2 destination)
+    {
+        StartCoroutine(ChangeScene(door, targetScene, destination));
     }
 }
