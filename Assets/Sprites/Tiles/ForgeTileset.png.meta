@@ -764,6 +764,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ForgeTileset_20
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 180
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -24, y: 24}
+        - {x: -24, y: -24}
+        - {x: 24, y: -24}
+        - {x: 24, y: 24}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7917a000141b9d43ae3e2fdfc7d5545
+      internalID: -1615295985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -776,6 +801,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ForgeTileset_16: -8575014738311646022
+      ForgeTileset_20: -1615295985
       ForgeTileset_6: -1728045098890765097
       ForgeTileset_5: -7186321936689487862
       ForgeTileset_10: 7760959274166226851
