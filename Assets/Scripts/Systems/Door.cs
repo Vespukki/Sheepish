@@ -9,6 +9,8 @@ public class Door : MonoBehaviour
 
     [SerializeField] Vector2 destination;
 
+
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out PlayerInteraction inter) && useable)

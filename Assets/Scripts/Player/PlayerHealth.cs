@@ -87,7 +87,10 @@ public class PlayerHealth : MonoBehaviour
     {
         inter.ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(SceneManager.GetSceneByBuildIndex(currentSceneIndex).name);
+        deathScreen.gameObject.SetActive(false);
+
+        yield return StartCoroutine(Easing.ScreenFadeOut());
+
         AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
         while(!unloadProgress.isDone)
         {
@@ -106,8 +109,8 @@ public class PlayerHealth : MonoBehaviour
 
 
         Time.timeScale = 1;
-        deathScreen.gameObject.SetActive(false);
         transform.position = respawnAnchor;
+        StartCoroutine(Easing.ScreenFadeIn());
         mover.CallPlayerAwake();
     }
 }

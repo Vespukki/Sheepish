@@ -57,10 +57,9 @@ public class PlayerInteraction : MonoBehaviour
 
     IEnumerator ChangeScene(Door door, Object targetScene, Vector2 destination)
     {
-        Vector2 offset = transform.position - door.transform.position;
-
         Time.timeScale = 0;
-
+        yield return StartCoroutine(Easing.ScreenFadeOut());
+        
         ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
@@ -81,7 +80,8 @@ public class PlayerInteraction : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetScene.name));
 
         Time.timeScale = 1;
-        transform.position = destination + offset;
+        transform.position = destination;
+        StartCoroutine(Easing.ScreenFadeIn());
         mover.CallPlayerAwake();
     }
 
