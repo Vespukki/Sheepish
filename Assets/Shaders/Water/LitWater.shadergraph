@@ -922,10 +922,10 @@
     "m_Guid": {
         "m_GuidSerialized": "dc02b7e5-b2c2-4e8c-bd27-337c58c2c154"
     },
-    "m_Name": "_Maintex",
+    "m_Name": "_MainTex",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "_Maintex",
-    "m_DefaultReferenceName": "_Maintex",
+    "m_RefNameGeneratedByDisplayName": "_MainTex",
+    "m_DefaultReferenceName": "_MainTex",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
