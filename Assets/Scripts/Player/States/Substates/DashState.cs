@@ -18,6 +18,8 @@ public class DashState : AirState
 
         mover.Dash();
         mover.remainingDashes--;
+
+        body.velocity = new Vector2(body.velocity.x, 0);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

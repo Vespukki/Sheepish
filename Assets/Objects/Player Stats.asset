@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8042f30acfe2c0f47a433a0afebc9c8a, type: 3}
   m_Name: Player Stats
   m_EditorClassIdentifier: 
-  _speed: 9
+  _speed: 10
   _acceleration: 9
   _decceleration: 9
   _jerk: 1.2
-  _jumpHeight: 4
-  _jumpTime: 0.4
+  _jumpHeight: 5.65
+  _jumpTime: 0.5
   _maxFallSpeed: -17
   _fallSpeedMultiplier: 1.25
   _inputForgivenessFrames: 5
