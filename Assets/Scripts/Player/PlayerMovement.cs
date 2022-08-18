@@ -8,6 +8,8 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
+
+    #region Inspector Stuff
     public PlayerStats stats;
 
     [SerializeField] Collider2D groundedCollider;
@@ -15,6 +17,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D rightWallClingingCollider;
     public Collider2D downAttackCollider;
     public Collider2D drillAttackCollider;
+
+    [SerializeField] GameObject lureObject;
+    #endregion
+
+    #region Tracking
+    [HideInInspector] public static float playerGravity; 
 
     [HideInInspector] public PlayerState lastState;
     [HideInInspector] public PlayerState currentState;
@@ -24,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public float lookingDir = 1;
 
-    public float moveInput = 0;
+    float moveInput = 0;
     bool grounded;
     [HideInInspector] public bool underwater;
     int wallCling = 0;
@@ -32,15 +40,22 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool jumping = false;
     public bool canMove = true;
 
+    //so you dont hit things multiple times in the same cast
+    List<GameObject> alreadyHit = new();
+
+    GameObject currentLure = null;
+    #endregion
+
+    #region Timers and Coroutines
     //timers
     [HideInInspector] public float lastDashTimer = 100;
     [HideInInspector] public float knockbackTimer = 100;
 
     //coroutines
     Coroutine wallJumpCutCo;
+    #endregion
 
-    //so you dont hit things multiple times in the same cast
-    List<GameObject> alreadyHit = new();
+    #region Startup
 
     Rigidbody2D body;
     PlayerInput input;
@@ -56,14 +71,18 @@ public class PlayerMovement : MonoBehaviour
     InputAction drillAttack;
     InputAction dropDown;
     InputAction interact;
+    InputAction fish;
 
-    //events
+    #endregion
+
+    #region Events
     public delegate void PlayerAwakeDelegate(PlayerMovement mover);
     public static event PlayerAwakeDelegate OnPlayerAwake;
     #endregion
 
-    
+    #endregion
 
+    #region Setup and Upkeep
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -80,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         drillAttack = input.actions.FindAction("Drill Attack");
         dropDown = input.actions.FindAction("Drop Down");
         interact = input.actions.FindAction("Interact");
+        fish = input.actions.FindAction("Fish");
 
 
         move.performed += MoveInput;
@@ -89,18 +109,86 @@ public class PlayerMovement : MonoBehaviour
         dash.started += DashInput;
         downAttack.started += DownAttackInput;
         drillAttack.started += DrillAttackInput;
-        dropDown.started += DropDownInput;
         interact.started += InteractInput;
+        fish.started += FishInput;
 
         CallPlayerAwake();
 
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
+        playerGravity = normalGravity;
     }
 
     public void CallPlayerAwake()
     {
         OnPlayerAwake?.Invoke(this);
     }
+
+    private void FixedUpdate()
+    {
+
+
+        UpdateTimers();
+
+        if (body.velocity.y < 0)
+        {
+            jumping = false;
+        }
+
+        if (dropDown.IsPressed())
+        {
+            Physics2D.IgnoreLayerCollision(8, 6, true);
+        }
+        else if (underwater == false)
+        {
+            Physics2D.IgnoreLayerCollision(8, 6, false);
+        }
+
+        //hitbox checks
+        Grounded();
+        Underwater();
+        WallClinging();
+        SideAttack();
+        DrillAttack();
+
+        SetAnimatorVars();
+
+
+    }
+
+    void SetAnimatorVars()
+    {
+        if (wallCling != 0 && (currentState is WallClingState))
+        {
+            lookingDir = -wallCling;
+        }
+        else if (currentState != null && currentState.canChangeDir && moveInput != 0)
+        {
+            lookingDir = moveInput;
+        }
+
+        spriter.flipX = lookingDir == -1;
+
+
+        //sets animator variables
+        animator.SetBool("Moving", Mathf.Abs(moveInput) > 0);
+        animator.SetBool("Grounded", grounded);
+        animator.SetFloat("yVelocity", body.velocity.y);
+        animator.SetInteger("WallCling", wallCling);
+    }
+
+    public void GroundReset()
+    {
+        remainingDashes = stats.maxDashes;
+    }
+    void UpdateTimers()
+    {
+        lastDashTimer += Time.fixedDeltaTime;
+        knockbackTimer += Time.fixedDeltaTime;
+    }
+
+    #endregion
+
+    #region Input
 
     void MoveInput(InputAction.CallbackContext context)
     {
@@ -145,48 +233,25 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "DrillAttack");
     }
 
-    void DropDownInput(InputAction.CallbackContext context)
-    {
- 
-    }
-
     void InteractInput(InputAction.CallbackContext context)
     {
         inter.TryInteract();
     }
 
-    private void FixedUpdate()
+    public void FishInput(InputAction.CallbackContext context)
     {
-       
-
-        UpdateTimers();
-
-        if(body.velocity.y < 0)
+        if (currentLure != null)
         {
-            jumping = false;
+            Unfish();
         }
-
-        if (dropDown.IsPressed())
+        else
         {
-            Physics2D.IgnoreLayerCollision(8, 6, true);
+            Fish();
         }
-        else if (underwater == false)
-        {
-            Physics2D.IgnoreLayerCollision(8, 6, false);
-        }
-
-        //hitbox checks
-        Grounded();
-        Underwater();
-        WallClinging();
-        SideAttack();
-        DrillAttack();
-
-        SetAnimatorVars();
-
-
     }
+    #endregion
 
+    #region Movement
     public void Movement()
     {
         if (!canMove) return;
@@ -261,6 +326,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTriggerOneFixedFrame(this, "DashCut");
     }
 
+    
+
     public void LimitFallSpeed(float multiplier)
     {
         float waterMultiplier = underwater ? stats.waterFallSpeedMultiplier : 1;
@@ -284,6 +351,40 @@ public class PlayerMovement : MonoBehaviour
         alreadyHit.Clear();
     }
 
+    IEnumerator CantMove(float time)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(time);
+        canMove = true;
+    }
+
+    public void Knockback(Vector2 force, float direction)
+    {
+        jumping = false;
+        body.velocity = new Vector2(force.x * direction, force.y);
+        knockbackTimer = 0;
+    }
+
+    void Unfish()
+    {
+        Destroy(currentLure);
+    }
+
+    void Fish()
+    {
+        if (currentLure != null)
+        {
+            Destroy(currentLure);
+        }
+
+        currentLure = Instantiate(lureObject, transform.position, transform.rotation);
+
+        currentLure.GetComponent<Rigidbody2D>().velocity = new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y);
+        currentLure.GetComponent<Lure>().mover = this;
+    }
+    #endregion
+
+    #region Hitbox Checks
     //also checks if on water surface
     void Grounded()
     {
@@ -377,13 +478,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator CantMove(float time)
-    {
-        canMove = false;
-        yield return new WaitForSeconds(time);
-        canMove = true;
-    }
-
+    
     void DrillAttack()
     {
         if (!drillAttackCollider.gameObject.activeSelf) return;
@@ -410,43 +505,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Knockback(Vector2 force, float direction)
-    {
-        jumping = false;
-        body.velocity = new Vector2(force.x * direction, force.y);
-        knockbackTimer = 0;
-    }
-
-    void SetAnimatorVars()
-    {
-        if(wallCling != 0 && (currentState is WallClingState))
-        {
-            lookingDir = -wallCling;
-        }
-        else if(currentState != null && currentState.canChangeDir && moveInput != 0)
-        {
-            lookingDir = moveInput;
-        }
-
-        spriter.flipX = lookingDir == -1;
-
-
-        //sets animator variables
-        animator.SetBool("Moving", Mathf.Abs(moveInput) > 0);
-        animator.SetBool("Grounded", grounded);
-        animator.SetFloat("yVelocity", body.velocity.y);
-        animator.SetInteger("WallCling", wallCling);
-    }
-
-    public void GroundReset()
-    {
-        remainingDashes = stats.maxDashes;
-    }
-    void UpdateTimers()
-    {
-        lastDashTimer += Time.fixedDeltaTime;
-        knockbackTimer += Time.fixedDeltaTime;
-    }
-
-    
+    #endregion
 }

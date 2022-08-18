@@ -1686,12 +1686,12 @@ MonoBehaviour:
   rightWallClingingCollider: {fileID: 547447865}
   downAttackCollider: {fileID: 1870761090}
   drillAttackCollider: {fileID: 1217466764}
+  lureObject: {fileID: 8053761468485534386, guid: f478b3b252ddf924bac4dc0342a9ab5d, type: 3}
   lastState: {fileID: 0}
   currentState: {fileID: 0}
   remainingDashes: 1
   normalGravity: 0
   lookingDir: 1
-  moveInput: 0
   underwater: 0
   jumping: 0
   canMove: 1

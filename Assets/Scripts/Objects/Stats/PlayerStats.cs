@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(order = 1, menuName = "Player Stats")]
 public class PlayerStats : ScriptableObject
 {
+    #region Movement
     [Header("Movement")]
     [SerializeField] float _speed;
     [SerializeField] float _acceleration;
@@ -16,6 +17,9 @@ public class PlayerStats : ScriptableObject
     public float decceleration => _decceleration;
     public float jerk => _jerk;
 
+    #endregion
+
+    #region Jump
     [Header("Jump")]
     [SerializeField] float _jumpHeight;
     [SerializeField] float _jumpTime;
@@ -28,6 +32,9 @@ public class PlayerStats : ScriptableObject
     public float fallSpeedMultiplier => _fallSpeedMultiplier;
     public float maxFallSpeed => _maxFallSpeed;
     public int inputForgivenessFrames => _inputForgivenessFrames;
+    #endregion
+
+    #region Walls
 
     [Header("Wall Cling")]
     [SerializeField] float _wallClingFallSpeed;
@@ -38,7 +45,11 @@ public class PlayerStats : ScriptableObject
     public float wallClingAcceleration => _wallClingAcceleration;
     public Vector2 wallJumpForce => _wallJumpForce;
     public float wallJumpTime => _wallJumpTime;
-    
+
+    #endregion
+
+    #region Dash
+
     [Header("Dash")]
     [SerializeField] float _dashTime;
     [SerializeField] float _dashDistance;
@@ -49,6 +60,10 @@ public class PlayerStats : ScriptableObject
     public float dashDistance => _dashDistance;
     public int maxDashes => _maxDashes;
     public float dashCD => _dashCD;
+
+    #endregion
+
+    #region Attack
 
     [Header("Attack")]
     [SerializeField] int _damage;
@@ -61,6 +76,7 @@ public class PlayerStats : ScriptableObject
     public float sideAttackKnockback => _sideAttackKnockback; //knockback from attacking
     public float attackKnockbackTime => _attackKnockbackTime;
 
+
     [Header("Drill")]
     [SerializeField] float _drillSpeed;
     [SerializeField] Vector2 _drillKnockback;
@@ -69,11 +85,24 @@ public class PlayerStats : ScriptableObject
     public Vector2 drillKnockback => _drillKnockback;
     public float drillKnockbackTime => _drillKnockbackTime;
 
+
+    #endregion
+
+    #region Water
     [Header("Water")]
     [SerializeField] float _waterGravityMultiplier;
     [SerializeField] float _waterFallSpeedMultiplier;
-    
+
     public float waterGravityMultiplier => _waterGravityMultiplier;
     public float waterFallSpeedMultiplier => _waterFallSpeedMultiplier;
+    #endregion
 
+
+    #region Fishing
+    [Header("Fishing")]
+    [SerializeField] Vector2 _castSpeed;
+
+    public Vector2 castSpeed => _castSpeed;
+
+    #endregion
 }
