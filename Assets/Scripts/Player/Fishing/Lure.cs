@@ -6,7 +6,7 @@ public class Lure : MonoBehaviour
 {
     Rigidbody2D body;
     LineRenderer liner;
-    TargetJoint2D targetJoint;
+    DistanceJoint2D distJoint;
 
     [HideInInspector] public PlayerMovement mover; // set by player mover on instantiate
 
@@ -14,9 +14,9 @@ public class Lure : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         liner = GetComponent<LineRenderer>();
-        targetJoint = GetComponent<TargetJoint2D>();
+        distJoint = GetComponent<DistanceJoint2D>();
 
-        targetJoint.enabled = false;
+        distJoint.enabled = false;
         body.gravityScale = PlayerMovement.playerGravity;
     }
 
@@ -28,8 +28,17 @@ public class Lure : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        targetJoint.target = collision.GetContact(0).point;
-        targetJoint.enabled = true;
+        distJoint.connectedBody = mover.gameObject.GetComponent<Rigidbody2D>();
+        distJoint.distance = Vector2.Distance(transform.position, mover.transform.position);
+        distJoint.enabled = true;
 
+        mover.canMove = false;
+
+        body.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void OnDestroy()
+    {
+        mover.canMove = true;
     }
 }

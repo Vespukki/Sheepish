@@ -377,10 +377,13 @@ public class PlayerMovement : MonoBehaviour
             Destroy(currentLure);
         }
 
+
         currentLure = Instantiate(lureObject, transform.position, transform.rotation);
 
+        Lure lure = currentLure.GetComponent<Lure>();
+
         currentLure.GetComponent<Rigidbody2D>().velocity = new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y);
-        currentLure.GetComponent<Lure>().mover = this;
+        lure.mover = this;
     }
     #endregion
 
