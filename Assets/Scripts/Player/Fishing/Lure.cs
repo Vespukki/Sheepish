@@ -32,13 +32,13 @@ public class Lure : MonoBehaviour
         distJoint.distance = Vector2.Distance(transform.position, mover.transform.position);
         distJoint.enabled = true;
 
-        mover.canMove = false;
+        //mover.canMove = false;
 
         body.bodyType = RigidbodyType2D.Static;
     }
 
     private void OnDestroy()
     {
-        mover.canMove = true;
+        //mover.canMove = true;
     }
 }

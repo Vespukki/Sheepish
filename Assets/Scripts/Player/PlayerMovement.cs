@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     List<GameObject> alreadyHit = new();
 
     GameObject currentLure = null;
+
+    float currentSpeed = 0; //current input speed, separate from physics speed
     #endregion
 
     #region Timers and Coroutines
@@ -252,14 +254,24 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Movement
+
+
     public void Movement()
     {
         if (!canMove) return;
 
         float targetSpeed = moveInput * stats.speed; //dir to move in at speed
+
         float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
 
-        float accelRate = (Mathf.Abs(targetSpeed) > .01) ? stats.acceleration : stats.decceleration; //choose to accelerate or decelerate
+        bool accel = Mathf.Abs(targetSpeed) > .01; //choose to accelerate or decelerate
+        float accelRate = accel ? stats.acceleration : stats.decceleration;
+
+        //WIP for better swing feel
+        /*if(Mathf.Sign(targetSpeed) * speedDiff <= 0 && Mathf.Abs(moveInput) >= .01)
+        {
+            return;
+        }*/
 
         //applies acceleration to speedDiff, then sets to a power to set jerk. then reapplies direction
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, stats.jerk) * Mathf.Sign(speedDiff);
@@ -267,7 +279,7 @@ public class PlayerMovement : MonoBehaviour
         body.AddForce(movement * Vector2.right);
 
         //no small numbers!
-        if(Mathf.Abs(body.velocity.x) < 0.05)
+        if (Mathf.Abs(body.velocity.x) < 0.05)
         {
             body.velocity = new Vector2(0, body.velocity.y);
         }    
