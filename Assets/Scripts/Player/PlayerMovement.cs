@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
 
     GameObject currentLure = null;
 
-    float currentSpeed = 0; //current input speed, separate from physics speed
     #endregion
 
     #region Timers and Coroutines

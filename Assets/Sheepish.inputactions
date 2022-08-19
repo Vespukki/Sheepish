@@ -750,6 +750,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Dialog",
+            "id": "133094f0-8cab-4276-bd1c-14a91eaad107",
+            "actions": [
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "fdc49da5-b9da-4e50-b39f-7fc0a1f04795",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6432df53-658c-45d8-9cb9-f926e79150e4",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

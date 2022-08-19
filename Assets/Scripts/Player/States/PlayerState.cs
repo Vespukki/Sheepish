@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerState : StateMachineBehaviour
 {
     protected PlayerMovement mover;
     protected Rigidbody2D body;
+    protected PlayerInput input;
+    protected PlayerInteraction inter;
 
     public bool canChangeDir = true;
 
@@ -13,6 +16,8 @@ public class PlayerState : StateMachineBehaviour
     {
         mover = animator.GetComponent<PlayerMovement>();
         body = animator.GetComponent<Rigidbody2D>();
+        input = animator.GetComponent<PlayerInput>();
+        inter = animator.GetComponent<PlayerInteraction>();
 
         mover.currentState = this;
     }
