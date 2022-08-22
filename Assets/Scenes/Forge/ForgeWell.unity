@@ -520,18 +520,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: {fileID: 2144426007}
   dialogs:
-  - text: squad wipe!
-    events:
-    - modifer: 1
-      speedMulitplier: 0.1
-      startIndex: 0
-      endIndex: 20
   - text: this one came after the first
+    events: []
+  - text: <link="0">damn danoil</link>
     events:
     - modifer: 1
-      speedMulitplier: 0.1
       startIndex: 0
-      endIndex: 20
+      endIndex: 1000
 --- !u!212 &1197407637
 SpriteRenderer:
   m_ObjectHideFlags: 0

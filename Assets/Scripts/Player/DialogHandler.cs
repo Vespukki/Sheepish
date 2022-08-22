@@ -34,61 +34,75 @@ public class DialogHandler : MonoBehaviour
     IEnumerator RunDialog(Dialog[] dialogs)
     {
         canGroup.alpha = 1;
+
+
         foreach (Dialog dialog in dialogs)
         {
             yield return StartCoroutine(PlayText(dialog));
         }
         yield return new WaitUntil(() => next.IsPressed());
         input.SwitchCurrentActionMap("Player");
-        animator.SetTrigger("Reset");
+        animator.SetTrigger("Reset"); 
         canGroup.alpha = 0;
     }
 
     IEnumerator PlayText(Dialog dialog)
     {
+        textBox.text = dialog.text;
+
+        textBox.maxVisibleCharacters = 0;
         textBox.ForceMeshUpdate();
 
-        //textBox.text = dialog.text;
-
-        textBox.ForceMeshUpdate();
-
-        float textSpeed = .1f;
         List<TextModifier> activeEvents = new();
-        for (int i = 0; i < dialog.text.Length; i++)
+
+        List<TextEvent> tEvents = new();
+
+        foreach (TMP_LinkInfo link in textBox.textInfo.linkInfo)
         {
-            string final = dialog.text.Insert(i, clearTag);
-            foreach(TextEvent tEvent in dialog.events)
+            Debug.Log(link.GetLinkID());
+            int first = (link.linkTextfirstCharacterIndex);
+            int last = link.GetLinkText().Length + first;
+
+            tEvents.Add(new TextEvent(dialog.events[int.Parse(link.GetLinkID())].modifer, first, last));
+        }
+
+        for (int i = 0; i < textBox.GetParsedText().Length; i++)
+        {
+            float textSpeed = .04f;
+
+            foreach(TextEvent tEvent in tEvents)
             {
                 if(tEvent.startIndex == i)
                 {
                     activeEvents.Add(tEvent.modifer);
-                    textSpeed *= tEvent.speedMulitplier;
                 }
                 else if(tEvent.endIndex == i)
                 {
                     activeEvents.Remove(tEvent.modifer);
-                    textSpeed /= tEvent.speedMulitplier;
                 }
 
-                foreach(TextModifier modifier in activeEvents)
+                
+            }
+
+            foreach (TextModifier modifier in activeEvents)
+            {
+                switch (modifier)
                 {
+                    case TextModifier.slow:
+                        textSpeed *= 10;
+                        break;
+                    default:
+                        break;
                 }
             }
-            textBox.text = final;
             yield return new WaitForSeconds(textSpeed);
+            textBox.maxVisibleCharacters++;
         }
-        textBox.text = dialog.text;
-
         yield return new WaitUntil(() => next.IsPressed());
-    }
 
-    public TextModifier Parse(string tag)
-    {
-        switch (tag)
-        {
-            default:
-                return TextModifier.none;
-        }
+        List<TMP_LinkInfo> links = new(textBox.textInfo.linkInfo);
+        links.Clear();
+        textBox.textInfo.linkInfo = links.ToArray();
     }
 
     IEnumerator PrintDialog(List<string> dialog)
@@ -109,13 +123,24 @@ public class Dialog
 public class TextEvent
 {
     public TextModifier modifer = TextModifier.none;
-    public float speedMulitplier = 1;
-    public int startIndex;
-    public int endIndex;
+    [HideInInspector] public int startIndex = 0;
+    [HideInInspector] public int endIndex = 1000;
+
+    public TextEvent()
+    {
+
+    }
+
+    public TextEvent(TextModifier _modifier, int _startIndex, int _endIndex)
+    {
+        modifer = _modifier;
+        startIndex = _startIndex;
+        endIndex = _endIndex;
+    }
 }
 
 
-public enum TextModifier { none }
+public enum TextModifier { none, slow }
 
 //save for later
 /*foreach (TMP_LinkInfo link in textBox.textInfo.linkInfo)
