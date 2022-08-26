@@ -10,6 +10,7 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] TMP_Text textBox;
     [SerializeField] Image portrait;
+    [SerializeField] AudioSource audioSource;
     CanvasGroup canGroup;
 
     PlayerInput input;
@@ -29,17 +30,17 @@ public class DialogHandler : MonoBehaviour
 
     public void StartDialog(Dialog[] dialogs, NPC npc)
     {
-        StartCoroutine(RunDialog(dialogs));
+        StartCoroutine(RunDialog(dialogs, npc));
     }
 
-    IEnumerator RunDialog(Dialog[] dialogs)
+    IEnumerator RunDialog(Dialog[] dialogs, NPC npc)
     {
         canGroup.alpha = 1;
 
 
         foreach (Dialog dialog in dialogs)
         {
-            yield return StartCoroutine(PlayText(dialog));
+            yield return StartCoroutine(PlayText(dialog, npc));
         }
         yield return new WaitUntil(() => next.IsPressed());
         input.SwitchCurrentActionMap("Player");
@@ -47,7 +48,7 @@ public class DialogHandler : MonoBehaviour
         canGroup.alpha = 0;
     }
 
-    IEnumerator PlayText(Dialog dialog)
+    IEnumerator PlayText(Dialog dialog, NPC npc)
     {
         portrait.sprite = dialog.portrait;
         textBox.text = dialog.text;
@@ -98,6 +99,10 @@ public class DialogHandler : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(textSpeed);
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(npc.voice);
+            }
             textBox.maxVisibleCharacters++;
         }
         yield return new WaitUntil(() => next.IsPressed());

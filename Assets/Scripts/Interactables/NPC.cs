@@ -9,6 +9,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     [SerializeField] Dialog[] dialogs;
 
+    public AudioClip voice;
+
     public void Interact(GameObject player)
     {
         player.GetComponent<Animator>().SetTrigger("Talk");
