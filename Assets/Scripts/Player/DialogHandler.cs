@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DialogHandler : MonoBehaviour
 {
     [SerializeField] Canvas canvas;
     [SerializeField] TMP_Text textBox;
+    [SerializeField] Image portrait;
     CanvasGroup canGroup;
 
     PlayerInput input;
     Animator animator;
 
-    InputAction next;
 
-    const string clearTag = "<color=#0000>";
+    InputAction next;
 
     private void Awake()
     {
@@ -48,6 +49,7 @@ public class DialogHandler : MonoBehaviour
 
     IEnumerator PlayText(Dialog dialog)
     {
+        portrait.sprite = dialog.portrait;
         textBox.text = dialog.text;
 
         textBox.maxVisibleCharacters = 0;
@@ -117,6 +119,7 @@ public class Dialog
     [TextArea]
     public string text;
     public List<TextEvent> events;
+    public Sprite portrait;
 }
 
 [System.Serializable]
