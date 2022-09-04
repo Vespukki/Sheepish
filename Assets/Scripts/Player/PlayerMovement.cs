@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool jumping = false;
     public bool canMove = true;
 
+
     //so you dont hit things multiple times in the same cast
     List<GameObject> alreadyHit = new();
 
@@ -274,9 +275,26 @@ public class PlayerMovement : MonoBehaviour
     public void Movement()
     {
         if (!canMove) return;
+        
 
-        if (currentLure?.state == lureState.grappling && (moveInput == 0 || Mathf.Sign(body.velocity.x) == Mathf.Sign(moveInput))) return;
+        if (Mathf.Sign(body.velocity.x) == Mathf.Sign(moveInput) && Mathf.Abs(body.velocity.x + .01f) > Mathf.Abs(stats.speed) && moveInput != 0 && currentState is AirState)
+        {
+            //no deceleration
+        }
+        else
+        {
+            Move();
+        }
+        //no small numbers!
+        if (Mathf.Abs(body.velocity.x) < 0.1)
+        {
+            body.velocity = new Vector2(0, body.velocity.y);
+        }
 
+    }
+
+    void Move()
+    {
         float targetSpeed = moveInput * stats.speed; //dir to move in at speed
 
         float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
@@ -284,23 +302,14 @@ public class PlayerMovement : MonoBehaviour
         bool accel = Mathf.Abs(targetSpeed) > .01; //choose to accelerate or decelerate
         float accelRate = accel ? stats.acceleration : stats.decceleration;
 
-        //WIP for better swing feel
-        /*if(Mathf.Sign(targetSpeed) * speedDiff <= 0 && Mathf.Abs(moveInput) >= .01)
-        {
-            return;
-        }*/
-
         //applies acceleration to speedDiff, then sets to a power to set jerk. then reapplies direction
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, stats.jerk) * Mathf.Sign(speedDiff);
 
         body.AddForce(movement * Vector2.right);
 
-        //no small numbers!
-        if (Mathf.Abs(body.velocity.x) < 0.05)
-        {
-            body.velocity = new Vector2(0, body.velocity.y);
-        }    
+        
     }
+
 
     public void Jump()
     {
@@ -415,11 +424,22 @@ public class PlayerMovement : MonoBehaviour
         currentLure.mover = this;
     }
 
-    void DeleteLure()
+    public void DeleteLure()
     {
-        Destroy(currentLure.gameObject);
-        currentLure = null;
+        if (currentLure != null)
+        {
+            Destroy(currentLure.gameObject);
+            currentLure = null;
+        }
+        
+        animator.SetTriggerOneFixedFrame(this, "GrappleCut");
     }
+
+    public void GrappleSwing()
+    {
+        body.AddForce(moveInput * stats.swingSpeed * Vector2.right);
+    }
+
     #endregion
 
     #region Hitbox Checks

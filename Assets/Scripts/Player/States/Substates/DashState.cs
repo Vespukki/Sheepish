@@ -26,6 +26,7 @@ public class DashState : AirState
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
+        body.velocity = new Vector2(mover.stats.speed * mover.lookingDir, body.velocity.y);
         mover.lastDashTimer = 0;
     }
 }

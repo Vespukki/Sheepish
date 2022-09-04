@@ -98,15 +98,17 @@ public class PlayerStats : ScriptableObject
     #endregion
 
 
-    #region Fishing
-    [Header("Fishing")]
+    #region Lure
+    [Header("Lure")]
     [SerializeField] Vector2 _castSpeed;
     [SerializeField] Vector2 _airCastSpeed;
     [SerializeField] float _reelSpeed;
+    [SerializeField] float _swingSpeed;
 
     public Vector2 castSpeed => _castSpeed;
     public Vector2 airCastSpeed => _airCastSpeed;
     public float reelSpeed => _reelSpeed;
+    public float swingSpeed => _swingSpeed;
 
     #endregion
 }

@@ -38,11 +38,11 @@ public class Lure : MonoBehaviour
 
         body.bodyType = RigidbodyType2D.Static;
         state = lureState.grappling;
+        mover.GetComponent<Animator>().SetTrigger("Grapple");
     }
 
     private void OnDestroy()
     {
-        //mover.canMove = true;
     }
 }
 public enum lureState { fishing, grappling, air }
