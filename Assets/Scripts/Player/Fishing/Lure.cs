@@ -6,7 +6,9 @@ public class Lure : MonoBehaviour
 {
     Rigidbody2D body;
     LineRenderer liner;
-    DistanceJoint2D distJoint;
+    [HideInInspector] public DistanceJoint2D distJoint;
+
+    [HideInInspector] public lureState state = lureState.air; 
 
     [HideInInspector] public PlayerMovement mover; // set by player mover on instantiate
 
@@ -35,6 +37,7 @@ public class Lure : MonoBehaviour
         //mover.canMove = false;
 
         body.bodyType = RigidbodyType2D.Static;
+        state = lureState.grappling;
     }
 
     private void OnDestroy()
@@ -42,3 +45,4 @@ public class Lure : MonoBehaviour
         //mover.canMove = true;
     }
 }
+public enum lureState { fishing, grappling, air }

@@ -52,7 +52,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -70,6 +70,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52a97f9ed95a754fac5d536e876ffec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distJoint: {fileID: 0}
+  state: 2
   mover: {fileID: 0}
 --- !u!212 &2527058475382387418
 SpriteRenderer:
@@ -266,4 +268,4 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 1
-  m_MaxDistanceOnly: 1
+  m_MaxDistanceOnly: 0

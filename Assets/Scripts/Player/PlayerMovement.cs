@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     //so you dont hit things multiple times in the same cast
     List<GameObject> alreadyHit = new();
 
-    GameObject currentLure = null;
+    Lure currentLure = null;
 
     #endregion
 
@@ -73,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     InputAction dropDown;
     InputAction interact;
     InputAction fish;
+    InputAction reel;
 
     #endregion
 
@@ -101,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         dropDown = input.actions.FindAction("Drop Down");
         interact = input.actions.FindAction("Interact");
         fish = input.actions.FindAction("Fish");
+        reel = input.actions.FindAction("Reel");
 
 
         move.performed += MoveInput;
@@ -142,6 +144,11 @@ public class PlayerMovement : MonoBehaviour
         else if (underwater == false)
         {
             Physics2D.IgnoreLayerCollision(8, 6, false);
+        }
+
+        if(reel.IsPressed())
+        {
+            ReelInput();
         }
 
         //hitbox checks
@@ -250,6 +257,15 @@ public class PlayerMovement : MonoBehaviour
             Fish();
         }
     }
+
+    public void ReelInput()
+    {
+        if (currentLure == null) return;
+
+        int direction = -(int)Mathf.Sign(reel.ReadValue<float>());
+
+        currentLure.distJoint.distance += stats.reelSpeed * direction;
+    }
     #endregion
 
     #region Movement
@@ -258,6 +274,8 @@ public class PlayerMovement : MonoBehaviour
     public void Movement()
     {
         if (!canMove) return;
+
+        if (currentLure?.state == lureState.grappling && (moveInput == 0 || Mathf.Sign(body.velocity.x) == Mathf.Sign(moveInput))) return;
 
         float targetSpeed = moveInput * stats.speed; //dir to move in at speed
 
@@ -378,23 +396,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Unfish()
     {
-        Destroy(currentLure);
+        DeleteLure();
     }
 
     void Fish()
     {
         if (currentLure != null)
         {
-            Destroy(currentLure);
+            DeleteLure();
         }
 
 
-        currentLure = Instantiate(lureObject, transform.position, transform.rotation);
+        currentLure = Instantiate(lureObject, transform.position, transform.rotation).GetComponent<Lure>();
 
-        Lure lure = currentLure.GetComponent<Lure>();
 
-        currentLure.GetComponent<Rigidbody2D>().velocity = new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y);
-        lure.mover = this;
+        currentLure.gameObject.GetComponent<Rigidbody2D>().velocity = (currentState is AirState ? new Vector2(lookingDir * stats.airCastSpeed.x, stats.airCastSpeed.y) :
+            new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y)) + new Vector2(body.velocity.x, body.velocity.y > 0 ? body.velocity.y : 0);
+        currentLure.mover = this;
+    }
+
+    void DeleteLure()
+    {
+        Destroy(currentLure.gameObject);
+        currentLure = null;
     }
     #endregion
 

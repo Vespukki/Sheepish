@@ -38,4 +38,6 @@ MonoBehaviour:
   _drillKnockbackTime: 0.2
   _waterGravityMultiplier: 0.8
   _waterFallSpeedMultiplier: 0.7
-  _castSpeed: {x: 30, y: 20}
+  _castSpeed: {x: 10, y: 15}
+  _airCastSpeed: {x: 15, y: 20}
+  _reelSpeed: 0.08

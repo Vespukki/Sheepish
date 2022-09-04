@@ -101,8 +101,12 @@ public class PlayerStats : ScriptableObject
     #region Fishing
     [Header("Fishing")]
     [SerializeField] Vector2 _castSpeed;
+    [SerializeField] Vector2 _airCastSpeed;
+    [SerializeField] float _reelSpeed;
 
     public Vector2 castSpeed => _castSpeed;
+    public Vector2 airCastSpeed => _airCastSpeed;
+    public float reelSpeed => _reelSpeed;
 
     #endregion
 }
