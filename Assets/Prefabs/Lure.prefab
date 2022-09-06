@@ -49,7 +49,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.02
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
@@ -70,9 +70,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52a97f9ed95a754fac5d536e876ffec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  body: {fileID: 0}
   distJoint: {fileID: 0}
+  audioSource: {fileID: 0}
   state: 2
   mover: {fileID: 0}
+  fisher: {fileID: 0}
 --- !u!212 &2527058475382387418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -266,6 +269,6 @@ DistanceJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
+  m_AutoConfigureDistance: 1
   m_Distance: 1
   m_MaxDistanceOnly: 0

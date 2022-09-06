@@ -10,7 +10,7 @@ public class DialogHandler : MonoBehaviour
     [SerializeField] Canvas canvas;
     [SerializeField] TMP_Text textBox;
     [SerializeField] Image portrait;
-    [SerializeField] AudioSource audioSource;
+    AudioSource audioSource;
     CanvasGroup canGroup;
 
     PlayerInput input;
@@ -23,6 +23,7 @@ public class DialogHandler : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         input = GetComponent<PlayerInput>();
+        audioSource = GetComponent<AudioSource>();
         canGroup = canvas.gameObject.GetComponent<CanvasGroup>();
 
         next = input.actions.FindAction("Next");

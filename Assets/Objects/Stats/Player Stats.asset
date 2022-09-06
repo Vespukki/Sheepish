@@ -42,3 +42,4 @@ MonoBehaviour:
   _airCastSpeed: {x: 15, y: 20}
   _reelSpeed: 0.08
   _swingSpeed: 15
+  _fishingReelSpeed: 0.3

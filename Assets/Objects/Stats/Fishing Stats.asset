@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d64e239f2c6bc04eb2f4d6c16eb9fd8, type: 3}
+  m_Name: Fishing Stats
+  m_EditorClassIdentifier: 
+  _rarityPings:
+  - {fileID: -267675303, guid: 9313fb6fa893b714a9674ecbb0c12849, type: 3}
+  - {fileID: -214965100, guid: 9313fb6fa893b714a9674ecbb0c12849, type: 3}
+  - {fileID: -762398150, guid: 9313fb6fa893b714a9674ecbb0c12849, type: 3}
+  - {fileID: -755963667, guid: 9313fb6fa893b714a9674ecbb0c12849, type: 3}
+  - {fileID: 760969689, guid: 9313fb6fa893b714a9674ecbb0c12849, type: 3}
+  _rarityTimers:
+  - 1.66
+  - 1.33
+  - 1
+  - 0.66
+  - 0.33
+  _pingObject: {fileID: 6497277324175534016, guid: de0d1086a5fdd6d4089c8292bad9f263, type: 3}
+  _notificationObject: {fileID: 5149377526443358485, guid: 639520ee002dcd747bafa1439caee526, type: 3}
+  _notificationTimer: 5

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e6daaa2de10148ae83b669875ab76, type: 3}
+  m_Name: Audio Bank
+  m_EditorClassIdentifier: 
+  _fishPing:
+  - {fileID: 8300000, guid: 0a334f2871e1a8a41912077ebd5d97eb, type: 3}
+  - {fileID: 8300000, guid: 9ddb402f751faca4e8487281467ca5b4, type: 3}
+  - {fileID: 8300000, guid: f43b482a70202f64d86acf41bac0ca6f, type: 3}
+  - {fileID: 8300000, guid: d114df8818e3daf4daa4f55c0af2b135, type: 3}
+  - {fileID: 8300000, guid: 6e4efca26f8c0754eabc35effd418772, type: 3}

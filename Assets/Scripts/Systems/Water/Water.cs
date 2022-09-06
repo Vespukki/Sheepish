@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Water : MonoBehaviour
 {
-
+    public FishTable fishTable;
 }

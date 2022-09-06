@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     PlayerInteraction inter;
     Collider2D coll;
+    PlayerFishing fisher;
 
     InputAction move;
     InputAction jump;
@@ -79,8 +80,11 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Events
-    public delegate void PlayerAwakeDelegate(PlayerMovement mover);
-    public static event PlayerAwakeDelegate OnPlayerAwake;
+    public delegate void PlayerEmptyDelegate();
+    public delegate void PlayerMoverDelegate(PlayerMovement mover);
+    
+    public static event PlayerMoverDelegate OnPlayerAwake;
+    public static event PlayerEmptyDelegate OnUnfish;
     #endregion
 
     #endregion
@@ -94,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inter = GetComponent<PlayerInteraction>();
         coll = GetComponent<Collider2D>();
+        fisher = GetComponent<PlayerFishing>();
 
         move = input.actions.FindAction("Move");
         jump = input.actions.FindAction("Jump");
@@ -149,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(reel.IsPressed())
         {
-            ReelInput();
+            Reel(-(int)Mathf.Sign(reel.ReadValue<float>()));
         }
 
         //hitbox checks
@@ -259,14 +264,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void ReelInput()
-    {
-        if (currentLure == null) return;
-
-        int direction = -(int)Mathf.Sign(reel.ReadValue<float>());
-
-        currentLure.distJoint.distance += stats.reelSpeed * direction;
-    }
     #endregion
 
     #region Movement
@@ -405,6 +402,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Unfish()
     {
+        OnUnfish?.Invoke();
         DeleteLure();
     }
 
@@ -421,7 +419,9 @@ public class PlayerMovement : MonoBehaviour
 
         currentLure.gameObject.GetComponent<Rigidbody2D>().velocity = (currentState is AirState ? new Vector2(lookingDir * stats.airCastSpeed.x, stats.airCastSpeed.y) :
             new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y)) + new Vector2(body.velocity.x, body.velocity.y > 0 ? body.velocity.y : 0);
+
         currentLure.mover = this;
+        currentLure.fisher = fisher;
     }
 
     public void DeleteLure()
@@ -438,6 +438,23 @@ public class PlayerMovement : MonoBehaviour
     public void GrappleSwing()
     {
         body.AddForce(moveInput * stats.swingSpeed * Vector2.right);
+    }
+
+    public void Reel(float direction)
+    {
+        if (currentLure == null) return;
+
+        if (currentLure.state == lureState.grappling)
+        {
+            currentLure.distJoint.distance += stats.reelSpeed * direction;
+        }
+        else if (currentLure.state == lureState.fishing)
+        {
+            if (direction < 0)
+            {
+                currentLure.body.AddForce(new Vector2(Mathf.Sign(transform.position.x - currentLure.body.position.x), 0) * stats.fishingReelSpeed);
+            }
+        }
     }
 
     #endregion

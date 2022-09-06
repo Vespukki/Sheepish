@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Lure : MonoBehaviour
 {
-    Rigidbody2D body;
+
     LineRenderer liner;
+
+    [HideInInspector] public Rigidbody2D body;
     [HideInInspector] public DistanceJoint2D distJoint;
+    [HideInInspector] public AudioSource audioSource;
 
-    [HideInInspector] public lureState state = lureState.air; 
+    [HideInInspector] public lureState state = lureState.air;
 
-    [HideInInspector] public PlayerMovement mover; // set by player mover on instantiate
+    // set by player mover on instantiate
+    [HideInInspector] public PlayerMovement mover;
+    [HideInInspector] public PlayerFishing fisher;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         liner = GetComponent<LineRenderer>();
         distJoint = GetComponent<DistanceJoint2D>();
+        audioSource = GetComponent<AudioSource>();
 
         distJoint.enabled = false;
         body.gravityScale = PlayerMovement.playerGravity;
@@ -30,19 +36,36 @@ public class Lure : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.collider.CompareTag("Ground") && state == lureState.air)
+        {
+            Grapple();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.TryGetComponent(out Water water) && state == lureState.air)
+        {
+            Fish(water.fishTable);
+        }
+    }
+
+    void Fish(FishTable fishTable)
+    {
+        state = lureState.fishing;
+        fisher.StartFishing(this, fishTable);
+    }
+
+    void Grapple()
+    {
+        state = lureState.grappling;
+
         distJoint.connectedBody = mover.gameObject.GetComponent<Rigidbody2D>();
         distJoint.distance = Vector2.Distance(transform.position, mover.transform.position);
         distJoint.enabled = true;
 
-        //mover.canMove = false;
-
         body.bodyType = RigidbodyType2D.Static;
-        state = lureState.grappling;
         mover.GetComponent<Animator>().SetTrigger("Grapple");
-    }
-
-    private void OnDestroy()
-    {
     }
 }
 public enum lureState { fishing, grappling, air }
