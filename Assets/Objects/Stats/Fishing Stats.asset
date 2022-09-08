@@ -27,3 +27,10 @@ MonoBehaviour:
   _pingObject: {fileID: 6497277324175534016, guid: de0d1086a5fdd6d4089c8292bad9f263, type: 3}
   _notificationObject: {fileID: 5149377526443358485, guid: 639520ee002dcd747bafa1439caee526, type: 3}
   _notificationTimer: 5
+  _reelPower: 7
+  _rarityShake:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0

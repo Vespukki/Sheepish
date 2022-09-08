@@ -403,7 +403,11 @@ public class PlayerMovement : MonoBehaviour
     void Unfish()
     {
         OnUnfish?.Invoke();
-        DeleteLure();
+
+        if(currentLure?.state != lureState.fishing)
+        {
+            DeleteLure();
+        }
     }
 
     void Fish()

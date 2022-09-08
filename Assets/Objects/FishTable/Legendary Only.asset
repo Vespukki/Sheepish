@@ -10,18 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f66ea71018e51a4e8ccd073cf6b0bec, type: 3}
-  m_Name: Left Lake
+  m_Name: Legendary Only
   m_EditorClassIdentifier: 
   _fishes:
-  - fish: {fileID: 11400000, guid: 5636540b7a1e6214fb90c59161ba1ce2, type: 2}
-    chancePart: 2
-  - fish: {fileID: 11400000, guid: 6996e97aaf176e045ab6a05147514b44, type: 2}
-    chancePart: 5
-  - fish: {fileID: 11400000, guid: f0c242aebe29e3b4bb027b9ada52e825, type: 2}
-    chancePart: 3
-  - fish: {fileID: 11400000, guid: 86140248833cf0748bb094b6791ca7b3, type: 2}
-    chancePart: 2
   - fish: {fileID: 11400000, guid: e54c3f5f18cff0049801a6bfbecb7b08, type: 2}
     chancePart: 1
-  _minTime: 4
-  _maxTime: 11
+  _minTime: 1.5
+  _maxTime: 1.5

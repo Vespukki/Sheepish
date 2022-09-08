@@ -285,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 5224527242503645672, guid: ecfd281f26beb4740bb2f8dd44b86ab9, type: 3}
       propertyPath: fishTable
       value: 
-      objectReference: {fileID: 11400000, guid: 8df653ef583f7a34e9378384d6ba9696, type: 2}
+      objectReference: {fileID: 11400000, guid: 7a324517a621b2245ba15733f9a254f9, type: 2}
     - target: {fileID: 5224527242503645674, guid: ecfd281f26beb4740bb2f8dd44b86ab9, type: 3}
       propertyPath: m_ColliderMask.m_Bits
       value: 576

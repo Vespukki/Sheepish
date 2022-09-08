@@ -63,7 +63,6 @@ public class DialogHandler : MonoBehaviour
 
         foreach (TMP_LinkInfo link in textBox.textInfo.linkInfo)
         {
-            Debug.Log(link.GetLinkID());
             int first = (link.linkTextfirstCharacterIndex);
             int last = link.GetLinkText().Length + first;
 

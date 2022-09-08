@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 520ad30a3ded32a41a0d05753681e632, type: 3}
-  m_Name: Sammin
+  m_Name: Broken Hammer
   m_EditorClassIdentifier: 
-  _fishName: Sammin
-  _sprite: {fileID: 2986902264991601036, guid: bb84c32bc33cca0438e6b44d90d2b035, type: 3}
-  _rarity: 2
+  _fishName: Broken Hammer
+  _sprite: {fileID: -3541210692410423812, guid: e32b116a0fea818499e92a97cda8d1bf, type: 3}
+  _rarity: 0
   _minWeight: 5
-  _maxWeight: 35
+  _maxWeight: 5

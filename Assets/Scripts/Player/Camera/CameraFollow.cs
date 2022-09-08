@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
 
     Rigidbody2D body;
 
-    CamZone zone = null;
+    [HideInInspector] public CamZone zone = null;
     CamZone lastzone;
 
     private void Awake()

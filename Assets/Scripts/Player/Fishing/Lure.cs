@@ -53,6 +53,8 @@ public class Lure : MonoBehaviour
     void Fish(FishTable fishTable)
     {
         state = lureState.fishing;
+
+
         fisher.StartFishing(this, fishTable);
     }
 
@@ -66,6 +68,14 @@ public class Lure : MonoBehaviour
 
         body.bodyType = RigidbodyType2D.Static;
         mover.GetComponent<Animator>().SetTrigger("Grapple");
+    }
+
+    private void OnDestroy()
+    {
+        if(fisher != null)
+        {
+            fisher.StopFishing();
+        }
     }
 }
 public enum lureState { fishing, grappling, air }
