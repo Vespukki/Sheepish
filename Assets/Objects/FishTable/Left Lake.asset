@@ -23,5 +23,5 @@ MonoBehaviour:
     chancePart: 2
   - fish: {fileID: 11400000, guid: e54c3f5f18cff0049801a6bfbecb7b08, type: 2}
     chancePart: 1
-  _minTime: 4
-  _maxTime: 11
+  _minTime: 3
+  _maxTime: 3

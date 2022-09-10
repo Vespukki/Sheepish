@@ -40,6 +40,7 @@ MonoBehaviour:
   _waterFallSpeedMultiplier: 0.7
   _castSpeed: {x: 10, y: 15}
   _airCastSpeed: {x: 15, y: 20}
-  _reelSpeed: 0.08
+  _reelSpeed: 0
   _swingSpeed: 15
-  _fishingReelSpeed: 0.3
+  _fishingReelSpeed: 0
+  _maxLureDist: 15

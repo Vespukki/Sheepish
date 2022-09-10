@@ -9,12 +9,14 @@ public class CameraFollow : MonoBehaviour
 
     Rigidbody2D body;
 
-    [HideInInspector] public CamZone zone = null;
-    CamZone lastzone;
+    [HideInInspector] public CamZone zone;
+    CamZone lastzone = null;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        zone = GetZone();
+        ChangeCam();
     }
 
     private void FixedUpdate()
@@ -30,19 +32,24 @@ public class CameraFollow : MonoBehaviour
 
         if (zone != lastzone)
         {
-            if (zone != null)
-            {
-                zone.vCam.Priority = 1;
-                if (zone.vCam.Follow == null)
-                {
-                    zone.vCam.Follow = transform;
-                }
-            }
-            if (lastzone != null)
-            {
-                lastzone.vCam.Priority = 0;
-            }
+            ChangeCam();
             
+        }
+    }
+
+    void ChangeCam()
+    {
+        if (zone != null)
+        {
+            zone.vCam.Priority = 1;
+            if (zone.vCam.Follow == null)
+            {
+                zone.vCam.Follow = transform;
+            }
+        }
+        if (lastzone != null)
+        {
+            lastzone.vCam.Priority = 0;
         }
     }
 

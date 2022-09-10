@@ -27,6 +27,7 @@ public class PlayerFishing : MonoBehaviour
     //true if unfish was called
     bool pulled;
 
+
     void Awake()
     {
         mover = GetComponent<PlayerMovement>();
@@ -116,7 +117,7 @@ public class PlayerFishing : MonoBehaviour
                 {
                     pulled = false;
 
-                    lure.body.AddForce(transform.position - lure.transform.position);
+                    lure.body.AddForce((transform.position - lure.transform.position) * Vector2.right);
                     waitForFish = StartCoroutine(WaitForFish(lure, fish, table, currentRarity + 1));
                     StopCoroutine(fishWindow);
                 }

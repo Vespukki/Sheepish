@@ -104,12 +104,14 @@ public class PlayerStats : ScriptableObject
     [SerializeField] float _reelSpeed;
     [SerializeField] float _swingSpeed;
     [SerializeField] float _fishingReelSpeed;
+    [SerializeField] float _maxLureDist;
 
     public Vector2 castSpeed => _castSpeed;
     public Vector2 airCastSpeed => _airCastSpeed;
     public float reelSpeed => _reelSpeed;
     public float swingSpeed => _swingSpeed;
     public float fishingReelSpeed => _fishingReelSpeed;
+    public float maxLureDist => _maxLureDist;
 
     #endregion
 }

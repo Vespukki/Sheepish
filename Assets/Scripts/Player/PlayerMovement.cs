@@ -37,8 +37,13 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool underwater;
     int wallCling = 0;
 
-    [HideInInspector] public bool jumping = false;
+    [SerializeField] bool canWaterWalk = false;
+
+    [SerializeField] bool _canWallJump = false;
+    public bool canWallJump { get { return _canWallJump; } set { _canWallJump = value; animator.SetBool("CanWallJump", value); } }
+
     public bool canMove = true;
+    [HideInInspector] public bool jumping = false;
 
 
     //so you dont hit things multiple times in the same cast
@@ -125,6 +130,8 @@ public class PlayerMovement : MonoBehaviour
 
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
         playerGravity = normalGravity;
+
+        animator.SetBool("CanWallJump", canWallJump);
     }
 
     public void CallPlayerAwake()
@@ -143,11 +150,11 @@ public class PlayerMovement : MonoBehaviour
             jumping = false;
         }
 
-        if (dropDown.IsPressed())
+        if (dropDown.IsPressed() || !canWaterWalk)
         {
             Physics2D.IgnoreLayerCollision(8, 6, true);
         }
-        else if (underwater == false)
+        else if (!underwater)
         {
             Physics2D.IgnoreLayerCollision(8, 6, false);
         }
@@ -155,6 +162,11 @@ public class PlayerMovement : MonoBehaviour
         if(reel.IsPressed())
         {
             Reel(-(int)Mathf.Sign(reel.ReadValue<float>()));
+        }
+
+        if(currentLure != null && Vector2.Distance(transform.position, currentLure.transform.position) > stats.maxLureDist)
+        {
+            Destroy(currentLure.gameObject);
         }
 
         //hitbox checks
@@ -303,8 +315,21 @@ public class PlayerMovement : MonoBehaviour
         float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, stats.jerk) * Mathf.Sign(speedDiff);
 
         body.AddForce(movement * Vector2.right);
+    }
 
-        
+    public void ForcedMove(float input)
+    {
+        float targetSpeed = input * stats.speed; //dir to move in at speed
+
+        float speedDiff = targetSpeed - body.velocity.x; //diff between current and desired
+
+        bool accel = Mathf.Abs(targetSpeed) > .01; //choose to accelerate or decelerate
+        float accelRate = accel ? stats.acceleration : stats.decceleration;
+
+        //applies acceleration to speedDiff, then sets to a power to set jerk. then reapplies direction
+        float movement = Mathf.Pow(Mathf.Abs(speedDiff) * accelRate, stats.jerk) * Mathf.Sign(speedDiff);
+
+        body.AddForce(movement * Vector2.right);
     }
 
 

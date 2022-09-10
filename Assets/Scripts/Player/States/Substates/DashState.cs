@@ -16,6 +16,9 @@ public class DashState : AirState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
+        body.constraints = RigidbodyConstraints2D.FreezePositionY;
+        body.freezeRotation = true;
+
         mover.Dash();
         mover.remainingDashes--;
 
@@ -25,6 +28,9 @@ public class DashState : AirState
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
+
+        body.constraints = RigidbodyConstraints2D.None;
+        body.freezeRotation = true;
 
         body.velocity = new Vector2(mover.stats.speed * mover.lookingDir, body.velocity.y);
         mover.lastDashTimer = 0;

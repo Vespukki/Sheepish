@@ -8,9 +8,18 @@ public class PlayerInteraction : MonoBehaviour
     IInteractable interactTarget;
 
     PlayerMovement mover;
+    Animator animator;
+
+    Dictionary<SceneTransition, string> transitionDict = new()
+    {
+        [SceneTransition.walking] = "WalkingTransition",
+        [SceneTransition.falling] = "FallingTransition",
+        [SceneTransition.jumping] = "JumpingTransition"
+    };
     private void Awake()
     {
         mover = GetComponent<PlayerMovement>();
+        animator = GetComponent<Animator>();
     }
 
     public void TryInteract()
@@ -55,14 +64,15 @@ public class PlayerInteraction : MonoBehaviour
         interactTarget = null;
     }
 
-    IEnumerator ChangeScene(Door door, Object targetScene, Vector2 destination)
+    IEnumerator ChangeScene(Door door, Object targetScene)
     {
-        Time.timeScale = 0;
+        animator.SetTrigger(transitionDict[door.transition]);
+        Debug.Log(transitionDict[door.transition]);
         yield return StartCoroutine(Easing.ScreenFadeOut());
-        
+        Time.timeScale = 0;
+
         ClearInteractTarget();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
         AsyncOperation unloadProgress = SceneManager.UnloadSceneAsync(SceneManager.GetSceneByBuildIndex(currentSceneIndex));
         while (!unloadProgress.isDone)
         {
@@ -80,13 +90,12 @@ public class PlayerInteraction : MonoBehaviour
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetScene.name));
 
         Time.timeScale = 1;
-        transform.position = destination;
         StartCoroutine(Easing.ScreenFadeIn());
         mover.CallPlayerAwake();
     }
 
-    public void StartChangeScene(Door door, Object targetScene, Vector2 destination)
+    public void StartChangeScene(Door door, Object targetScene)
     {
-        StartCoroutine(ChangeScene(door, targetScene, destination));
+        StartCoroutine(ChangeScene(door, targetScene));
     }
 }

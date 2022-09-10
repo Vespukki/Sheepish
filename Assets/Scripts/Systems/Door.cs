@@ -6,16 +6,28 @@ public class Door : MonoBehaviour
 {
     [SerializeField] bool useable = true;
     [SerializeField] Object targetScene;
+    
+    public SceneTransition transition = SceneTransition.walking;
 
-    [SerializeField] Vector2 destination;
+    private void Start()
+    {
+        StartCoroutine(StartDelay());
+    }
 
+    IEnumerator StartDelay()
+    {
+        useable = false;
+        yield return new WaitForSeconds(.5f);
+        useable = true;
+    }
 
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out PlayerInteraction inter) && useable)
         {
-            inter.StartChangeScene(this, targetScene, destination);
+            inter.StartChangeScene(this, targetScene);
         }
     }
 }   
+
+public enum SceneTransition { walking, falling, jumping}
