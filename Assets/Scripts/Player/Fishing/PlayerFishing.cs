@@ -8,6 +8,7 @@ public class PlayerFishing : MonoBehaviour
     PlayerMovement mover;
     Animator animator;
     AudioSource audioSource;
+    PlayerInventory inventory;
     [SerializeField] AudioBank audioBank;
     [SerializeField] FishingStats fishingStats;
 
@@ -33,7 +34,7 @@ public class PlayerFishing : MonoBehaviour
         mover = GetComponent<PlayerMovement>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-
+        inventory = GetComponent<PlayerInventory>();
 
         PlayerMovement.OnUnfish += UnfishHandler;
     }
@@ -190,6 +191,9 @@ public class PlayerFishing : MonoBehaviour
     void CatchFish(Fish fish)
     {
         fishInventory.Add(fish);
+        inventory.hasCaught.Remove(fish.info);
+        inventory.hasCaught.Add(fish.info, true);
+        inventory.UpdateInventory();
         FishNotification(fish);
         EndFishing();
     }

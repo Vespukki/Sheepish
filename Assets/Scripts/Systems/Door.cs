@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
     IEnumerator StartDelay()
     {
         useable = false;
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         useable = true;
     }
 

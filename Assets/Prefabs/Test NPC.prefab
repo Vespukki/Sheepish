@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5210778470877212964, guid: bb84c32bc33cca0438e6b44d90d2b035, type: 3}
+  m_Sprite: {fileID: -6922080110141321396, guid: 74047da892198c94fb31ad29c970e2a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -106,10 +106,10 @@ MonoBehaviour:
     - modifer: 1
       startIndex: 0
       endIndex: 1000
-    portrait: {fileID: 5210778470877212964, guid: bb84c32bc33cca0438e6b44d90d2b035, type: 3}
+    portrait: {fileID: -6922080110141321396, guid: 74047da892198c94fb31ad29c970e2a2, type: 3}
   - text: this one came after the first
     events: []
-    portrait: {fileID: -4292565329555929452, guid: bb84c32bc33cca0438e6b44d90d2b035, type: 3}
+    portrait: {fileID: -6922080110141321396, guid: 74047da892198c94fb31ad29c970e2a2, type: 3}
   voice: {fileID: 8300000, guid: bfac4bdbac5d7a3409d6dfb83ce418d7, type: 3}
 --- !u!61 &3197110196031062633
 BoxCollider2D:
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1764706, y: 1.0588236}
+    oldSize: {x: 1.125, y: 0.4375}
     newSize: {x: 1.1764706, y: 1.0588236}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

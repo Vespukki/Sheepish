@@ -67,7 +67,6 @@ public class PlayerInteraction : MonoBehaviour
     IEnumerator ChangeScene(Door door, Object targetScene)
     {
         animator.SetTrigger(transitionDict[door.transition]);
-        Debug.Log(transitionDict[door.transition]);
         yield return StartCoroutine(Easing.ScreenFadeOut());
         Time.timeScale = 0;
 

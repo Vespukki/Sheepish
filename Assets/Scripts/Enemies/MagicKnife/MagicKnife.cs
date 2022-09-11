@@ -32,11 +32,21 @@ public class MagicKnife : Enemy
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (currentState is MagicKnifeAttackState)
+        {
+            if (collision.CompareTag("Ground"))
+            {
+                animator.SetTriggerXFixedFrames(4, this, "Idle");
+            }
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
         if(currentState is MagicKnifeAttackState)
         {
             if(collision.CompareTag("Ground"))
             {
-                animator.SetTrigger("Idle");
+                animator.SetTriggerXFixedFrames(4, this, "Idle");
             }
         }
     }

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     #region Inspector Stuff
     public PlayerStats stats;
+    public AudioBank audioBank;
 
     [SerializeField] Collider2D groundedCollider;
     [SerializeField] Collider2D leftWallClingingCollider;
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool underwater;
     int wallCling = 0;
 
-    [SerializeField] bool canWaterWalk = false;
+    public bool canWaterWalk = false;
 
     [SerializeField] bool _canWallJump = false;
     public bool canWallJump { get { return _canWallJump; } set { _canWallJump = value; animator.SetBool("CanWallJump", value); } }
@@ -81,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
     InputAction interact;
     InputAction fish;
     InputAction reel;
+    InputAction openInventory;
+    InputAction closeInventory;
 
     #endregion
 
@@ -90,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
     
     public static event PlayerMoverDelegate OnPlayerAwake;
     public static event PlayerEmptyDelegate OnUnfish;
+    public static event PlayerEmptyDelegate OnInventoryOpen;
+    public static event PlayerEmptyDelegate OnInventoryClose;
     #endregion
 
     #endregion
@@ -114,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
         interact = input.actions.FindAction("Interact");
         fish = input.actions.FindAction("Fish");
         reel = input.actions.FindAction("Reel");
+        openInventory = input.actions.FindAction("Open Inventory");
+        closeInventory = input.actions.FindAction("Close Inventory");
 
 
         move.performed += MoveInput;
@@ -125,6 +132,8 @@ public class PlayerMovement : MonoBehaviour
         drillAttack.started += DrillAttackInput;
         interact.started += InteractInput;
         fish.started += FishInput;
+        openInventory.started += OpenInventoryInput;
+        closeInventory.started += CloseInventoryInput;
 
         CallPlayerAwake();
 
@@ -164,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
             Reel(-(int)Mathf.Sign(reel.ReadValue<float>()));
         }
 
-        if(currentLure != null && Vector2.Distance(transform.position, currentLure.transform.position) > stats.maxLureDist)
+        if(currentLure != null && Vector2.Distance(transform.position, currentLure.transform.position) > stats.maxLureDist && currentLure.state == lureState.air)
         {
             Destroy(currentLure.gameObject);
         }
@@ -273,6 +282,26 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             Fish();
+        }
+    }
+
+    void OpenInventoryInput(InputAction.CallbackContext context)
+    {
+        Time.timeScale = 0;
+        input.SwitchCurrentActionMap("Inventory");
+        if(OnInventoryOpen != null)
+        {
+            OnInventoryOpen();
+        }
+    }
+    void CloseInventoryInput(InputAction.CallbackContext context)
+    {
+        input.SwitchCurrentActionMap("Player");
+        Time.timeScale = 1;
+
+        if(OnInventoryClose != null)
+        {
+            OnInventoryClose();
         }
     }
 
@@ -485,6 +514,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    
 
     #endregion
 

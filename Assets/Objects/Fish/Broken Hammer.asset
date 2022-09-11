@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Broken Hammer
   m_EditorClassIdentifier: 
   _fishName: Broken Hammer
-  _sprite: {fileID: -3541210692410423812, guid: e32b116a0fea818499e92a97cda8d1bf, type: 3}
+  _sprite: {fileID: 21300000, guid: 920fd48aa3ad5e14093fcd48c2dd9f0d, type: 3}
   _rarity: 0
   _minWeight: 5
   _maxWeight: 5

@@ -92,14 +92,14 @@ public class DialogHandler : MonoBehaviour
                 switch (modifier)
                 {
                     case TextModifier.slow:
-                        textSpeed *= 10;
+                        textSpeed *= 5;
                         break;
                     default:
                         break;
                 }
             }
             yield return new WaitForSeconds(textSpeed);
-            if(!audioSource.isPlaying)
+            if(!audioSource.isPlaying && char.IsLetter(textBox.GetParsedText()[i]))
             {
                 audioSource.PlayOneShot(npc.voice);
             }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Playtest/PlaytestMainArea.unity
     guid: 156be65d28cd78d40a6c62fd9a80c082
   - enabled: 1
-    path: Assets/Scenes/Playtest/PlaytestFishing.unity
+    path: Assets/Scenes/Playtest/PlaytestUpper.unity
     guid: e3a188cbfa3561444a98d8d894a8a6ef
+  - enabled: 1
+    path: Assets/Scenes/Playtest/PlaytestRight.unity
+    guid: 423bca73e2c0e0947a4b04a5cb926205
   m_configObjects: {}

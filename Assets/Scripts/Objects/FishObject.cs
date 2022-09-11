@@ -16,10 +16,6 @@ public class FishObject : ScriptableObject
     public float minWeight => _minWeight;
     public float maxWeight => _maxWeight;
 
-
-
-
-
 }
 
 [System.Serializable]

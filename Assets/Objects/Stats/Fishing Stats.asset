@@ -34,3 +34,12 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  _allFish:
+  - {fileID: 11400000, guid: e54c3f5f18cff0049801a6bfbecb7b08, type: 2}
+  - {fileID: 11400000, guid: 5636540b7a1e6214fb90c59161ba1ce2, type: 2}
+  - {fileID: 11400000, guid: 86140248833cf0748bb094b6791ca7b3, type: 2}
+  - {fileID: 11400000, guid: f0c242aebe29e3b4bb027b9ada52e825, type: 2}
+  - {fileID: 11400000, guid: 6996e97aaf176e045ab6a05147514b44, type: 2}
+  _rarityTierUIObject: {fileID: 7763482145484333753, guid: 43a29dc8d1cabf8468c78c1229c87e89, type: 3}
+  _fishUIObject: {fileID: 5523700092074664525, guid: f0b0548b92f029941b56ddfd660afddf, type: 3}
+  _uncaughtSprite: {fileID: 21300000, guid: 1180a9b39a9dcec4593efc3cc4cf4c5d, type: 3}
