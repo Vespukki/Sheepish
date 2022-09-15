@@ -6,9 +6,11 @@ using UnityEngine;
 public class FishTable : ScriptableObject
 {
     [SerializeField] List<FishTableEntry> _fishes = new List<FishTableEntry>();
+    [SerializeField] string _tableName;
     [SerializeField] float _minTime;
     [SerializeField] float _maxTime;
     public List<FishTableEntry> fishes => _fishes;
+    public string tableName => _tableName;
     public float minTime => _minTime;
     public float maxTime => _maxTime;
 }

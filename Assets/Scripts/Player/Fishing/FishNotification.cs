@@ -12,7 +12,7 @@ public class FishNotification : MonoBehaviour
 
     public void FormatNotification(Fish fish)
     {
-        textmesh.SetText(string.Format("{2} star catch! you caught a {1}lb {0}!", fish.info.fishName, fish.weight, fish.info.rarity + 1));
+        textmesh.SetText(string.Format("{1} star catch! you caught a {0}!", fish.info.fishName, fish.info.rarity + 1));
         image.sprite = fish.info.sprite;
     }
 }

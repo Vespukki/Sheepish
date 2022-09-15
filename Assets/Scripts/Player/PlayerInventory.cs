@@ -11,7 +11,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] GameObject container;
 
-    List<GameObject> rarityTierBoxes = new();
+    List<LakeInfoUI> lakeBoxes = new();
 
     private void OnDestroy()
     {
@@ -24,45 +24,29 @@ public class PlayerInventory : MonoBehaviour
         PlayerMovement.OnInventoryOpen += OpenInventory;
         PlayerMovement.OnInventoryClose += CloseInventory;
 
+        InitializeInventory();
+    }
 
-        foreach (var fish in fishingStats.allfish)
+    void InitializeInventory()
+    {
+        foreach (var table in fishingStats.allFishTables)
         {
-            hasCaught.Add(fish, false);
-        }
-
-
-        for(int i = FishingStats.rarityTiers - 1; i > -1; i--)
-        {
-            GameObject newRarityBox = (Instantiate(fishingStats.rarityTierUIObject, container.transform));
-            foreach(var fish in fishingStats.allfish)
+            LakeInfoUI newLakeBox = (Instantiate(fishingStats.rarityTierUIObject, container.transform).GetComponent<LakeInfoUI>());
+            foreach(var pair in newLakeBox.Initialize(table.fishes, fishingStats, table.tableName))
             {
-                if(fish.rarity == i)
-                {
-                    FishUI fishUI = Instantiate(fishingStats.fishUIObject, newRarityBox.transform).GetComponent<FishUI>();
-                    fishUI.fish = fish;
-
-                    if(hasCaught[fish])
-                    {
-                        fishUI.sprite = fish.sprite;
-                    }
-                    else
-                    {
-                        fishUI.sprite = fishingStats.uncaughtSprite;
-                    }
-                }
+                hasCaught.TryAdd(pair.Key, pair.Value);
             }
 
-            rarityTierBoxes.Add(newRarityBox);
+            lakeBoxes.Add(newLakeBox);
         }
     }
 
     public void UpdateInventory()
     {
-        foreach(var rarityBox in rarityTierBoxes)
+        foreach(var box in lakeBoxes)
         {
-            foreach (Transform fishUIObject in rarityBox.transform)
+            foreach (FishUI fishUI in box.fishUIs)
             {
-                FishUI fishUI = fishUIObject.GetComponent<FishUI>();
                 if (hasCaught[fishUI.fish])
                 {
                     fishUI.sprite = fishUI.fish.sprite;

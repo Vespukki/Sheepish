@@ -8,36 +8,20 @@ public class FishObject : ScriptableObject
     [SerializeField] string _fishName;
     [SerializeField] Sprite _sprite;
     [Range(0, 4)][SerializeField] int _rarity;
-    [SerializeField] float _minWeight;
-    [SerializeField] float _maxWeight;
+    [TextArea][SerializeField] string _description;
     public string fishName => _fishName;
     public Sprite sprite => _sprite;
     public int rarity => _rarity;
-    public float minWeight => _minWeight;
-    public float maxWeight => _maxWeight;
-
+    public string description => _description;
 }
 
 [System.Serializable]
 public class Fish
 {
     public FishObject info;
-    public float weight;
 
     public Fish(FishObject _info)
     {
         info = _info;
-        weight = GetWeight();
-    }
-    public Fish(FishObject _info, float _weight)
-    {
-        info = _info;
-        weight = _weight;
-    }
-
-    float GetWeight()
-    {
-        return Random.Range(info.minWeight, info.maxWeight);
-        //TODO: make distribution normal instead of random
     }
 }

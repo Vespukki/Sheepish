@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Canvas deathScreen;
 
     private void Awake()
-    {
+    {   
         animator = GetComponent<Animator>();
         mover = GetComponent<PlayerMovement>();
         body = GetComponent<Rigidbody2D>();
