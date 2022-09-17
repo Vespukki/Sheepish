@@ -42,7 +42,6 @@ public class PlayerHealth : MonoBehaviour
     {
         if(invincibleTimer >= stats.invincibleTime)
         {
-            Debug.Log("player hit");
             TakeDamage(damage,knockback, attacker);
         }
     }
@@ -112,5 +111,20 @@ public class PlayerHealth : MonoBehaviour
         transform.position = respawnAnchor;
         StartCoroutine(Easing.ScreenFadeIn());
         mover.CallPlayerAwake();
+    }
+
+    public IEnumerator StartGame(int startSceneIndex)
+    {
+        Easing.SetBlackScreen();
+        Time.timeScale = 0;
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(startSceneIndex, LoadSceneMode.Additive);
+        while (!loadProgress.isDone)
+        {
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(startSceneIndex));
+        StartCoroutine(Easing.ScreenFadeIn());
     }
 }

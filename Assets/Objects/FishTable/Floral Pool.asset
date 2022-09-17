@@ -24,5 +24,5 @@ MonoBehaviour:
   - fish: {fileID: 11400000, guid: 2f4f2c74e5392544297057db083e1607, type: 2}
     chancePart: 1
   _tableName: Floral Pool
-  _minTime: 0
-  _maxTime: 0
+  _minTime: 4
+  _maxTime: 12

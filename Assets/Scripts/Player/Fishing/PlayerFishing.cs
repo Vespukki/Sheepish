@@ -77,13 +77,13 @@ public class PlayerFishing : MonoBehaviour
 
     void Fishing(Lure lure, FishTable table)
     {
-        waitForFish = StartCoroutine(WaitForFish(lure, ChooseFish(table), table, 0));
+        waitForFish = StartCoroutine(WaitForFish(lure, ChooseFish(table), table, 0, table.minTime, table.maxTime));
     }
 
-    IEnumerator WaitForFish(Lure lure, FishObject fish, FishTable table, int currentRarity)
+    IEnumerator WaitForFish(Lure lure, FishObject fish, FishTable table, int currentRarity, float minTime, float maxTime)
     {
         float timer = 0;
-        float endTime = Random.Range(table.minTime, table.maxTime);
+        float endTime = Random.Range(minTime, maxTime);
         pulled = false;
         lureCam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = fishingStats.rarityShake[currentRarity];
 
@@ -119,7 +119,7 @@ public class PlayerFishing : MonoBehaviour
                     pulled = false;
 
                     lure.body.AddForce((transform.position - lure.transform.position) * Vector2.right);
-                    waitForFish = StartCoroutine(WaitForFish(lure, fish, table, currentRarity + 1));
+                    waitForFish = StartCoroutine(WaitForFish(lure, fish, table, currentRarity + 1, fishingStats.fishPullTimer, fishingStats.fishPullTimer));
                     StopCoroutine(fishWindow);
                 }
                 else

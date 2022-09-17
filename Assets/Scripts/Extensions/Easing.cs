@@ -70,4 +70,10 @@ public static class Easing
             yield return null;
         }
     }
+
+    public static void SetBlackScreen()
+    {
+        Image image = Camera.main.GetComponentInChildren<Image>();
+        image.color = new Color(image.color.r, image.color.g, image.color.b, 1);
+    }
 }

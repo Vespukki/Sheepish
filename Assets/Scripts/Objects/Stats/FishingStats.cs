@@ -22,6 +22,7 @@ public class FishingStats : ScriptableObject
     [SerializeField] GameObject _rarityTierUIObject;
     [SerializeField] GameObject _fishUIObject;
     [SerializeField] Sprite _uncaughtSprite;
+    [SerializeField] float _fishPullTime; //time between pulls
     public List<Sprite> rarityPings => _rarityPings;
     public List<float> rarityTimers => _rarityTimers;
     public GameObject pingObject => _pingObject;
@@ -33,4 +34,5 @@ public class FishingStats : ScriptableObject
     public GameObject rarityTierUIObject => _rarityTierUIObject;
     public GameObject fishUIObject => _fishUIObject;
     public Sprite uncaughtSprite => _uncaughtSprite;
+    public float fishPullTimer => _fishPullTime;
 }
