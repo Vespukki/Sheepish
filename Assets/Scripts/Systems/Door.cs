@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] bool useable = true;
-    [SerializeField] Object targetScene;
+    [SerializeField] int targetSceneIndex;
     
     public SceneTransition transition = SceneTransition.walking;
 
@@ -25,7 +25,7 @@ public class Door : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerInteraction inter) && useable)
         {
-            inter.StartChangeScene(this, targetScene);
+            inter.StartChangeScene(this, targetSceneIndex);
         }
     }
 }   

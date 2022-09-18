@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class PlayerInteraction : MonoBehaviour
     private void FixedUpdate()
     {
         interactTarget = GetInteractionTarget();
+
+        foreach (var hit in Physics.RaycastAll(new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, -10), Vector3.forward))
+        {
+            Debug.Log(hit.transform.name);
+        }
     }
 
     IInteractable GetInteractionTarget()
@@ -64,7 +70,7 @@ public class PlayerInteraction : MonoBehaviour
         interactTarget = null;
     }
 
-    IEnumerator ChangeScene(Door door, Object targetScene)
+    IEnumerator ChangeScene(Door door, int targetSceneIndex)
     {
         animator.SetTrigger(transitionDict[door.transition]);
         yield return StartCoroutine(Easing.ScreenFadeOut());
@@ -77,7 +83,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             yield return null;
         }
-        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(targetScene.name, LoadSceneMode.Additive);
+        AsyncOperation loadProgress = SceneManager.LoadSceneAsync(targetSceneIndex, LoadSceneMode.Additive);
         while (!loadProgress.isDone)
         {
             yield return null;
@@ -86,15 +92,15 @@ public class PlayerInteraction : MonoBehaviour
 
         yield return null;
 
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(targetScene.name));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(targetSceneIndex));
 
         Time.timeScale = 1;
         StartCoroutine(Easing.ScreenFadeIn());
         mover.CallPlayerAwake();
     }
 
-    public void StartChangeScene(Door door, Object targetScene)
+    public void StartChangeScene(Door door, int targetSceneIndex)
     {
-        StartCoroutine(ChangeScene(door, targetScene));
+        StartCoroutine(ChangeScene(door, targetSceneIndex));
     }
 }

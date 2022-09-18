@@ -49,7 +49,7 @@ public class PlayerInventory : MonoBehaviour
             {
                 if (hasCaught[fishUI.fish])
                 {
-                    fishUI.sprite = fishUI.fish.sprite;
+                    fishUI.Discover();
                 }
             }
         }
@@ -58,10 +58,14 @@ public class PlayerInventory : MonoBehaviour
     void OpenInventory()
     {
         canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     void CloseInventory()
     {
         canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 }
