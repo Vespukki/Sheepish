@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520ad30a3ded32a41a0d05753681e632, type: 3}
   m_Name: Sammin
   m_EditorClassIdentifier: 
-  _fishName: Sammin
+  _discoverName: Sammin
+  _description: d
   _sprite: {fileID: 21300000, guid: b3f45e2c67c56614e96320f29da50db1, type: 3}
   _rarity: 2
-  _minWeight: 5
-  _maxWeight: 35

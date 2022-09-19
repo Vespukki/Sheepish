@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f66ea71018e51a4e8ccd073cf6b0bec, type: 3}
   m_Name: Lake of Aggression
   m_EditorClassIdentifier: 
+  _discoverName: Lake of Aggression
+  _description: 
   _fishes:
   - fish: {fileID: 11400000, guid: 9e559a953e1e36944b53cf285a3fc326, type: 2}
     chancePart: 2
   - fish: {fileID: 11400000, guid: 0eba67d9766ce944f9f3d8e2c873116e, type: 2}
-    chancePart: 5
+    chancePart: 3
   - fish: {fileID: 11400000, guid: 4b9b9282eb424bf41acaa3dec651d5b4, type: 2}
     chancePart: 3
   - fish: {fileID: 11400000, guid: 1ffd7bd35393bf04b916c52a3b239f59, type: 2}
     chancePart: 2
   - fish: {fileID: 11400000, guid: 509764cc1e8654f4193a3ce801ab0314, type: 2}
     chancePart: 1
-  _tableName: Lake of Aggression
   _minTime: 2
   _maxTime: 5

@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f66ea71018e51a4e8ccd073cf6b0bec, type: 3}
   m_Name: Floral Pool
   m_EditorClassIdentifier: 
+  _discoverName: Floral Pool
+  _description: It seems a shipment of fertilizer fell into this pond a long time
+    ago, which allowed the local flora to thrive and develop a symbiotic relationship
+    with the fish living in it. You've decided to name it 'Floral Pool', after the
+    colorful fish that reside in it. You could have named it 'Mossy Pool', but a
+    mossfish bit you while you were thinking up a name, so you didn't want to give
+    him any glory by naming a pond after him.
   _fishes:
   - fish: {fileID: 11400000, guid: f10c15d18dc292646b592daf765711b2, type: 2}
     chancePart: 2
   - fish: {fileID: 11400000, guid: aab35e387796ee242bcf7f9c3fa66308, type: 2}
     chancePart: 3
   - fish: {fileID: 11400000, guid: 24889f8582133f54bb41e419d1477f3a, type: 2}
-    chancePart: 5
+    chancePart: 3
   - fish: {fileID: 11400000, guid: c79bacbf2b1cebc4dad9651081bf8fad, type: 2}
     chancePart: 2
   - fish: {fileID: 11400000, guid: 2f4f2c74e5392544297057db083e1607, type: 2}
     chancePart: 1
-  _tableName: Floral Pool
   _minTime: 4
   _maxTime: 12
-  _description: It seems a shipment of fertilizer fell into this pond a long time
-    ago, which allowed the local flora to thrive and develop a symbiotic relationship
-    with the fish living in it. You've decided to name it 'Floral Pool', after the
-    colorful fish that reside in it. You could have named it 'Mossy Pool', but a
-    mossfish bit you while you were thinking up a name, and you didn't want to give
-    him any glory by naming a pond after him.

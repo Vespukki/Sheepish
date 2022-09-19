@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] FishingStats fishingStats;
-    public Dictionary<FishObject, bool> hasCaught = new();
+
+    Dictionary<DiscoverableObject, bool> hasDiscovered = new();
 
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] GameObject lakeUIContainer;
@@ -38,25 +39,47 @@ public class PlayerInventory : MonoBehaviour
         foreach (var table in fishingStats.allFishTables)
         {
             LakeInfoUI newLakeBox = (Instantiate(fishingStats.rarityTierUIObject, lakeUIContainer.transform).GetComponent<LakeInfoUI>());
+
+            hasDiscovered.TryAdd(table, false);
+
             foreach(var pair in newLakeBox.Initialize(table.fishes, fishingStats, table))
             {
-                hasCaught.TryAdd(pair.Key, pair.Value);
+                hasDiscovered.TryAdd(pair.Key, pair.Value);
             }
 
             lakeBoxes.Add(newLakeBox);
         }
     }
 
-    public void UpdateInventory()
+    public void UpdateInventory(FishObject fish)
     {
-        foreach(var box in lakeBoxes)
+        hasDiscovered.Remove(fish);
+        hasDiscovered.Add(fish, true);
+
+        foreach (var box in lakeBoxes)
         {
+            bool discoveredLake = true;
             foreach (FishUI fishUI in box.fishUIs)
             {
-                if (hasCaught[fishUI.fish])
+                if (hasDiscovered[fishUI.fish])
                 {
                     fishUI.Discover();
                 }
+                else
+                {
+                    discoveredLake = false;
+                }
+            }
+            if(discoveredLake)
+            {
+                hasDiscovered.Remove(box.lake);
+                hasDiscovered.TryAdd(box.lake, true);
+
+            }
+
+            if(hasDiscovered[box.lake])
+            {
+                box.Discover();
             }
         }
     }
@@ -79,7 +102,12 @@ public class PlayerInventory : MonoBehaviour
     {
         selectedBox = clicked;
 
-        FishInfo info = clicked.GetClicked();
+        FishInfo info = FishInfo.UndiscoveredInfo;
+
+        if (hasDiscovered[clicked.discoverableObject])
+        {
+            info = clicked.GetClicked();
+        }
 
         fishInfoUI.header = info.header;
         fishInfoUI.body = info.body;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520ad30a3ded32a41a0d05753681e632, type: 3}
   m_Name: Sproutling Mossfish
   m_EditorClassIdentifier: 
-  _fishName: Sproutling Mossfish
+  _discoverName: Sproutling Mossfish
+  _description: 
   _sprite: {fileID: 21300000, guid: 382c85e22dde60641bc10c3d7e1ce497, type: 3}
   _rarity: 1
-  _description: 

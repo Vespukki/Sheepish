@@ -8,18 +8,15 @@ public class LakeInfoUI : ClickUI
     [SerializeField] TextMeshProUGUI nameTextmesh;
     [SerializeField] Transform fishUIHolder;
     FishTable _lake;
-    public FishTable lake { get { return _lake; } set { SetName(value); } }
+    public FishTable lake { get { return _lake; } set { SetLake(value); } }
 
     public List<FishUI> fishUIs = new();
-    void SetName(FishTable value)
+    void SetLake(FishTable value)
     {
         _lake = value;
-        nameTextmesh.SetText(value.tableName);
-    }
+        discoverableObject = value;
 
-    public override FishInfo GetClicked()
-    {
-        return new FishInfo(lake.tableName, lake.description);
+        nameTextmesh.SetText(FishInfo.UndiscoveredInfo.header);
     }
 
     public List<KeyValuePair<FishObject, bool>> Initialize(List<FishTableEntry> entries, FishingStats stats, FishTable table)
@@ -30,7 +27,7 @@ public class LakeInfoUI : ClickUI
 
         foreach (var entry in entries)
         {
-            FishUI fishUI = Instantiate(stats.fishUIObject, fishUIHolder).GetComponent<FishUI>();
+            FishUI fishUI = Instantiate(stats.fishUIObject, fishUIHolder).GetComponentInChildren<FishUI>();
             fishUI.fish = entry.fish;
             fishUI.sprite = stats.uncaughtSprite;
 
@@ -40,5 +37,10 @@ public class LakeInfoUI : ClickUI
         }
 
         return returnList;
+    }
+
+    public override void Discover()
+    {
+        nameTextmesh.SetText(lake.discoverName);
     }
 }

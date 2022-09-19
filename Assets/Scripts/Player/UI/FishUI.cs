@@ -8,8 +8,8 @@ public class FishUI : ClickUI
 {
     Image image;
 
-
-    public FishObject fish;
+    FishObject _fish;
+    public FishObject fish { get { return _fish; } set { _fish = value; discoverableObject = value; }}
     Sprite _sprite;
     public Sprite sprite { get { return _sprite; } set { SetSprite(value); } }
 
@@ -18,20 +18,14 @@ public class FishUI : ClickUI
         image = GetComponent<Image>();
     }
 
-    public void Discover()
+    public override void Discover()
     {
         sprite = fish.sprite;
-
     }
 
     void SetSprite(Sprite value)
     {
         image.sprite = value;
         _sprite = value;
-    }
-
-    public override FishInfo GetClicked()
-    {
-        return new FishInfo(fish.fishName, fish.description);
     }
 }

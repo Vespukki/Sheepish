@@ -24,6 +24,7 @@ public class FishInfoUI : MonoBehaviour
         bodyTextmesh.SetText(value);
     }
 
+
 }
 
 public class FishInfo
@@ -36,4 +37,6 @@ public class FishInfo
         header = _header;
         body = _body;
     }
+
+    public static FishInfo UndiscoveredInfo = new("???????", "?????????????????????????");
 }

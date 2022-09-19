@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520ad30a3ded32a41a0d05753681e632, type: 3}
   m_Name: Trowt
   m_EditorClassIdentifier: 
-  _fishName: Trowt
+  _discoverName: Trowt
+  _description: e
   _sprite: {fileID: 21300000, guid: ef0c7621fdff1144983101786ab0f1af, type: 3}
   _rarity: 1
-  _minWeight: 1
-  _maxWeight: 20

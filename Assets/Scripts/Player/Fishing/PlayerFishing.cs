@@ -191,9 +191,7 @@ public class PlayerFishing : MonoBehaviour
     void CatchFish(Fish fish)
     {
         fishInventory.Add(fish);
-        inventory.hasCaught.Remove(fish.info);
-        inventory.hasCaught.Add(fish.info, true);
-        inventory.UpdateInventory();
+        inventory.UpdateInventory(fish.info);
         FishNotification(fish);
         EndFishing();
     }
