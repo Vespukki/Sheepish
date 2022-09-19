@@ -15,4 +15,6 @@ MonoBehaviour:
   _fishName: Empty bag of Fertilizer
   _sprite: {fileID: 21300000, guid: 8713f9e2ac49dea44b9b558faf5beb4f, type: 3}
   _rarity: 0
-  _description: 
+  _description: An empty, tattered plastic bag that was once filled with fertilizer.
+    Super Grow, the manufacturer, was shut down 50 years ago following a lawsuit
+    over their use of potentially hazardous chemicals in their fertilizers.

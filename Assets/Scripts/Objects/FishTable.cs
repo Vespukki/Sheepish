@@ -9,10 +9,12 @@ public class FishTable : ScriptableObject
     [SerializeField] string _tableName;
     [SerializeField] float _minTime;
     [SerializeField] float _maxTime;
+    [TextArea] [SerializeField] string _description;
     public List<FishTableEntry> fishes => _fishes;
     public string tableName => _tableName;
     public float minTime => _minTime;
     public float maxTime => _maxTime;
+     public string description => _description;
 }
 
 [System.Serializable]

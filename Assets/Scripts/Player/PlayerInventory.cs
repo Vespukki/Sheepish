@@ -9,21 +9,27 @@ public class PlayerInventory : MonoBehaviour
     public Dictionary<FishObject, bool> hasCaught = new();
 
     [SerializeField] CanvasGroup canvasGroup;
-    [SerializeField] GameObject container;
+    [SerializeField] GameObject lakeUIContainer;
+
+    [SerializeField] FishInfoUI fishInfoUI;
 
     List<LakeInfoUI> lakeBoxes = new();
+
+    ClickUI selectedBox = null;
 
     private void OnDestroy()
     {
         PlayerMovement.OnInventoryOpen -= OpenInventory;
         PlayerMovement.OnInventoryClose -= CloseInventory;
+        LakeInfoUI.OnClickUI -= SetSelectedBox;
     }
 
     private void Awake()
     {
         PlayerMovement.OnInventoryOpen += OpenInventory;
         PlayerMovement.OnInventoryClose += CloseInventory;
-
+        LakeInfoUI.OnClickUI += SetSelectedBox;
+        
         InitializeInventory();
     }
 
@@ -31,8 +37,8 @@ public class PlayerInventory : MonoBehaviour
     {
         foreach (var table in fishingStats.allFishTables)
         {
-            LakeInfoUI newLakeBox = (Instantiate(fishingStats.rarityTierUIObject, container.transform).GetComponent<LakeInfoUI>());
-            foreach(var pair in newLakeBox.Initialize(table.fishes, fishingStats, table.tableName))
+            LakeInfoUI newLakeBox = (Instantiate(fishingStats.rarityTierUIObject, lakeUIContainer.transform).GetComponent<LakeInfoUI>());
+            foreach(var pair in newLakeBox.Initialize(table.fishes, fishingStats, table))
             {
                 hasCaught.TryAdd(pair.Key, pair.Value);
             }
@@ -67,5 +73,15 @@ public class PlayerInventory : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
+    }
+
+    void SetSelectedBox(ClickUI clicked)
+    {
+        selectedBox = clicked;
+
+        FishInfo info = clicked.GetClicked();
+
+        fishInfoUI.header = info.header;
+        fishInfoUI.body = info.body;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class FishUI : HoverUI
+public class FishUI : ClickUI
 {
     Image image;
 
@@ -16,9 +16,6 @@ public class FishUI : HoverUI
     private void Awake()
     {
         image = GetComponent<Image>();
-
-        hover.headerText = "???";
-        hover.bodyText = "Catch this fish to learn more!";
     }
 
     public void Discover()
@@ -33,7 +30,8 @@ public class FishUI : HoverUI
         _sprite = value;
     }
 
-   
-
-    
+    public override FishInfo GetClicked()
+    {
+        return new FishInfo(fish.fishName, fish.description);
+    }
 }

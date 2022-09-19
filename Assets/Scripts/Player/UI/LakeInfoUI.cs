@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LakeInfoUI : MonoBehaviour
+public class LakeInfoUI : ClickUI
 {
     [SerializeField] TextMeshProUGUI nameTextmesh;
     [SerializeField] Transform fishUIHolder;
-    string _lakeName;
-    public string lakeName { get { return _lakeName; } set { SetName(value); } }
+    FishTable _lake;
+    public FishTable lake { get { return _lake; } set { SetName(value); } }
 
     public List<FishUI> fishUIs = new();
-    void SetName(string value)
+    void SetName(FishTable value)
     {
-        _lakeName = value;
-        nameTextmesh.SetText(_lakeName);
+        _lake = value;
+        nameTextmesh.SetText(value.tableName);
     }
 
-    public List<KeyValuePair<FishObject, bool>> Initialize(List<FishTableEntry> entries, FishingStats stats, string tableName)
+    public override FishInfo GetClicked()
     {
-        lakeName = tableName;
+        return new FishInfo(lake.tableName, lake.description);
+    }
+
+    public List<KeyValuePair<FishObject, bool>> Initialize(List<FishTableEntry> entries, FishingStats stats, FishTable table)
+    {
+        lake = table;
 
         List<KeyValuePair<FishObject, bool>> returnList = new();
 
