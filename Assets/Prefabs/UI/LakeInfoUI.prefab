@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 25
     m_Right: 25
-    m_Top: 75
+    m_Top: 55
     m_Bottom: 25
   m_ChildAlignment: 0
   m_StartCorner: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e813a59df3e2baa40a61e3b42195dbac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  discoverableObject: {fileID: 0}
   nameTextmesh: {fileID: 1807189691613413336}
   fishUIHolder: {fileID: 9084669224940728944}
   fishUIs: []

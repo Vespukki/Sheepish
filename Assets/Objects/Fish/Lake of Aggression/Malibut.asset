@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Malibut
   m_EditorClassIdentifier: 
   _discoverName: Malibut
-  _description: 
+  _description: This fish is evil. It steps on puppies and pushes people over and
+    says mean things over the internet and doesn't share its toys.
   _sprite: {fileID: 21300000, guid: 4c2760e190ba83e4cb7dce2eea89835a, type: 3}
   _rarity: 2

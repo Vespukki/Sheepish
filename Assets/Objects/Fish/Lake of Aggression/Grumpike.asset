@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grumpike
   m_EditorClassIdentifier: 
   _discoverName: Grumpike
-  _description: 
+  _description: This fish has the biggest frown you have ever seen. You think you
+    even heard it sigh when you caught it.
   _sprite: {fileID: 21300000, guid: 9f05b27ba4915424d9c728b1ea0a0894, type: 3}
   _rarity: 3

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Lake of Aggression
   m_EditorClassIdentifier: 
   _discoverName: Lake of Aggression
-  _description: 
+  _description: All the fish that you've caught here seem to be vicious and feral.
+    Perhaps its from the empty creatine containers that you found floating in the
+    water. Maybe they are just really stressed about current events. You've decided
+    to name this the 'Lake of Aggression', as the fish here really just not friendly.
   _fishes:
   - fish: {fileID: 11400000, guid: 9e559a953e1e36944b53cf285a3fc326, type: 2}
     chancePart: 2

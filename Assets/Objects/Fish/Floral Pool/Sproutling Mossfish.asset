@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Sproutling Mossfish
   m_EditorClassIdentifier: 
   _discoverName: Sproutling Mossfish
-  _description: 
+  _description: This fish's scales are covered in a pretty thick coating of moss,
+    despite the fact that it is still quite young. Perhaps it grows this moss intentionally,
+    as some sort of defense against predators.
   _sprite: {fileID: 21300000, guid: 382c85e22dde60641bc10c3d7e1ce497, type: 3}
   _rarity: 1

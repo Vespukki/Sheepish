@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ratfish
   m_EditorClassIdentifier: 
   _discoverName: Ratfish
-  _description: c
+  _description: A greasy, sleek fish that's full of diseases. The whiskers help it
+    find snacks in the dark.
   _sprite: {fileID: 21300000, guid: 327236d3261ea814cb742b609cae5264, type: 3}
   _rarity: 3

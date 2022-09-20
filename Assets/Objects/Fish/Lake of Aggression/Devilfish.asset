@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Devilfish
   m_EditorClassIdentifier: 
   _discoverName: Devilfish
-  _description: 
+  _description: It's hard to describe this fish as anything but demonic. It has a
+    nasty grin and reeks of sulfur. Its rough, deep red skin feels surpisingly warm.
   _sprite: {fileID: 21300000, guid: b00310fce5ce63a47b9d4b450e914bd1, type: 3}
   _rarity: 4

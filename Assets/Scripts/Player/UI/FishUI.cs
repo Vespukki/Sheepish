@@ -28,4 +28,9 @@ public class FishUI : ClickUI
         image.sprite = value;
         _sprite = value;
     }
+
+    public override FishInfo GetUndiscoveredInfo()
+    {
+        return new("???????", "Catch this fish to learn more!");
+    }
 }

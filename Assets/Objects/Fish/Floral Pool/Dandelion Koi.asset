@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Dandelion Koi
   m_EditorClassIdentifier: 
   _discoverName: Dandelion Koi
-  _description: 
+  _description: This koi fish has a flower growing out of its head. It seems to take
+    of the plant, making sure it gets plenty of sun, but you are sure the plant does
+    not return the favor. you hope that this poor fish isn't in any pain.
   _sprite: {fileID: 21300000, guid: c4a59a6d8f8707640ba18a9d812815ab, type: 3}
   _rarity: 3

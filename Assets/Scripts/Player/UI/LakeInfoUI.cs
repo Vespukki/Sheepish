@@ -11,12 +11,14 @@ public class LakeInfoUI : ClickUI
     public FishTable lake { get { return _lake; } set { SetLake(value); } }
 
     public List<FishUI> fishUIs = new();
+
+
     void SetLake(FishTable value)
     {
         _lake = value;
         discoverableObject = value;
 
-        nameTextmesh.SetText(FishInfo.UndiscoveredInfo.header);
+        nameTextmesh.SetText(GetUndiscoveredInfo().header) ;
     }
 
     public List<KeyValuePair<FishObject, bool>> Initialize(List<FishTableEntry> entries, FishingStats stats, FishTable table)
@@ -42,5 +44,10 @@ public class LakeInfoUI : ClickUI
     public override void Discover()
     {
         nameTextmesh.SetText(lake.discoverName);
+    }
+
+    public override FishInfo GetUndiscoveredInfo()
+    {
+        return new("???????", "Catch all the fish in this lake to learn more!");
     }
 }

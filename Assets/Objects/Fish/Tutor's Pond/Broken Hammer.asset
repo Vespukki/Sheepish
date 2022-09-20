@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Broken Hammer
   m_EditorClassIdentifier: 
   _discoverName: Broken Hammer
-  _description: b
+  _description: A simple, cheap hammer that's been broken into two pieces. The name
+    "Robert Tutor" is carved into the side.
   _sprite: {fileID: 21300000, guid: 920fd48aa3ad5e14093fcd48c2dd9f0d, type: 3}
   _rarity: 0

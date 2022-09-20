@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Flattooth Piranha
   m_EditorClassIdentifier: 
   _discoverName: Flattooth Piranha
-  _description: 
+  _description: 'Very hyper and mean, the Flattooth Piranha would be terrifying,
+    if it weren''t an herbivore. it''s teeth, while perfect for chewing on moss and
+    other aquatic flora, are perfectly flat. Also, its bite strength is quite poor.
+    It would, however, make an excellent pet. '
   _sprite: {fileID: 21300000, guid: a6b7af9971774374ea70ed123419c5b2, type: 3}
   _rarity: 1

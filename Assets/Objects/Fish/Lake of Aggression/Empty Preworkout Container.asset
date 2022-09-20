@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Empty Preworkout Container
   m_EditorClassIdentifier: 
   _discoverName: Empty Preworkout Container
-  _description: 
+  _description: An empty container of preworkout. The label promises "Extreme Gains",
+    and it says it contains enough creatine to kill a whale.
   _sprite: {fileID: 21300000, guid: 1a21245c75b9d434e84107abb922c502, type: 3}
   _rarity: 0

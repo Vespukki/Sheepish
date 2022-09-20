@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Overgrown Mossfish
   m_EditorClassIdentifier: 
   _discoverName: Overgrown Mossfish
-  _description: 
+  _description: 'You think this is a mossfish, but it could just be a lump of moss.
+    if it is a fish, it must be very old. '
   _sprite: {fileID: 21300000, guid: 0dc603505e84d404c811726d91491197, type: 3}
   _rarity: 4

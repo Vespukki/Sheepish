@@ -16,12 +16,12 @@ MonoBehaviour:
   _description: "The fish in this pond don't really seem to share any common traits,
     so you decided to name it 'Tutor's Pond' after Robert Tutor, a man you have never
     met. You think, however, that he used to live nearby, and perhaps he was a gruff,
-    silent sort who spent his days making furniture for his neighbors. He would get
-    finished with a hard day's work and come to this pond to fish and clear his mind.
-    Perhaps he even wore fun shirts and hats that described the complex relationship
-    between fish, women, and himself. Of course, this is all hypothetical, and there
-    is very little proof that this man ever existed. Even so, you can't help but
-    hope that Robert lived a happy, full life. \r"
+    silent sort of man who spent his days woodworking, making furniture for his neighbors.
+    He would get finished with a hard day's work and come to this pond to fish and
+    clear his mind. Perhaps he even wore fun shirts and hats that described the extent
+    to which fish feared him. Of course, this is all hypothetical, and there is very
+    little proof that this man ever existed. Even so, you can't help but hope that
+    Robert lived a happy, full life. \r"
   _fishes:
   - fish: {fileID: 11400000, guid: 5636540b7a1e6214fb90c59161ba1ce2, type: 2}
     chancePart: 2

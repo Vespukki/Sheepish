@@ -102,11 +102,14 @@ public class PlayerInventory : MonoBehaviour
     {
         selectedBox = clicked;
 
-        FishInfo info = FishInfo.UndiscoveredInfo;
-
+        FishInfo info;
         if (hasDiscovered[clicked.discoverableObject])
         {
             info = clicked.GetClicked();
+        }
+        else
+        {
+            info = clicked.GetUndiscoveredInfo();
         }
 
         fishInfoUI.header = info.header;

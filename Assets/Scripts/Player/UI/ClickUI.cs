@@ -27,4 +27,6 @@ public abstract class ClickUI : MonoBehaviour, IPointerClickHandler
 
     public abstract void Discover();
 
+    public abstract FishInfo GetUndiscoveredInfo();
+
 }
