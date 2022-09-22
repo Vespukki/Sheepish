@@ -180,6 +180,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed49fe1188f3d12408e0f13ca21258c3, type: 3}
+--- !u!1001 &84911982
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3197110196031062632, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_Name
+      value: Test NPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -140.291
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 60.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062636, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[0].text
+      value: You're not supposed to be here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[1].text
+      value: But do whatever you want man I'm not a cop.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[0].portrait
+      value: 
+      objectReference: {fileID: -6922080110141321396, guid: 74047da892198c94fb31ad29c970e2a2, type: 3}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 4331472792414885178, guid: 55dc31f7d06a41448bf9a668c765f4c4, type: 3}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[0].events.Array.data[0].modifer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062639, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
 --- !u!1 &122698028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,6 +4398,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
       propertyPath: dialogs.Array.data[0].text
       value: I've heard rumors about a pair of shoes that lets you walk on water!
       objectReference: {fileID: 0}
@@ -4317,11 +4410,20 @@ PrefabInstance:
       value: It must be somewhere in this room.
       objectReference: {fileID: 0}
     - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[2].text
+      value: They say that if you have them, you can fall into the water by pressing
+        the down arrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
       propertyPath: dialogs.Array.data[0].portrait
       value: 
       objectReference: {fileID: -6922080110141321396, guid: 74047da892198c94fb31ad29c970e2a2, type: 3}
     - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
       propertyPath: dialogs.Array.data[1].portrait
+      value: 
+      objectReference: {fileID: 4331472792414885178, guid: 55dc31f7d06a41448bf9a668c765f4c4, type: 3}
+    - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
+      propertyPath: dialogs.Array.data[2].portrait
       value: 
       objectReference: {fileID: 4331472792414885178, guid: 55dc31f7d06a41448bf9a668c765f4c4, type: 3}
     - target: {fileID: 3197110196031062638, guid: 02d537b4ec9f82b4f8ff7e089e396793, type: 3}
@@ -4801,7 +4903,7 @@ GameObject:
   - component: {fileID: 1528720956}
   - component: {fileID: 1528720955}
   m_Layer: 0
-  m_Name: Attack Tutor (1)
+  m_Name: Down Attack Tutor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4854,8 +4956,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4958,8 +5060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -139.6, y: 56.2}
-  m_SizeDelta: {x: 6.3724, y: 2.0369}
+  m_AnchoredPosition: {x: -117.9, y: 63.5}
+  m_SizeDelta: {x: 5.65, y: 2.0369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1654002811
 PrefabInstance:
@@ -5273,7 +5375,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 192f6a186258ced46887bbf9e9b9a59a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

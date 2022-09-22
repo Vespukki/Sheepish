@@ -16,8 +16,8 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     [SerializeField] float invincibleTimer = 100;
 
-    public Vector2 respawnAnchor;
-    public int respawnSceneIndex;
+    [HideInInspector] public Vector2 respawnAnchor;
+    [HideInInspector] public int respawnSceneIndex = 1;
 
     [SerializeField] Canvas deathScreen;
 
@@ -29,9 +29,7 @@ public class PlayerHealth : MonoBehaviour
         inter = GetComponent<PlayerInteraction>();
 
         respawnAnchor = new Vector2(transform.position.x, transform.position.y);
-        respawnSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
-
 
     private void FixedUpdate()
     {

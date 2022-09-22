@@ -80,6 +80,13 @@ public abstract class Enemy : MonoBehaviour, IHittable
         {
             collision.GetComponentInParent<PlayerHealth>().OnHit(damage, knockback, gameObject);
         }
+
+        ExtraOnTriggerStay(collision);
+    }
+
+    protected virtual void ExtraOnTriggerStay(Collider2D collision)
+    {
+
     }
 
     void SetTarget(PlayerMovement mover)
