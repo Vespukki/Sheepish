@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Collider2D groundedCollider;
     [SerializeField] Collider2D leftWallClingingCollider;
     [SerializeField] Collider2D rightWallClingingCollider;
-    public Collider2D downAttackCollider;
+    public Collider2D sideAttackCollider;
     public Collider2D drillAttackCollider;
 
     [SerializeField] GameObject lureObject;
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     InputAction move;
     InputAction jump;
     InputAction dash;
-    InputAction downAttack;
+    InputAction sideAttack;
     InputAction drillAttack;
     InputAction dropDown;
     InputAction interact;
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         move = input.actions.FindAction("Move");
         jump = input.actions.FindAction("Jump");
         dash = input.actions.FindAction("Dash");
-        downAttack = input.actions.FindAction("Down Attack");
+        sideAttack = input.actions.FindAction("Side Attack");
         drillAttack = input.actions.FindAction("Drill Attack");
         dropDown = input.actions.FindAction("Drop Down");
         interact = input.actions.FindAction("Interact");
@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         jump.started += JumpInput;
         jump.canceled += CancelJumpInput;
         dash.started += DashInput;
-        downAttack.started += DownAttackInput;
+        sideAttack.started += SideAttack;
         drillAttack.started += DrillAttackInput;
         interact.started += InteractInput;
         fish.started += FishInput;
@@ -150,7 +150,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
 
         UpdateTimers();
 
@@ -238,6 +237,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+        else if(currentState is GrappleState)
+        {
+            animator.SetTriggerOneFixedFrame(this, "GrappleCut");
+        }
     }
 
     void CancelJumpInput(InputAction.CallbackContext context)
@@ -257,7 +260,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }    
 
-    void DownAttackInput(InputAction.CallbackContext context)
+    void SideAttack(InputAction.CallbackContext context)
     {
         if (context.ReadValue<float>() <= 0) return;
         animator.SetTriggerXFixedFrames(stats.inputForgivenessFrames, this, "SideAttack");
@@ -475,8 +478,12 @@ public class PlayerMovement : MonoBehaviour
         currentLure = Instantiate(lureObject, transform.position, transform.rotation).GetComponent<Lure>();
 
 
-        currentLure.gameObject.GetComponent<Rigidbody2D>().velocity = (currentState is AirState ? new Vector2(lookingDir * stats.airCastSpeed.x, stats.airCastSpeed.y) :
-            new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y)) + new Vector2(body.velocity.x, body.velocity.y > 0 ? body.velocity.y : 0);
+        /*currentLure.gameObject.GetComponent<Rigidbody2D>().velocity = (currentState is AirState ? new Vector2(lookingDir * stats.airCastSpeed.x, stats.airCastSpeed.y) :
+            new Vector2(lookingDir * stats.castSpeed.x, stats.castSpeed.y)) + new Vector2(body.velocity.x, body.velocity.y > 0 ? body.velocity.y : 0);*/
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        currentLure.gameObject.GetComponent<Rigidbody2D>().velocity = (new Vector2(mousePos.x, mousePos.y) - new Vector2(transform.position.x, transform.position.y)).normalized 
+            * (currentState is AirState ? stats.airCastSpeed : stats.castSpeed);
 
         currentLure.mover = this;
         currentLure.fisher = fisher;
@@ -589,12 +596,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void SideAttack()
     {
-        if(!downAttackCollider.gameObject.activeSelf) return;
+        if(!sideAttackCollider.gameObject.activeSelf) return;
 
 
         List<Collider2D> colliders = new List<Collider2D>();
 
-        downAttackCollider.GetContacts(colliders);
+        sideAttackCollider.GetContacts(colliders);
 
         foreach (var hit in colliders)
         {
@@ -641,4 +648,5 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
 }

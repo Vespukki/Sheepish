@@ -8,13 +8,13 @@ public class SideAttackState : AirState
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
-        mover.StartAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
+        mover.StartAttack(animator.GetComponent<PlayerMovement>().sideAttackCollider);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        mover.EndAttack(animator.GetComponent<PlayerMovement>().downAttackCollider);
+        mover.EndAttack(animator.GetComponent<PlayerMovement>().sideAttackCollider);
     }
 }

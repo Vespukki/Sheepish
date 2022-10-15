@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Down Attack",
+                    "name": "Side Attack",
                     "type": "Button",
                     "id": "20748cac-251d-445c-9d79-3df1f0e3149a",
                     "expectedControlType": "Button",
@@ -100,7 +100,7 @@
                 {
                     "name": "",
                     "id": "c6e3c017-7af0-40b8-8cfa-d2ce93a1cc7d",
-                    "path": "<Keyboard>/z",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -122,7 +122,7 @@
                 {
                     "name": "negative",
                     "id": "8c5c8ea7-6763-4e97-83dd-f3fa22e6d282",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -133,7 +133,7 @@
                 {
                     "name": "positive",
                     "id": "1dabccfe-6bc6-450b-91af-af7ceee7a5cf",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -144,7 +144,7 @@
                 {
                     "name": "",
                     "id": "2585cf3a-dd24-4620-9417-ef5a1e98a32a",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -153,7 +153,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Down + X",
+                    "name": "Down + LMB",
                     "id": "eee5f8bc-0a9b-4145-a200-f39844088c1e",
                     "path": "ButtonWithOneModifier",
                     "interactions": "",
@@ -166,7 +166,7 @@
                 {
                     "name": "Modifier",
                     "id": "cad6478c-14ad-49b4-814e-f490a266ab2a",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -177,7 +177,7 @@
                 {
                     "name": "Button",
                     "id": "d68df185-754c-40d6-9418-9f96d913e7f5",
-                    "path": "<Keyboard>/x",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -186,42 +186,42 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "x - down",
+                    "name": "LMB - down",
                     "id": "ad069263-145c-4957-b7c0-b05b0af41378",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "Clamp(max=1)",
                     "groups": "",
-                    "action": "Down Attack",
+                    "action": "Side Attack",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "negative",
                     "id": "bf2b04a6-b12d-4de8-a165-c629d8dfeaf1",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Down Attack",
+                    "action": "Side Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
                     "id": "463f9009-6b29-440f-8284-5a331085b9e0",
-                    "path": "<Keyboard>/x",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Down Attack",
+                    "action": "Side Attack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
                     "id": "2124dec2-e66c-4b62-a93f-b4616b47a38b",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -232,7 +232,7 @@
                 {
                     "name": "",
                     "id": "76cfe340-6ac3-40d9-abfb-194b18d8c6b1",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,7 +243,7 @@
                 {
                     "name": "",
                     "id": "363c3aa9-0faf-46fc-bbe6-af6056491e25",
-                    "path": "<Keyboard>/a",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -265,7 +265,7 @@
                 {
                     "name": "negative",
                     "id": "f3ddc15a-7093-4d2a-b367-d9179364283e",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -276,7 +276,7 @@
                 {
                     "name": "positive",
                     "id": "17c36245-5391-4dd2-8042-78befaf26fcc",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

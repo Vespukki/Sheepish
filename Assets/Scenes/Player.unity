@@ -647,7 +647,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.021584, y: 28.66631, z: -10.33934}
+  m_LocalPosition: {x: -167.04675, y: 5.8910713, z: -10.33934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2954,7 +2954,7 @@ MonoBehaviour:
   groundedCollider: {fileID: 545436386}
   leftWallClingingCollider: {fileID: 665851012}
   rightWallClingingCollider: {fileID: 547447865}
-  downAttackCollider: {fileID: 1870761090}
+  sideAttackCollider: {fileID: 1870761090}
   drillAttackCollider: {fileID: 1217466764}
   lureObject: {fileID: 8053761468485534386, guid: f478b3b252ddf924bac4dc0342a9ab5d, type: 3}
   lastState: {fileID: 0}
@@ -3149,7 +3149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932538816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12abc1517ff3fd049830d2651621c710, type: 3}
   m_Name: 

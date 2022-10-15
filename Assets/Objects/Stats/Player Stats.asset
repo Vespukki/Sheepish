@@ -38,9 +38,9 @@ MonoBehaviour:
   _drillKnockbackTime: 0.2
   _waterGravityMultiplier: 0.8
   _waterFallSpeedMultiplier: 0.7
-  _castSpeed: {x: 10, y: 15}
-  _airCastSpeed: {x: 15, y: 20}
+  _castSpeed: 20
+  _airCastSpeed: 50
   _reelSpeed: 0
-  _swingSpeed: 15
+  _swingSpeed: 4
   _fishingReelSpeed: 0
-  _maxLureDist: 15
+  _maxLureDist: 14
