@@ -8,6 +8,7 @@ TagManager:
   - Camera Zone
   - Water
   - Water Surface
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -19,10 +20,10 @@ TagManager:
   - Enemy
   - Water Surface
   - Lure
-  - 
-  - 
-  - 
-  - 
+  - Fishing
+  - SwimmingFish
+  - FishingBounds
+  - FishingWall
   - 
   - 
   - 

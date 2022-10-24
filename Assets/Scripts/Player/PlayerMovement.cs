@@ -137,10 +137,17 @@ public class PlayerMovement : MonoBehaviour
 
         CallPlayerAwake();
 
+        Hook.OnHookSpawn += CallPlayerAwake;
+
         normalGravity = (-2 * stats.jumpHeight) / (stats.jumpTime * stats.jumpTime) / -10;
         playerGravity = normalGravity;
 
         animator.SetBool("CanWallJump", canWallJump);
+    }
+
+    private void OnDestroy()
+    {
+        Hook.OnHookSpawn -= CallPlayerAwake;
     }
 
     public void CallPlayerAwake()
