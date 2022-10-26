@@ -509,6 +509,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void GrappleSwing()
     {
+        float swingAngle = (Mathf.Atan2(currentLure.transform.position.y - transform.position.y, currentLure.transform.position.x - transform.position.x) * Mathf.Rad2Deg - 90) / 90; //-1 to 1 between -90 and 90
+        if(Mathf.Abs(swingAngle) > 1)
+        {
+            body.drag = Mathf.Abs(.25f);
+        }
+        else
+        {
+            body.drag = Mathf.Abs(swingAngle / 4);
+        }
         body.AddForce(moveInput * stats.swingSpeed * Vector2.right);
     }
 

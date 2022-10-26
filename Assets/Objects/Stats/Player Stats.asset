@@ -41,6 +41,6 @@ MonoBehaviour:
   _castSpeed: 20
   _airCastSpeed: 50
   _reelSpeed: 0
-  _swingSpeed: 4
+  _swingSpeed: 8
   _fishingReelSpeed: 0
   _maxLureDist: 14
